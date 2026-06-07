@@ -1,0 +1,124 @@
+{
+  "roadmaps": [
+    {
+      "career_id": "car_001",
+      "competences_cles": ["Maîtrise des langages de programmation (JavaScript, Python)", "Résolution de problèmes algorithmiques", "Travail en équipe sur des projets logiciels (Git)", "Anglais technique", "Conception de bases de données (SQL/NoSQL)"],
+      "matieres_importantes": ["Mathématiques", "Informatique / Sciences du Numérique", "Anglais", "Logique"],
+      "related_universities": ["uni_003", "uni_022", "uni_024", "uni_006"]
+    },
+    {
+      "career_id": "car_002",
+      "competences_cles": ["Connaissance des sols, cultures et climatologie", "Utilisation d'équipements agricoles modernes", "Gestion financière d'une exploitation agricole", "Sensibilisation aux techniques d'irrigation", "Rédaction de projets agricoles pour financements"],
+      "matieres_importantes": ["SVT (Sciences de la Vie et de la Terre)", "Physique-Chimie", "Mathématiques", "Géographie"],
+      "related_universities": ["uni_022", "uni_009"]
+    },
+    {
+      "career_id": "car_003",
+      "competences_cles": ["Techniques de soins infirmiers (pansements, injections, perfusions)", "Empathie et écoute active des patients", "Gestion du stress et réactivité en urgence", "Hygiène et prévention des infections", "Connaissances en pharmacologie de base"],
+      "matieres_importantes": ["SVT (Sciences de la Vie et de la Terre)", "Physique-Chimie", "Mathématiques"],
+      "related_universities": ["uni_017", "uni_015", "uni_022"]
+    },
+    {
+      "career_id": "car_004",
+      "competences_cles": ["Conception de systèmes solaires et éoliens", "Électrotechnique et câblage électrique", "Maintenance préventive et corrective des installations", "Lecture de plans et schémas électriques", "Gestion de projets d'électrification rurale"],
+      "matieres_importantes": ["Physique-Chimie", "Mathématiques", "Sciences de l'Ingénieur", "Informatique industrielle"],
+      "related_universities": ["uni_022", "uni_013", "uni_006"]
+    },
+    {
+      "career_id": "car_005",
+      "competences_cles": ["Maîtrise des réseaux sociaux (Facebook, Instagram, TikTok, LinkedIn)", "Création de contenu visuel et vidéo", "Rédaction web et copywriting", "Publicité digitale (Facebook Ads, Google Ads)", "Analyse des statistiques et KPIs"],
+      "matieres_importantes": ["Français / Lettres", "Langues vivantes (Anglais)", "Arts Plastiques", "Informatique"],
+      "related_universities": ["uni_014", "uni_022", "uni_010", "uni_018"]
+    },
+    {
+      "career_id": "car_006",
+      "competences_cles": ["Maîtrise du Plan Comptable OHADA", "Utilisation des logiciels comptables (Sage, SAARI)", "Déclarations fiscales et douanières", "Audit et contrôle interne", "Analyse financière et reporting"],
+      "matieres_importantes": ["Mathématiques", "Économie", "Gestion", "Droit des affaires"],
+      "related_universities": ["uni_001", "uni_002", "uni_005", "uni_004", "uni_022"]
+    },
+    {
+      "career_id": "car_007",
+      "competences_cles": ["Examen clinique et diagnostic médical", "Maîtrise des pathologies tropicales (paludisme, typhoïde, choléra)", "Prescription et suivi des traitements", "Urgences médicales et réanimation", "Communication bienveillante avec les patients"],
+      "matieres_importantes": ["SVT (Sciences de la Vie et de la Terre)", "Physique-Chimie", "Mathématiques", "Philosophie"],
+      "related_universities": ["uni_022"]
+    },
+    {
+      "career_id": "car_008",
+      "competences_cles": ["Conception architecturale et dessin technique", "Maîtrise des logiciels CAO (AutoCAD, ArchiCAD, Revit)", "Droit de l'urbanisme et des constructions", "Gestion de chantier et coordination des équipes", "Rendu 3D et présentation client"],
+      "matieres_importantes": ["Arts Plastiques", "Mathématiques", "Physique-Chimie", "Sciences de l'Ingénieur"],
+      "related_universities": ["uni_011", "uni_022", "uni_023"]
+    },
+    {
+      "career_id": "car_009",
+      "competences_cles": ["Gestion des stocks et des entrepôts (WMS)", "Maîtrise des Incoterms et du commerce international", "Transit douanier et réglementation portuaire", "Logistique inverse et traçabilité", "Coordination des transporteurs"],
+      "matieres_importantes": ["Géographie", "Mathématiques", "Économie", "Anglais"],
+      "related_universities": ["uni_001", "uni_002", "uni_022", "uni_010"]
+    },
+    {
+      "career_id": "car_010",
+      "competences_cles": ["Maîtrise approfondie de la matière enseignée", "Techniques pédagogiques et didactiques", "Gestion de classe et discipline positive", "Élaboration de progressions et fiches de cours", "Soutien scolaire individualisé"],
+      "matieres_importantes": ["La matière choisie + Pédagogie", "Psychologie de l'enfant"],
+      "related_universities": ["uni_019", "uni_022", "uni_009"]
+    },
+    {
+      "career_id": "car_011",
+      "competences_cles": ["Programmation Python et R pour l'analyse de données", "Machine Learning et intelligence artificielle", "Visualisation des données (Power BI, Tableau, Matplotlib)", "Bases de données (SQL, NoSQL, Big Data)", "Statistiques appliquées et modélisation"],
+      "matieres_importantes": ["Mathématiques (avancées)", "Informatique", "Statistiques", "Anglais"],
+      "related_universities": ["uni_003", "uni_022", "uni_024"]
+    },
+    {
+      "career_id": "car_012",
+      "competences_cles": ["Planification de projets (méthode PERT, Gantt)", "Gestion budgétaire et reporting financier", "Leadership et management d'équipes pluridisciplinaires", "Cadre logique (LogFrame) pour projets ONG", "Communication et négociation"],
+      "matieres_importantes": ["Mathématiques", "Économie", "Langues (Anglais/Français)", "Gestion"],
+      "related_universities": ["uni_004", "uni_010", "uni_022", "uni_001"]
+    },
+    {
+      "career_id": "car_013",
+      "competences_cles": ["Maîtrise du droit OHADA et du droit togolais", "Rédaction d'actes juridiques et de contrats", "Procédure civile et pénale", "Consultation et conseil juridique", "Plaidoirie et défense en audience"],
+      "matieres_importantes": ["Français (rédaction)", "Histoire", "Philosophie", "Économie"],
+      "related_universities": ["uni_022", "uni_014", "uni_008", "uni_020"]
+    },
+    {
+      "career_id": "car_014",
+      "competences_cles": ["Électromécanique et automatismes industriels", "Hydraulique et pneumatique", "Lecture de plans et schémas techniques", "Diagnostic des pannes (méthode AMDEC)", "Maintenance préventive (planning TPM)"],
+      "matieres_importantes": ["Physique-Chimie", "Mathématiques", "Sciences de l'Ingénieur", "Technologie"],
+      "related_universities": ["uni_006", "uni_012", "uni_022"]
+    },
+    {
+      "career_id": "car_015",
+      "competences_cles": ["Analyse du risque crédit", "Connaissance des produits bancaires (épargne, crédit, assurance)", "Relation client et vente de services financiers", "Conformité bancaire (KYC, AML)", "Maîtrise des systèmes bancaires (Core Banking)"],
+      "matieres_importantes": ["Mathématiques", "Économie", "Gestion", "Anglais"],
+      "related_universities": ["uni_001", "uni_002", "uni_010", "uni_022"]
+    },
+    {
+      "career_id": "car_016",
+      "competences_cles": ["Maîtrise de la suite Adobe (Photoshop, Illustrator, InDesign)", "Conception d'identités visuelles et chartes graphiques", "UI/UX Design (Figma, Sketch)", "Motion Design et animation vidéo", "Impression et production visuelle"],
+      "matieres_importantes": ["Arts Plastiques", "Informatique", "Mathématiques (géométrie)", "Langues"],
+      "related_universities": ["uni_011", "uni_022", "uni_003"]
+    },
+    {
+      "career_id": "car_017",
+      "competences_cles": ["Droit administratif togolais", "Rédaction administrative (notes, circulaires, rapports)", "Gestion des archives et documentation", "Éthique et déontologie de la fonction publique", "Management des équipes publiques"],
+      "matieres_importantes": ["Français (rédaction)", "Histoire-Géographie", "Économie", "Droit"],
+      "related_universities": ["uni_022", "uni_020", "uni_014"]
+    },
+    {
+      "career_id": "car_018",
+      "competences_cles": ["Élaboration d'un business plan viable", "Gestion financière et comptabilité de base", "Marketing et acquisition de clients", "Gestion des ressources humaines", "Résilience face à l'échec et pivotage"],
+      "matieres_importantes": ["Économie", "Gestion", "Mathématiques", "Communication"],
+      "related_universities": ["uni_001", "uni_002", "uni_004", "uni_010", "uni_022"]
+    },
+    {
+      "career_id": "car_019",
+      "competences_cles": ["Pharmacologie et interactions médicamenteuses", "Chimie analytique et contrôle qualité", "Réglementation pharmaceutique (DPM/Ministère Santé)", "Gestion de stock et approvisionnement officinal", "Conseil et éducation thérapeutique du patient"],
+      "matieres_importantes": ["SVT", "Physique-Chimie (avancée)", "Mathématiques", "Sciences naturelles"],
+      "related_universities": ["uni_022"]
+    },
+    {
+      "career_id": "car_020",
+      "competences_cles": ["Maîtrise du français et de l'anglais (indispensable)", "Droit international et organisations multilatérales (UA, ONU)", "Protocole et étiquette diplomatique", "Négociation internationale et médiation", "Rédaction de rapports et notes diplomatiques"],
+      "matieres_importantes": ["Français", "Anglais", "Histoire-Géographie", "Économie", "Philosophie"],
+      "related_universities": ["uni_022", "uni_020", "uni_014", "uni_008"]
+    }
+  ]
+}
