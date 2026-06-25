@@ -2,8 +2,13 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import universitiesData from "@/data/universities.json";
 import newsData from "@/data/news.json";
+
+const UniversityMap = dynamic(() => import('@/components/UniversityMap'), {
+  ssr: false,
+});
 
 /* ───── Scroll-reveal hook ───── */
 function useReveal() {
@@ -366,6 +371,24 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ═══════ CARTE DES UNIVERSITÉS ═══════ */}
+      <section className="border-t border-border bg-muted">
+        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
+          <div className="text-center mb-10">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Localisation
+            </span>
+            <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+              Carte des Établissements
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-base text-muted-foreground">
+              Découvrez la répartition géographique des universités et instituts à travers le pays.
+            </p>
+          </div>
+          <UniversityMap universities={universitiesData} />
         </div>
       </section>
 

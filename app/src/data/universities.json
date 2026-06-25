@@ -22,7 +22,9 @@
       "Gestion",
       "Finance",
       "Marketing"
-    ]
+    ],
+    "lat": 6.136898045850441,
+    "lng": 1.2201548226139591
   },
   {
     "id": "uni_002",
@@ -37,17 +39,28 @@
     "phone": "+228 22 21 61 61",
     "description": "L'IAEC forme des professionnels dans les domaines de l'administration, du commerce et de la gestion. Reconnu CAMES, il propose des parcours de Licence et Master.",
     "filieres": [
-      "Licence Administration des Affaires",
-      "BTS Commerce International",
+      "Audit et Contrôle de Gestion",
+      "Gestion des Ressources Humaines",
       "Master Gestion",
-      "Comptabilité"
+      "Marketing et Communication",
+      "BTS Commerce International",
+      "Comptabilité",
+      "Gestion des Entreprises",
+      "Sécurité de l'Information",
+      "Informatique de Gestion",
+      "Licence Administration des Affaires",
+      "Finance et Comptabilité"
     ],
     "domains": [
       "Administration",
-      "Commerce",
+      "Sciences Économiques et de Gestion",
+      "Informatique",
       "Gestion",
-      "Droit des Affaires"
-    ]
+      "Droit des Affaires",
+      "Commerce"
+    ],
+    "lat": 6.1190977767916905,
+    "lng": 1.230072491032599
   },
   {
     "id": "uni_003",
@@ -86,7 +99,9 @@
       "Télécommunications",
       "Marketing",
       "Logistique"
-    ]
+    ],
+    "lat": 6.133717483119728,
+    "lng": 1.2289786156235698
   },
   {
     "id": "uni_004",
@@ -111,7 +126,9 @@
       "Ressources Humaines",
       "Administration",
       "Commerce"
-    ]
+    ],
+    "lat": 6.123574847546433,
+    "lng": 1.2238451393695693
   },
   {
     "id": "uni_005",
@@ -126,17 +143,27 @@
     "phone": "+228 22 21 38 60",
     "description": "L'ESAG-NDE est une école catholique d'excellence en administration et gestion. Elle propose des cursus Licence/Master dans un environnement bienveillant et rigoureux.",
     "filieres": [
-      "Licence Administration & Gestion",
       "Master Finance",
+      "Gestion des Ressources Humaines",
+      "Marketing et Communication",
+      "Marketing",
       "Comptabilité",
-      "Marketing"
+      "Licence Administration & Gestion",
+      "Gestion des Entreprises",
+      "Sécurité de l'Information",
+      "Finance et Comptabilité"
     ],
     "domains": [
       "Administration",
+      "Ressources Humaines",
+      "Marketing",
+      "Comptabilité",
       "Gestion",
-      "Finance",
-      "Comptabilité"
-    ]
+      "Technologie de l'Information",
+      "Finance"
+    ],
+    "lat": 6.14335754261764,
+    "lng": 1.1998065402146423
   },
   {
     "id": "uni_006",
@@ -161,7 +188,9 @@
       "Technologie",
       "Bâtiment",
       "Électronique"
-    ]
+    ],
+    "lat": 6.131479390835025,
+    "lng": 1.2218167852489832
   },
   {
     "id": "uni_007",
@@ -186,7 +215,9 @@
       "Philosophie",
       "Éducation",
       "Recherche"
-    ]
+    ],
+    "lat": 6.139384072842975,
+    "lng": 1.2152436185552444
   },
   {
     "id": "uni_008",
@@ -211,7 +242,9 @@
       "Langues",
       "Diplomatie",
       "Traduction"
-    ]
+    ],
+    "lat": 6.1441226215599665,
+    "lng": 1.231290163992163
   },
   {
     "id": "uni_009",
@@ -226,27 +259,29 @@
     "phone": "+228 26 60 01 04",
     "description": "L'Université de Kara est la grande université publique du Nord du Togo, accueillant environ 23 000 étudiants en 2024-2025. En avril 2026, elle a inauguré son nouveau Campus Nord de 18 600 m² comprenant la Faculté des Sciences de la Santé, l'Institut Supérieur des Métiers de l'Agriculture (ISMA) et l'Institut Polytechnique et de l'Innovation. L'UK vise une capacité de 30 000 étudiants d'ici 2030 avec des projets de bibliothèque centrale et de cités universitaires pouvant héberger 10 000 étudiants. De nouvelles filières en cybersécurité, maintenance industrielle, multimédia et informatique sont en cours de déploiement. Un partenariat avec le CNP-Togo aligne les formations sur les besoins réels des entreprises. Les frais de scolarité sont très accessibles en tant qu'établissement public.",
     "filieres": [
-      "Licence Sciences",
-      "Lettres & Langues",
-      "Droit",
-      "Sciences de l'Éducation",
-      "Sciences Économiques",
-      "Agronomie & Métiers de l'Agriculture",
-      "Sciences de la Santé",
       "Cybersécurité (nouveau)",
+      "Sciences de la Santé",
+      "Sciences Économiques",
+      "Multimédia & Informatique (nouveau)",
+      "Lettres & Langues",
+      "Agronomie & Métiers de l'Agriculture",
+      "Droit",
       "Maintenance Industrielle (nouveau)",
-      "Multimédia & Informatique (nouveau)"
+      "Licence Sciences",
+      "Sciences de l'Éducation"
     ],
     "domains": [
-      "Sciences",
       "Lettres",
-      "Droit",
-      "Agriculture",
+      "Sciences",
+      "Informatique",
       "Éducation",
+      "Droit",
       "Santé",
       "Technologie",
-      "Informatique"
-    ]
+      "Agriculture"
+    ],
+    "lat": 9.554120825397002,
+    "lng": 1.1778864545548253
   },
   {
     "id": "uni_010",
@@ -271,7 +306,9 @@
       "Management",
       "Entrepreneuriat",
       "Marketing"
-    ]
+    ],
+    "lat": 6.1437147084435395,
+    "lng": 1.218791508295238
   },
   {
     "id": "uni_011",
@@ -296,7 +333,9 @@
       "Urbanisme",
       "Design",
       "Bâtiment"
-    ]
+    ],
+    "lat": 6.1271786903592425,
+    "lng": 1.2199716296097887
   },
   {
     "id": "uni_012",
@@ -321,7 +360,9 @@
       "Artisanat",
       "Techniques",
       "Travaux Publics"
-    ]
+    ],
+    "lat": 6.127762494735237,
+    "lng": 1.2087773815364882
   },
   {
     "id": "uni_013",
@@ -346,7 +387,9 @@
       "Technologie",
       "Ingénierie",
       "Numérique"
-    ]
+    ],
+    "lat": 6.136628799214847,
+    "lng": 1.2058251185971853
   },
   {
     "id": "uni_014",
@@ -361,17 +404,19 @@
     "phone": "+228 22 51 05 23",
     "description": "L'UCAO-UUT est la branche togolaise de l'Université Catholique de l'Afrique de l'Ouest. Elle offre des formations reconnues en droit, gestion et sciences sociales dans un environnement catholique.",
     "filieres": [
-      "Droit",
-      "Sciences Économiques & Gestion",
+      "Communication",
       "Sciences Sociales",
-      "Communication"
+      "Droit",
+      "Sciences Économiques & Gestion"
     ],
     "domains": [
-      "Droit",
-      "Gestion",
+      "Communication",
       "Sciences Sociales",
-      "Communication"
-    ]
+      "Gestion",
+      "Droit"
+    ],
+    "lat": 6.121749585997428,
+    "lng": 1.2006750798102326
   },
   {
     "id": "uni_015",
@@ -386,17 +431,30 @@
     "phone": "+228 22 60 30 00",
     "description": "L'IADSS forme des professionnels du secteur sanitaire et social: infirmiers, sages-femmes, travailleurs sociaux et agents de santé communautaire.",
     "filieres": [
-      "Soins Infirmiers",
+      "Gestion des Bases de Données de Santé",
       "Sage-Femme",
+      "Santé Internationale",
+      "Soins Infirmiers",
+      "Soins Obstétricaux",
+      "Statistiques en Santé",
+      "Biostatistique",
       "Travail Social",
+      "Gestion de l'Environnement",
+      "Gestion du Patrimoine Culturel",
+      "Gériatrie",
       "Santé Communautaire"
     ],
     "domains": [
-      "Santé",
+      "Développement Social et Santé Publique",
+      "Soins Infirmiers",
+      "Humanitaire",
+      "Gestion de la Santé",
       "Social",
       "Médecine",
-      "Humanitaire"
-    ]
+      "Santé"
+    ],
+    "lat": 6.152240859373745,
+    "lng": 1.2309119792068821
   },
   {
     "id": "uni_016",
@@ -421,7 +479,9 @@
       "Arts",
       "Patrimoine",
       "Sciences Humaines"
-    ]
+    ],
+    "lat": 6.135948884097703,
+    "lng": 1.2257221076431122
   },
   {
     "id": "uni_017",
@@ -446,7 +506,9 @@
       "Médecine",
       "Soins",
       "Paramédical"
-    ]
+    ],
+    "lat": 6.130823649671945,
+    "lng": 1.2074973404603697
   },
   {
     "id": "uni_018",
@@ -471,7 +533,9 @@
       "Communication",
       "Management",
       "Marketing"
-    ]
+    ],
+    "lat": 6.148553239214101,
+    "lng": 1.195131358865218
   },
   {
     "id": "uni_019",
@@ -497,7 +561,9 @@
       "Enseignement",
       "Sciences",
       "Lettres"
-    ]
+    ],
+    "lat": 6.121022933370791,
+    "lng": 1.2244933237617102
   },
   {
     "id": "uni_020",
@@ -522,7 +588,9 @@
       "Droit",
       "Diplomatie",
       "Finances Publiques"
-    ]
+    ],
+    "lat": 6.132102132431629,
+    "lng": 1.216986728651543
   },
   {
     "id": "uni_021",
@@ -547,7 +615,9 @@
       "Commerce",
       "Relations Internationales",
       "Communication"
-    ]
+    ],
+    "lat": 6.138615051755165,
+    "lng": 1.1973271909697298
   },
   {
     "id": "uni_022",
@@ -562,34 +632,36 @@
     "phone": "+228 22 25 25 84",
     "description": "Fondée en 1970 (initialement Université du Bénin), l'Université de Lomé est la plus grande institution publique d'enseignement supérieur du Togo, accueillant plus de 70 000 étudiants. Elle est structurée en 6 facultés (Droit, Lettres Langues et Arts, Sciences, Sciences de la Santé incluant Médecine et Pharmacie, Sciences Économiques et de Gestion, Sciences de l'Homme et de la Société), 5 écoles de formation (École Polytechnique de Lomé, École Supérieure d'Agronomie, École des Assistants Médicaux, École Supérieure des Assistants Administratifs, École Supérieure des Techniques Biologiques et Alimentaires) et 4 instituts principaux (INSE, IUT de Gestion, ISICA, INJS). L'université fonctionne sous le système LMD depuis 2009. La Division de l'Information et de l'Orientation (DIO) accompagne les étudiants dans leurs choix de filières et d'insertion professionnelle. Les frais de scolarité sont parmi les plus accessibles du pays.",
     "filieres": [
-      "Médecine & Pharmacie (FSS)",
-      "Sciences & Techniques (FDS)",
-      "Droit (FDD)",
-      "Lettres, Langues & Arts (FLLA)",
-      "Sciences Économiques & de Gestion (FASEG)",
-      "Sciences de l'Homme & de la Société (FSHS)",
-      "Génie Civil & Mécanique (EPL)",
-      "Agronomie (ESA)",
-      "Assistants Médicaux (EAM)",
       "Techniques Biologiques & Alimentaires (ESTBA)",
+      "Communication & Arts (ISICA)",
+      "Sciences Économiques & de Gestion (FASEG)",
+      "Génie Civil & Mécanique (EPL)",
+      "Droit (FDD)",
+      "Médecine & Pharmacie (FSS)",
+      "Assistants Médicaux (EAM)",
       "Sciences de l'Éducation (INSE)",
       "Gestion (IUT)",
-      "Communication & Arts (ISICA)",
-      "Jeunesse & Sports (INJS)",
-      "Informatique (CIC)"
+      "Informatique (CIC)",
+      "Sciences & Techniques (FDS)",
+      "Lettres, Langues & Arts (FLLA)",
+      "Agronomie (ESA)",
+      "Sciences de l'Homme & de la Société (FSHS)",
+      "Jeunesse & Sports (INJS)"
     ],
     "domains": [
+      "Lettres",
       "Sciences",
+      "Informatique",
+      "Économie",
+      "Éducation",
+      "Communication",
       "Médecine",
       "Droit",
-      "Lettres",
-      "Économie",
-      "Informatique",
-      "Agriculture",
       "Ingénierie",
-      "Communication",
-      "Éducation"
-    ]
+      "Agriculture"
+    ],
+    "lat": 6.12036390239286,
+    "lng": 1.2107938454153775
   },
   {
     "id": "uni_023",
@@ -604,18 +676,27 @@
     "phone": "+228 22 26 56 36",
     "description": "L'ESPC forme des ingénieurs spécialisés dans le génie civil, les travaux publics, les routes et les ouvrages d'art. Partenaire des grands chantiers d'infrastructure au Togo.",
     "filieres": [
-      "Génie Civil",
+      "Hydraulique",
       "Travaux Publics",
-      "Routes & Ponts",
+      "Informatique de Gestion",
+      "Informatique Appliquée aux Travaux Publics",
+      "Audit Technique",
+      "Génie Civil et Construction",
+      "Génie Civil",
       "Topographie",
-      "Hydraulique"
+      "Routes & Ponts"
     ],
     "domains": [
-      "Ingénierie",
-      "Bâtiment",
+      "Gestion des Travaux Publics",
       "Travaux Publics",
-      "Infrastructure"
-    ]
+      "Infrastructure",
+      "Informatique de Gestion",
+      "Bâtiment",
+      "Ingénierie",
+      "Génie Civil"
+    ],
+    "lat": 6.130887531933008,
+    "lng": 1.2116447523224476
   },
   {
     "id": "uni_024",
@@ -640,7 +721,9 @@
       "Numérique",
       "Cybersécurité",
       "Intelligence Artificielle"
-    ]
+    ],
+    "lat": 6.13279257345941,
+    "lng": 1.1978571968196572
   },
   {
     "id": "uni_025",
@@ -664,7 +747,9 @@
       "Réseaux & Bases de Données",
       "Électronique & Automatisation",
       "Génie Informatique"
-    ]
+    ],
+    "lat": 6.154533513713746,
+    "lng": 1.2164231809618364
   },
   {
     "id": "uni_026",
@@ -685,7 +770,9 @@
     "domains": [
       "Réseaux & Bases de Données",
       "Développement Logiciel"
-    ]
+    ],
+    "lat": 6.130009429418831,
+    "lng": 1.2291746429122539
   },
   {
     "id": "uni_027",
@@ -711,7 +798,9 @@
       "Arts",
       "Arts du Spectacle",
       "Sciences Sociales & Culture"
-    ]
+    ],
+    "lat": 6.152335792579114,
+    "lng": 1.1978282582390523
   },
   {
     "id": "uni_028",
@@ -735,7 +824,9 @@
       "Communication",
       "Comptabilité & Fiscalité",
       "Finance & Banque"
-    ]
+    ],
+    "lat": 6.136249723766917,
+    "lng": 1.1955609904577296
   },
   {
     "id": "uni_029",
@@ -756,7 +847,9 @@
     "domains": [
       "Hôtellerie & Restauration",
       "Tourisme & Loisirs"
-    ]
+    ],
+    "lat": 6.1520278042366385,
+    "lng": 1.1980697640585483
   },
   {
     "id": "uni_030",
@@ -775,7 +868,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.123492770558382,
+    "lng": 1.2220870057313864
   },
   {
     "id": "uni_031",
@@ -803,7 +898,9 @@
       "Langues",
       "Mathématiques",
       "Physique"
-    ]
+    ],
+    "lat": 6.150243322810612,
+    "lng": 1.2219039193655428
   },
   {
     "id": "uni_032",
@@ -821,7 +918,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.122583535471537,
+    "lng": 1.1956565217351836
   },
   {
     "id": "uni_033",
@@ -840,7 +939,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 9.561222148976572,
+    "lng": 1.203810479954229
   },
   {
     "id": "uni_034",
@@ -859,7 +960,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 9.540465768521122,
+    "lng": 1.1939521365623056
   },
   {
     "id": "uni_035",
@@ -876,7 +979,9 @@
     "filieres": [
       "Licence"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.146851101434126,
+    "lng": 1.2065722166835033
   },
   {
     "id": "uni_036",
@@ -896,7 +1001,9 @@
     ],
     "domains": [
       "Santé"
-    ]
+    ],
+    "lat": 9.567291421798897,
+    "lng": 1.1816511464190853
   },
   {
     "id": "uni_037",
@@ -920,7 +1027,9 @@
       "Agriculture",
       "Communication",
       "Génie Informatique"
-    ]
+    ],
+    "lat": 6.129177076788519,
+    "lng": 1.2252783687363125
   },
   {
     "id": "uni_038",
@@ -944,7 +1053,9 @@
       "Droit",
       "Médecine",
       "Sciences"
-    ]
+    ],
+    "lat": 6.132900740906345,
+    "lng": 1.193481949511956
   },
   {
     "id": "uni_039",
@@ -966,7 +1077,9 @@
       "Communication",
       "Droit",
       "Sciences"
-    ]
+    ],
+    "lat": 6.128668147898235,
+    "lng": 1.22347576844601
   },
   {
     "id": "uni_040",
@@ -984,7 +1097,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.150640631094564,
+    "lng": 1.213005148149062
   },
   {
     "id": "uni_041",
@@ -1009,7 +1124,9 @@
     "domains": [
       "Communication",
       "Sciences"
-    ]
+    ],
+    "lat": 6.154496295620399,
+    "lng": 1.1977650814185292
   },
   {
     "id": "uni_042",
@@ -1035,7 +1152,9 @@
       "Développement Logiciel",
       "Finance & Banque",
       "Marketing"
-    ]
+    ],
+    "lat": 6.122919999152421,
+    "lng": 1.1962911029036984
   },
   {
     "id": "uni_043",
@@ -1054,7 +1173,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.138918587078779,
+    "lng": 1.205365099925312
   },
   {
     "id": "uni_044",
@@ -1073,7 +1194,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.120223360415573,
+    "lng": 1.1977902417593498
   },
   {
     "id": "uni_045",
@@ -1092,7 +1215,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.133744143318059,
+    "lng": 1.2023531633871654
   },
   {
     "id": "uni_046",
@@ -1124,7 +1249,9 @@
       "Hôtellerie & Restauration",
       "Sciences",
       "Tourisme & Loisirs"
-    ]
+    ],
+    "lat": 6.129235789701425,
+    "lng": 1.1992631164540246
   },
   {
     "id": "uni_047",
@@ -1141,7 +1268,9 @@
     "filieres": [
       "BTS"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.134816291312711,
+    "lng": 1.2253122428303729
   },
   {
     "id": "uni_048",
@@ -1165,7 +1294,9 @@
       "Business",
       "Commerce & Administration",
       "Sciences"
-    ]
+    ],
+    "lat": 6.139316345545885,
+    "lng": 1.1923644701713692
   },
   {
     "id": "uni_049",
@@ -1187,7 +1318,9 @@
       "Droit",
       "Génie Informatique",
       "Marketing"
-    ]
+    ],
+    "lat": 6.141915660523748,
+    "lng": 1.219897236104328
   },
   {
     "id": "uni_050",
@@ -1210,7 +1343,9 @@
     "domains": [
       "Électronique & Automatisation",
       "Génie Informatique"
-    ]
+    ],
+    "lat": 6.1193387346779655,
+    "lng": 1.2191031716802823
   },
   {
     "id": "uni_051",
@@ -1229,7 +1364,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.143010649230606,
+    "lng": 1.2164843088015223
   },
   {
     "id": "uni_052",
@@ -1247,7 +1384,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.127827989146724,
+    "lng": 1.2221191653344574
   },
   {
     "id": "uni_053",
@@ -1267,7 +1406,9 @@
     ],
     "domains": [
       "Droit"
-    ]
+    ],
+    "lat": 6.143108974698624,
+    "lng": 1.1954695480994653
   },
   {
     "id": "uni_054",
@@ -1285,7 +1426,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.130913477369438,
+    "lng": 1.2260997188686416
   },
   {
     "id": "uni_055",
@@ -1304,7 +1447,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.124770720980159,
+    "lng": 1.2044437474887486
   },
   {
     "id": "uni_056",
@@ -1323,7 +1468,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.140912522372667,
+    "lng": 1.226901576345756
   },
   {
     "id": "uni_057",
@@ -1341,7 +1488,9 @@
       "BTS",
       "Licence"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.156866241503437,
+    "lng": 1.2254297861445704
   },
   {
     "id": "uni_058",
@@ -1359,7 +1508,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.119308913963181,
+    "lng": 1.2046368373945522
   },
   {
     "id": "uni_059",
@@ -1376,7 +1527,9 @@
     "filieres": [
       "Licence"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.156050866406544,
+    "lng": 1.1940819261319329
   },
   {
     "id": "uni_060",
@@ -1395,7 +1548,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.145325122396165,
+    "lng": 1.1976530591017898
   },
   {
     "id": "uni_061",
@@ -1414,7 +1569,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.131383203428498,
+    "lng": 1.2014758502969083
   },
   {
     "id": "uni_062",
@@ -1444,7 +1601,9 @@
       "Droit",
       "Finance & Banque",
       "Sciences"
-    ]
+    ],
+    "lat": 6.146720118113134,
+    "lng": 1.215251935129735
   },
   {
     "id": "uni_063",
@@ -1472,7 +1631,9 @@
       "Communication",
       "Finance & Banque",
       "Génie Informatique"
-    ]
+    ],
+    "lat": 6.124760429543347,
+    "lng": 1.2025626294690188
   },
   {
     "id": "uni_064",
@@ -1494,7 +1655,9 @@
       "Comptabilité & Fiscalité",
       "Hôtellerie & Restauration",
       "Marketing"
-    ]
+    ],
+    "lat": 6.136798223935061,
+    "lng": 1.1929464786101887
   },
   {
     "id": "uni_065",
@@ -1509,15 +1672,23 @@
     "phone": "+228 22 22 01 01",
     "description": "L’Hôtel École Avenida, situé au cœur de Lomé, Togo, est un établissement unique combinant hébergement hôtelier et centre de formation professionnelle en hôtellerie et tourisme. Fondé le 15 novembre 1984 par feu Léopold d’Almeida sous le nom d’AVENIDA Hôtel, il a évolué pour devenir un complexe de 77 chambres climatisées, un restaurant-bar, des salles de conférence et une école hôtelière. Le cen...",
     "filieres": [
+      "Service en Restauration",
+      "Restauration",
       "BTS Hôtellerie & Restauration",
-      "BTS Tourisme & Loisirs",
       "Licence Hôtellerie & Restauration",
+      "Hôtellerie",
+      "Gestion Hôtelière",
+      "BTS Tourisme & Loisirs",
       "Licence Tourisme & Loisirs"
     ],
     "domains": [
+      "Restauration",
       "Hôtellerie & Restauration",
+      "Hôtellerie",
       "Tourisme & Loisirs"
-    ]
+    ],
+    "lat": 6.123896163746901,
+    "lng": 1.196907283744551
   },
   {
     "id": "uni_066",
@@ -1534,7 +1705,9 @@
     "filieres": [],
     "domains": [
       "Commerce & Administration"
-    ]
+    ],
+    "lat": 6.137581100777817,
+    "lng": 1.2062769579089885
   },
   {
     "id": "uni_067",
@@ -1549,21 +1722,35 @@
     "phone": "+228 90038416",
     "description": "Depuis sa création, FORMATEC s’est imposé comme une référence dans le paysage éducatif togolais, offrant une large gamme de programmes adaptés aux besoins du marché du travail. ​L’établissement propose des formations diversifiées allant du Brevet de Technicien (BT) au Master Professionnel, en passant par le Brevet de Technicien Supérieur (BTS) et la Licence Professionnelle. Les filières couvren...",
     "filieres": [
-      "BTS Commerce & Administration",
-      "BTS Communication",
+      "Transport Logistique et Transit",
       "Licence Commerce & Administration",
-      "Licence Communication",
+      "BTS Commerce & Administration",
+      "Gestion des Ressources Humaines",
+      "Développeur d'Applications",
+      "Électrotechnique",
       "Master Commerce & Administration",
-      "Master Communication"
+      "Master Communication",
+      "Gestion Administrative des Entreprises",
+      "Maintenance Informatique et Réseau",
+      "BTS Communication",
+      "Licence Communication",
+      "Topographie",
+      "Comptabilité et Audit",
+      "Génie Civil"
     ],
     "domains": [
-      "Commerce & Administration",
-      "Communication",
+      "Administration",
       "Comptabilité & Fiscalité",
-      "Électronique & Automatisation",
+      "Génie Informatique",
       "Finance & Banque",
-      "Génie Informatique"
-    ]
+      "Communication",
+      "Commerce & Administration",
+      "Gestion",
+      "Électronique & Automatisation",
+      "Technologie"
+    ],
+    "lat": 6.130469937985162,
+    "lng": 1.22663485876848
   },
   {
     "id": "uni_068",
@@ -1579,9 +1766,18 @@
     "description": "La Faculté de Théologie des Assemblées de Dieu (FATAD), également connue sous le nom de West Africa Advanced School of Theology (WAAST), est un établissement d’enseignement supérieur privé situé à Lomé, au Togo. Fondée en 1971 sous l’appellation École Supérieure de Théologie de l’Afrique de l’Ouest (ESTAO), elle a été renommée FATAD en 1994 avec l’introduction de programmes de master. Affiliée ...",
     "filieres": [
       "Licence",
-      "Master"
+      "Master",
+      "Études Bibliques",
+      "Mission Théologique",
+      "Études Pentecôtistes",
+      "Théologie Pastorale"
     ],
-    "domains": []
+    "domains": [
+      "Formation Pastorale",
+      "Théologie"
+    ],
+    "lat": 6.149340751328654,
+    "lng": 1.1960943637378463
   },
   {
     "id": "uni_069",
@@ -1596,21 +1792,33 @@
     "phone": "+228 90 28 06 84",
     "description": "​L’École Supérieure de Formation Professionnelle FIMAC (ESFP-FIMAC), située à Lomé, est un établissement privé d’enseignement supérieur reconnu par le Ministère de l’Enseignement Supérieur et de la Recherche du Togo. Elle propose une gamme variée de formations professionnelles axées sur la pratique, visant à répondre aux besoins du marché de l’emploi.​ Les programmes offerts par ESFP-FIMAC couv...",
     "filieres": [
-      "BTS Commerce & Administration",
-      "BTS Comptabilité & Fiscalité",
-      "Licence Commerce & Administration",
       "Licence Comptabilité & Fiscalité",
+      "Licence Commerce & Administration",
+      "BTS Commerce & Administration",
+      "Gestion des Ressources Humaines",
+      "Marketing et Communication",
+      "Master Comptabilité & Fiscalité",
+      "BTS Comptabilité & Fiscalité",
+      "Gestion des Entreprises",
+      "Sécurité de l'Information",
       "Master Commerce & Administration",
-      "Master Comptabilité & Fiscalité"
+      "Finance et Comptabilité"
     ],
     "domains": [
-      "Commerce & Administration",
       "Comptabilité & Fiscalité",
-      "Électronique & Automatisation",
-      "Finance & Banque",
       "Génie Informatique",
-      "Hôtellerie & Restauration"
-    ]
+      "Ressources Humaines",
+      "Marketing",
+      "Finance & Banque",
+      "Commerce & Administration",
+      "Hôtellerie & Restauration",
+      "Gestion",
+      "Technologie de l'Information",
+      "Électronique & Automatisation",
+      "Finance"
+    ],
+    "lat": 6.126440165337582,
+    "lng": 1.2172155422193038
   },
   {
     "id": "uni_070",
@@ -1625,17 +1833,24 @@
     "phone": "+228 90 93 76 21",
     "description": "​L’École Supérieure du Tourisme et d’Hôtellerie Stella Matutina (ESTH-SM), située à Lomé, est un établissement privé d’enseignement supérieur agréé par le Ministère de l’Enseignement Supérieur et de la Recherche du Togo. Reconnue pour sa formation de qualité dans les domaines du tourisme, de l’hôtellerie et de la restauration, l’ESTH-SM offre des programmes adaptés aux besoins du marché de l’em...",
     "filieres": [
+      "Restauration et Hébergement",
       "BTS Hôtellerie & Restauration",
-      "BTS Tourisme & Loisirs",
       "Licence Hôtellerie & Restauration",
-      "Licence Tourisme & Loisirs",
+      "Master Tourisme & Loisirs",
+      "Hôtellerie",
+      "BTS Tourisme & Loisirs",
+      "Tourisme et Loisirs",
       "Master Hôtellerie & Restauration",
-      "Master Tourisme & Loisirs"
+      "Licence Tourisme & Loisirs"
     ],
     "domains": [
+      "Hôtellerie",
       "Hôtellerie & Restauration",
+      "Tourisme",
       "Tourisme & Loisirs"
-    ]
+    ],
+    "lat": 6.127916473861522,
+    "lng": 1.1983266743592456
   },
   {
     "id": "uni_071",
@@ -1651,12 +1866,21 @@
     "description": "L’École Supérieure des Techniques et Arts de la Communication (ESTAC) est un établissement privé d’enseignement supérieur situé à Lomé, au Togo. Fondée en 2003 par un groupe de professionnels des médias, l’ESTAC a pour mission de combler le vide laissé par le départ à la retraite de nombreux journalistes formés dans de grandes écoles africaines et européennes. L’ESTAC propose des formations pro...",
     "filieres": [
       "BTS Sciences",
-      "Licence Sciences",
-      "Master Sciences"
+      "Journalisme et Numérique",
+      "Master Sciences",
+      "Relations Publiques et Communication Institutionnelle",
+      "Publicité et Communication d'Entreprise",
+      "Audiovisuel et Production Multimédia",
+      "Licence Sciences"
     ],
     "domains": [
-      "Sciences"
-    ]
+      "Communication",
+      "Journalisme",
+      "Sciences",
+      "Audiovisuel"
+    ],
+    "lat": 6.154628514642423,
+    "lng": 1.1974781689287521
   },
   {
     "id": "uni_072",
@@ -1682,7 +1906,9 @@
       "Éducation",
       "Lettres & Langues",
       "Sciences"
-    ]
+    ],
+    "lat": 6.152234535244571,
+    "lng": 1.1961714048887986
   },
   {
     "id": "uni_073",
@@ -1697,13 +1923,18 @@
     "phone": "+228 91312450",
     "description": "L’École Supérieure d’Architecture et de Topographie (ESTABAT), anciennement connue sous le nom d’École Supérieure des Techniques Appliquées en Bâtiment, est un établissement privé d’enseignement supérieur basé à Lomé, au Togo. Spécialisée dans les domaines de l’architecture et de la topographie, ESTABAT propose des formations professionnalisantes adaptées aux besoins du marché de la constructio...",
     "filieres": [
-      "BTS Architecture",
+      "Architecture",
+      "Master Architecture",
       "Licence Architecture",
-      "Master Architecture"
+      "BTS Architecture",
+      "Topographie"
     ],
     "domains": [
+      "Topographie",
       "Architecture"
-    ]
+    ],
+    "lat": 6.1288651192775125,
+    "lng": 1.221994387679795
   },
   {
     "id": "uni_074",
@@ -1727,7 +1958,9 @@
       "Business",
       "Comptabilité & Fiscalité",
       "Finance & Banque"
-    ]
+    ],
+    "lat": 6.1242404704914515,
+    "lng": 1.2006169008705134
   },
   {
     "id": "uni_075",
@@ -1742,11 +1975,22 @@
     "phone": "+228 90 04 69 44",
     "description": "L’École Supérieure des Études Cinématographiques et de l’Audiovisuel (ESEC), fondée le 3 novembre 2006 à Lomé, est un établissement privé d’enseignement supérieur agréé par l’État togolais. Située au 74, rue 184, derrière l’École Primaire d’Aflao-Gakli, dans le quartier Djidjolé, elle est spécialisée dans la formation aux métiers du cinéma, de l’audiovisuel et de la communication. ESEC propose ...",
     "filieres": [
-      "BTS",
+      "Production Audiovisuelle",
+      "Montage et Postproduction",
       "Licence",
-      "Master"
+      "Master",
+      "Scénario et Adaptation",
+      "Animation et Effets Visuels",
+      "Réalisation Cinématographique",
+      "Gestion de la Production Cinématographique",
+      "BTS"
     ],
-    "domains": []
+    "domains": [
+      "Cinéma",
+      "Audiovisuel"
+    ],
+    "lat": 6.130488553371195,
+    "lng": 1.2164972028070087
   },
   {
     "id": "uni_076",
@@ -1761,13 +2005,22 @@
     "phone": "+228 97695980",
     "description": "L’École Supérieure de Technologie du Cinéma et de l’Audiovisuel (ESTECA), située à Lomé, est un établissement privé d’enseignement supérieur agréé par l’État togolais. Spécialisée dans les métiers du cinéma, de l’audiovisuel et des arts numériques, l’école propose des formations professionnalisantes aux niveaux BTS, Licence et Master.​ ESTECA offre une variété de programmes dans plusieurs domai...",
     "filieres": [
+      "Réalisation Audiovisuelle",
+      "Montage et Postproduction",
       "BTS Sciences",
-      "Licence Sciences",
-      "Master Sciences"
+      "Master Sciences",
+      "Animation et Effets Visuels",
+      "Techniques de la Production Audiovisuelle",
+      "Gestion de la Production Cinématographique",
+      "Licence Sciences"
     ],
     "domains": [
-      "Sciences"
-    ]
+      "Sciences",
+      "Cinéma",
+      "Audiovisuel"
+    ],
+    "lat": 6.127964634706509,
+    "lng": 1.2068306458583384
   },
   {
     "id": "uni_077",
@@ -1782,20 +2035,34 @@
     "phone": "+228 22 56 04 90",
     "description": "L’École Supérieure de Management des Affaires (ESMA), fondée le 6 juillet 2012 à Lomé, est une institution d’enseignement supérieur reconnue par le Ministère de l’Enseignement Supérieur et de la Recherche du Togo. Elle propose des formations diplômantes en BTS, Licence et Master, alignées sur le système LMD, avec des diplômes reconnus tant au niveau national qu’international.​ Formations propos...",
     "filieres": [
-      "BTS Agronomie",
-      "BTS Communication",
+      "Création et Gestion d'Entreprises",
       "Licence Agronomie",
-      "Licence Communication",
+      "Gestion des Ressources Humaines",
+      "Marketing Stratégique",
+      "Management des Organisations",
       "Master Agronomie",
-      "Master Communication"
+      "Master Communication",
+      "Gestion de Projet",
+      "Gestion Financière",
+      "Communication d'Entreprise",
+      "BTS Communication",
+      "Licence Communication",
+      "Comptabilité et Audit",
+      "BTS Agronomie"
     ],
     "domains": [
-      "Agronomie",
-      "Communication",
+      "Management et Administration des Affaires",
       "Comptabilité & Fiscalité",
+      "Marketing et Communication",
+      "Agronomie",
+      "Finance & Banque",
+      "Communication",
+      "Entrepreneuriat",
       "Développement Logiciel",
-      "Finance & Banque"
-    ]
+      "Finance et Comptabilité"
+    ],
+    "lat": 6.153071344183897,
+    "lng": 1.2110666507338514
   },
   {
     "id": "uni_078",
@@ -1811,14 +2078,25 @@
     "description": "L’École Supérieure d’Audit et de Management (ESAM), située à Lomé, est une institution d’enseignement supérieur privé spécialisée dans les domaines de la gestion, de l’audit et du management. Reconnue par l’État togolais, elle a pour mission de former des cadres dynamiques, compétents et éthiques, capables d’évoluer dans un environnement économique en mutation. Structures et capacités L’Ecole e...",
     "filieres": [
       "Licence Comptabilité & Fiscalité",
-      "Licence Droit",
+      "Audit et Contrôle de Gestion",
+      "Droit des Affaires et Fiscalité",
       "Master Comptabilité & Fiscalité",
-      "Master Droit"
+      "Gestion des Entreprises",
+      "Master Droit",
+      "Management des Ressources Humaines",
+      "Licence Droit",
+      "Finance et Comptabilité"
     ],
     "domains": [
       "Comptabilité & Fiscalité",
-      "Droit"
-    ]
+      "Gestion",
+      "Management",
+      "Droit",
+      "Audit",
+      "Finance"
+    ],
+    "lat": 6.122332030882163,
+    "lng": 1.1932579590862817
   },
   {
     "id": "uni_079",
@@ -1843,7 +2121,9 @@
     "domains": [
       "Communication",
       "Finance & Banque"
-    ]
+    ],
+    "lat": 6.149011539249225,
+    "lng": 1.2267896342055826
   },
   {
     "id": "uni_080",
@@ -1868,7 +2148,9 @@
     "domains": [
       "Arts",
       "Arts du Spectacle"
-    ]
+    ],
+    "lat": 6.13482800150915,
+    "lng": 1.2114960030715696
   },
   {
     "id": "uni_081",
@@ -1886,7 +2168,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.129585127212216,
+    "lng": 1.2273253091164087
   },
   {
     "id": "uni_082",
@@ -1906,7 +2190,9 @@
     ],
     "domains": [
       "Sciences"
-    ]
+    ],
+    "lat": 6.129187666772539,
+    "lng": 1.1993525074612217
   },
   {
     "id": "uni_083",
@@ -1921,21 +2207,36 @@
     "phone": "+228 93 37 30 54",
     "description": "L’École des Cadres de Lomé, fondée en 1997, est une institution d’enseignement supérieur privé agréée par l’arrêté n°96/068/METFPA du 12 décembre 1996. Située dans le quartier Avénou, elle se distingue par son engagement à former des cadres dynamiques et des entrepreneurs aptes à répondre aux défis économiques contemporains.​ L’établissement propose une gamme variée de formations, notamment des...",
     "filieres": [
-      "BTS Communication",
-      "BTS Comptabilité & Fiscalité",
-      "Licence Communication",
       "Licence Comptabilité & Fiscalité",
+      "Administration Publique",
+      "Gestion des Ressources Humaines",
+      "Marketing Stratégique",
+      "Relations Internationales",
+      "Master Comptabilité & Fiscalité",
+      "BTS Comptabilité & Fiscalité",
+      "Management des Organisations",
       "Master Communication",
-      "Master Comptabilité & Fiscalité"
+      "Gestion Financière",
+      "Communication d'Entreprise",
+      "BTS Communication",
+      "Droit des Affaires",
+      "Licence Communication",
+      "Comptabilité et Audit"
     ],
     "domains": [
-      "Communication",
+      "Droit et Sciences Politiques",
+      "Gestion et Administration",
       "Comptabilité & Fiscalité",
-      "Droit",
-      "Finance & Banque",
       "Génie Informatique",
-      "Marketing"
-    ]
+      "Marketing et Communication",
+      "Marketing",
+      "Finance & Banque",
+      "Communication",
+      "Droit",
+      "Finance et Comptabilité"
+    ],
+    "lat": 6.125080777087603,
+    "lng": 1.2059738825209543
   },
   {
     "id": "uni_084",
@@ -1964,7 +2265,9 @@
       "Finance & Banque",
       "Génie Informatique",
       "Mathématiques"
-    ]
+    ],
+    "lat": 6.150879096697636,
+    "lng": 1.2012194635334115
   },
   {
     "id": "uni_085",
@@ -1987,7 +2290,9 @@
     "domains": [
       "Médecine",
       "Sciences"
-    ]
+    ],
+    "lat": 6.150099776709718,
+    "lng": 1.2145073665617128
   },
   {
     "id": "uni_086",
@@ -2002,17 +2307,32 @@
     "phone": "+228 22 22 11 30",
     "description": "Le Centre Informatique de Formation et d’Orientation Professionnelles (CIFOP), fondé en 1989 à Lomé, est une institution togolaise de référence dans le domaine de la formation professionnelle et universitaire. Situé sur la route de Kpalimé, en face du Collège Protestant de Tokoin, le CIFOP s’est donné pour mission de proposer des solutions de formation efficaces et adaptées aux besoins des entr...",
     "filieres": [
-      "BTS Communication",
+      "Licence Comptabilité & Fiscalité",
+      "Marketing et Vente",
+      "Gestion des Ressources Humaines",
+      "Réseaux et Télécommunications",
+      "Comptabilité",
       "BTS Comptabilité & Fiscalité",
+      "Gestion des Entreprises",
+      "Maintenance Industrielle",
+      "Électrotechnique",
+      "Commerce International",
+      "BTS Communication",
       "Licence Communication",
-      "Licence Comptabilité & Fiscalité"
+      "Développement de Logiciels"
     ],
     "domains": [
-      "Communication",
+      "Informatique et Télécommunications",
+      "Gestion et Administration",
       "Comptabilité & Fiscalité",
+      "Génie Informatique",
+      "Techniques Industrielles",
       "Finance & Banque",
-      "Génie Informatique"
-    ]
+      "Communication",
+      "Commerce et Marketing"
+    ],
+    "lat": 6.138950776495959,
+    "lng": 1.2265323539492519
   },
   {
     "id": "uni_087",
@@ -2027,18 +2347,20 @@
     "phone": "+228 22 26 69 13",
     "description": "​Le Centre de Formation Bancaire du Togo (CFBT), fondé en 1979 par l’Association Professionnelle des Banques (APB) du Togo, est une institution de référence en matière de formation bancaire et financière en Afrique de l’Ouest. Situé à Lomé, il a formé près de 25 000 professionnels en plus de 40 ans, contribuant significativement au développement du secteur bancaire togolais et sous-régional. Le...",
     "filieres": [
-      "BTS Comptabilité & Fiscalité",
-      "BTS Finance & Banque",
       "Licence Comptabilité & Fiscalité",
       "Licence Finance & Banque",
       "Master Comptabilité & Fiscalité",
+      "BTS Comptabilité & Fiscalité",
+      "BTS Finance & Banque",
       "Master Finance & Banque"
     ],
     "domains": [
+      "Marketing",
       "Comptabilité & Fiscalité",
-      "Finance & Banque",
-      "Marketing"
-    ]
+      "Finance & Banque"
+    ],
+    "lat": 6.1392379464310505,
+    "lng": 1.2171566611461038
   },
   {
     "id": "uni_088",
@@ -2053,11 +2375,28 @@
     "phone": "+228 22 22 98 58",
     "description": "L’École Supérieure d’Information, d’Administration et de Gestion (ESIAG AMOR DEI) est un établissement d’enseignement supérieur privé qui propose des formations en BTS, Licence et Master, dans des domaines variés tels que l’informatique, l’administration et la gestion. Située à Lomé, l’école se concentre sur la réduction de l’écart entre la formation académique et les besoins du marché de l’emp...",
     "filieres": [
-      "BTS",
+      "Administration",
       "Licence",
-      "Master"
+      "Master",
+      "Communication des Entreprises",
+      "Action Commerciale",
+      "Assistance de Gestion PMI/PME",
+      "Réseaux Locaux",
+      "Finances Banques",
+      "Force de Vente",
+      "Développement d'Applications",
+      "Commerce International",
+      "Transport Logistique – Transit Douane",
+      "Comptabilité et Gestion des Entreprises",
+      "BTS"
     ],
-    "domains": []
+    "domains": [
+      "Administration",
+      "Informatique",
+      "Gestion"
+    ],
+    "lat": 6.154460009300223,
+    "lng": 1.1932111950192297
   },
   {
     "id": "uni_089",
@@ -2071,8 +2410,92 @@
     "email": "apiifordd@gmail.com",
     "phone": "+228 98 99 87 50",
     "description": "L’Institut de Formation et de Recherche pour Le Développement Durable (IFORDD) a pour vision de former en Afrique des ressources humaines à même de penser, de concevoir et de piloter avec confiance et dynamisme l’intégration de l’économie africaine du savoir au sein de l’économie mondiale. Il a pour mission de fournir un enseignement supérieur de qualité ainsi que des services de recherche adap...",
-    "filieres": [],
-    "domains": []
+    "filieres": [
+      "LMD (public) ; BTS/Licence/Master (privé)",
+      "BTS à Master",
+      "Licence Pro à Master",
+      "Licence Pro à Doctorat",
+      "UL, UK",
+      "Certificat",
+      "42",
+      "CAMES, MESRS Togo, METFP, REESAO",
+      "1 (UK)",
+      "BTS à Ingénieur",
+      "Licence Pro",
+      "Licence à Master",
+      "Établissements",
+      "Énergies Renouvelables",
+      "Gestion de l'Environnement",
+      "Agriculture Durable",
+      "Économie Verte",
+      "Licence",
+      "Société, Environnement et Développement Durable (SEDD)",
+      "Licence Pro à Ingénieur",
+      "Licence à Doctorat",
+      "2 (UL, UK)",
+      "UL",
+      "UK",
+      "~15 000 étudiants",
+      "Grade",
+      "~38",
+      "Français (dominant) ; Français/Anglais (IPNET, AIA)",
+      "~2 000 étudiants (14 nationalités)",
+      "Nombre",
+      "Gestion des Ressources Naturelles",
+      "Master",
+      "BTS à Doctorat",
+      "40",
+      "74 195 étudiants (2023-2024)",
+      "BTS",
+      "IBLT"
+    ],
+    "domains": [
+      "IFORDD",
+      "AIA-AUA, UCAO-UUT, UST-TG",
+      "UL (CIC), UCAO-UUT, UST-TG",
+      "UK, UCAO-UUT, UST-TG",
+      "UL, UK",
+      "Développement Durable",
+      "UL, UK, UCAO-UUT, UST-TG",
+      "ESTECA, ESEC",
+      "CFP Ancila",
+      "Établissements",
+      "AIA-AUA",
+      "IPNET, AIA-AUA, UCAO-UUT, UST-TG, ELATSA, ESIG, ESTEG, IBLT",
+      "AIA-AUA, CIB-INTA, FORMATEC, ESIAG",
+      "IPNET, CIB-INTA, CEFOP-ASA, UL (CIC), CIFOP, ELATSA, ESIG, ESTEG",
+      "UK, IBLT",
+      "ESTABAT",
+      "UL",
+      "UK",
+      "UL, UK, UCAO-UUT, UST-TG, CIB-INTA, ESMA, ESIG, FIMAC",
+      "Société",
+      "UL (ISICA), ESTAC",
+      "IPNET, CIB-INTA, CEFOP-ASA, CIFOP, ELATSA, ESIG, ESTEG, FORMATEC, IFGI",
+      "UL, UK, UCAO-UUT, UST-TG, CFBT, CIB-INTA, CEFOP-ASA, ESAM, ESIG, ESMA, IAEC, IALL, IBLT, ESBA",
+      "CFP Ancila, ESTH-SM, Hôtel École Avenida",
+      "COA",
+      "ESTABAT, FORMATEC",
+      "IPNET",
+      "Environnement",
+      "UL (ISICA), ESTAC, IBLT",
+      "IPNET, IFORDD",
+      "UL (CIC), UCAO-UUT, IBLT",
+      "UL, UK, UCAO-UUT, CIFOP, CEFOP-ASA, ELATSA, ESAM, ESMA, IFGI",
+      "UL (ENSI), ELATSA, ESTEG, CEFOP-ASA, FORMATEC",
+      "ESTH-SM, Hôtel École Avenida",
+      "UL (ISICA)",
+      "FATAD",
+      "ESPC",
+      "IADSS",
+      "Ecole des Cadres, IBLT",
+      "UL (ENSI), CIB-INTA, UCAO-UUT, UST-TG, ESTEG, ESPC, FORMATEC, ELATSA",
+      "CFBT",
+      "UK, UCAO-UUT, UST-TG, ESAM, ESAG",
+      "UL (ENSI), ELATSA, ESTEG"
+    ],
+    "lat": 6.153930774247636,
+    "lng": 1.2074962454710754
   },
   {
     "id": "uni_090",
@@ -2090,7 +2513,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.131329949661769,
+    "lng": 1.2074361517107464
   },
   {
     "id": "uni_091",
@@ -2109,7 +2534,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.138648274406725,
+    "lng": 1.2051342035656398
   },
   {
     "id": "uni_092",
@@ -2139,7 +2566,9 @@
       "Électronique & Automatisation",
       "Finance & Banque",
       "Génie Informatique"
-    ]
+    ],
+    "lat": 6.148128417939619,
+    "lng": 1.1937455568576818
   },
   {
     "id": "uni_093",
@@ -2158,7 +2587,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.148523972854205,
+    "lng": 1.2300525149559192
   },
   {
     "id": "uni_094",
@@ -2176,7 +2607,9 @@
       "Licence",
       "Master"
     ],
-    "domains": []
+    "domains": [],
+    "lat": 6.15645880079039,
+    "lng": 1.220336378358082
   },
   {
     "id": "uni_095",
@@ -2203,7 +2636,9 @@
       "Lettres & Langues",
       "Santé",
       "Sciences"
-    ]
+    ],
+    "lat": 6.142974884799456,
+    "lng": 1.2006220384825497
   },
   {
     "id": "uni_096",
@@ -2224,7 +2659,9 @@
     ],
     "domains": [
       "Architecture"
-    ]
+    ],
+    "lat": 6.143626664689781,
+    "lng": 1.217741125535695
   },
   {
     "id": "uni_097",
@@ -2264,6 +2701,8 @@
       "Électrotechnique",
       "Énergies Renouvelables",
       "Intelligence Artificielle"
-    ]
+    ],
+    "lat": 6.120161909305699,
+    "lng": 1.2230244381469806
   }
 ]
