@@ -128,7 +128,6 @@ export default function ChatbotPage() {
   const [isTyping, setIsTyping] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
   const [profile, setProfile] = useState<UserProfile | null>(null);
-  const [sidebarTab, setSidebarTab] = useState<"iki" | "profil">("iki");
   const [showBanner, setShowBanner] = useState(true);
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -279,228 +278,88 @@ export default function ChatbotPage() {
       {/* ══ SIDEBAR ═══════════════════════════════════════════════════════ */}
       <aside className="hidden xl:flex w-72 flex-col border-r border-border bg-card shrink-0">
 
-        {/* Sidebar Tabs */}
-        <div className="flex border-b border-border shrink-0">
-          <button
-            onClick={() => setSidebarTab("iki")}
-            className={`flex-1 py-3 text-xs font-semibold transition-colors ${
-              sidebarTab === "iki"
-                ? "text-primary border-b-2 border-primary bg-primary-light"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Iki
-          </button>
-          <button
-            onClick={() => setSidebarTab("profil")}
-            className={`flex-1 py-3 text-xs font-semibold transition-colors ${
-              sidebarTab === "profil"
-                ? "text-primary border-b-2 border-primary bg-primary-light"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            Mon profil
-          </button>
-        </div>
-
         <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-5">
 
-          {/* ── Tab Iki ── */}
-          {sidebarTab === "iki" && (
-            <>
-              {/* Identity */}
-              <div className="flex flex-col items-center gap-3 text-center pt-2">
-                <div className="relative">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary shadow-lg">
-                    <svg className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
-                    </svg>
-                  </div>
-                  <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-success ring-2 ring-card">
-                    <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
-                  </span>
-                </div>
-                <div>
-                  <h2 className="text-sm font-bold text-foreground">Iki</h2>
-                  <p className="text-xs text-muted-foreground mt-0.5">Conseiller d'orientation IA</p>
-                  <p className="text-xs text-muted-foreground italic mt-1 leading-relaxed">Inspire de l'Ikigai — ta raison d'etre</p>
-                </div>
+          {/* Identity */}
+          <div className="flex flex-col items-center gap-3 text-center pt-2">
+            <div className="relative">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary shadow-lg">
+                <svg className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                </svg>
               </div>
+              <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-success ring-2 ring-card">
+                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
+              </span>
+            </div>
+            <div>
+              <h2 className="text-sm font-bold text-foreground">Iki</h2>
+              <p className="text-xs text-muted-foreground mt-0.5">Conseiller d'orientation IA</p>
+              <p className="text-xs text-muted-foreground italic mt-1 leading-relaxed">Inspire de l'Ikigai — ta raison d'etre</p>
+            </div>
+          </div>
 
-              {/* Expertise */}
-              <div>
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Expertises</p>
-                <div className="flex flex-col gap-1.5">
-                  {IKI_EXPERTISE.map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 rounded-lg px-3 py-2 bg-surface border border-border">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
-                      <span className="text-xs font-medium text-foreground">{item}</span>
-                    </div>
-                  ))}
+          {/* Expertise */}
+          <div>
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Expertises</p>
+            <div className="flex flex-col gap-1.5">
+              {IKI_EXPERTISE.map((item) => (
+                <div key={item} className="flex items-center gap-2.5 rounded-lg px-3 py-2 bg-surface border border-border">
+                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
+                  <span className="text-xs font-medium text-foreground">{item}</span>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
 
-              {/* New chat button */}
-              <button
-                onClick={startNewChat}
-                className="w-full rounded-xl border border-dashed border-primary/40 py-2.5 text-xs font-medium text-primary hover:bg-primary-light transition-colors"
-              >
-                + Nouvelle conversation
-              </button>
+          {/* New chat button */}
+          <button
+            onClick={startNewChat}
+            className="w-full rounded-xl border border-dashed border-primary/40 py-2.5 text-xs font-medium text-primary hover:bg-primary-light transition-colors"
+          >
+            + Nouvelle conversation
+          </button>
 
-              {/* Recent sessions */}
-              {sessions.length > 0 && (
-                <div>
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
-                    Conversations recentes
-                  </p>
-                  <div className="flex flex-col gap-1">
-                    {sessions.slice(0, 5).map((s) => (
-                      <button
-                        key={s.id}
-                        onClick={() => switchSession(s.id)}
-                        className={`text-left rounded-lg px-3 py-2.5 text-xs transition-colors truncate ${
-                          s.id === activeSessionId
-                            ? "bg-primary-light text-primary font-semibold"
-                            : "text-muted-foreground hover:text-foreground hover:bg-surface"
-                        }`}
-                      >
-                        {s.titre}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Platform links */}
-              <div className="mt-auto">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">La plateforme</p>
-                <div className="flex flex-col gap-0.5">
-                  {[
-                    { href: "/formations", label: "Formations" },
-                    { href: "/universities", label: "Universites" },
-                    { href: "/recommendations", label: "Metiers" },
-                    { href: "/news", label: "Actualites" },
-                  ].map((link) => (
-                    <Link key={link.href} href={link.href} className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
-                      {link.label}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </>
-          )}
-
-          {/* ── Tab Profil (No-AI) ── */}
-          {sidebarTab === "profil" && (
-            <>
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between">
-                  <h3 className="text-sm font-bold text-foreground">Mon profil</h3>
-                  <Link
-                    href="/onboarding"
-                    className="text-xs text-primary hover:underline font-medium"
+          {/* Recent sessions */}
+          {sessions.length > 0 && (
+            <div>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
+                Conversations recentes
+              </p>
+              <div className="flex flex-col gap-1">
+                {sessions.slice(0, 5).map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => switchSession(s.id)}
+                    className={`text-left rounded-lg px-3 py-2.5 text-xs transition-colors truncate ${
+                      s.id === activeSessionId
+                        ? "bg-primary-light text-primary font-semibold"
+                        : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                    }`}
                   >
-                    Modifier
-                  </Link>
-                </div>
-
-                {profile ? (
-                  <>
-                    {/* Niveau */}
-                    {profile.niveau && (
-                      <div className="rounded-xl border border-border bg-surface p-4">
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">Niveau scolaire</p>
-                        <p className="text-sm font-semibold text-foreground">{profile.niveau}</p>
-                      </div>
-                    )}
-
-                    {/* Interets */}
-                    {profile.interets && profile.interets.length > 0 && (
-                      <div className="rounded-xl border border-border bg-surface p-4">
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Centres d'interet</p>
-                        <div className="flex flex-wrap gap-1.5">
-                          {profile.interets.map((i) => (
-                            <span key={i} className="rounded-full border border-primary/20 bg-primary-light px-2.5 py-1 text-xs font-medium text-primary">
-                              {i}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Loisirs */}
-                    {profile.loisirs && profile.loisirs.length > 0 && (
-                      <div className="rounded-xl border border-border bg-surface p-4">
-                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Loisirs</p>
-                        <div className="flex flex-wrap gap-1.5">
-                          {profile.loisirs.map((l) => (
-                            <span key={l} className="rounded-full border border-border bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
-                              {l}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <div className="rounded-xl border border-dashed border-border bg-surface p-5 text-center">
-                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">
-                      Tu n'as pas encore completes ton profil. Reponds a quelques questions pour qu'Iki te conseille mieux !
-                    </p>
-                    <Link
-                      href="/onboarding"
-                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-white hover:bg-primary-hover transition-colors"
-                    >
-                      Completer mon profil
-                    </Link>
-                  </div>
-                )}
-
-                {/* Historique des conversations */}
-                {sessions.length > 0 && (
-                  <div className="rounded-xl border border-border bg-surface p-4">
-                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
-                      Historique des chats ({sessions.length})
-                    </p>
-                    <div className="flex flex-col gap-1.5">
-                      {sessions.map((s) => (
-                        <button
-                          key={s.id}
-                          onClick={() => { switchSession(s.id); setSidebarTab("iki"); }}
-                          className="text-left rounded-lg px-2 py-2 text-xs text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors truncate"
-                        >
-                          {s.titre}
-                        </button>
-                      ))}
-                    </div>
-                    <button
-                      onClick={() => { setSessions([]); saveSessions([]); startNewChat(); }}
-                      className="mt-3 w-full text-xs text-error hover:underline"
-                    >
-                      Supprimer tout l'historique
-                    </button>
-                  </div>
-                )}
-
-                {/* Explorer */}
-                <div className="rounded-xl border border-border bg-surface p-4">
-                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Explorer</p>
-                  <div className="flex flex-col gap-1">
-                    {[
-                      { href: "/recommendations", label: "Metiers recommandes pour moi" },
-                      { href: "/formations", label: "Formations disponibles" },
-                      { href: "/universities", label: "Carte des universites" },
-                    ].map((link) => (
-                      <Link key={link.href} href={link.href} className="rounded-lg px-2 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
-                        {link.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+                    {s.titre}
+                  </button>
+                ))}
               </div>
-            </>
+            </div>
           )}
+
+          {/* Platform links */}
+          <div className="mt-auto">
+            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">La plateforme</p>
+            <div className="flex flex-col gap-0.5">
+              {[
+                { href: "/formations", label: "Formations" },
+                { href: "/universities", label: "Universites" },
+                { href: "/recommendations", label: "Metiers" },
+                { href: "/news", label: "Actualites" },
+              ].map((link) => (
+                <Link key={link.href} href={link.href} className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </aside>
 
