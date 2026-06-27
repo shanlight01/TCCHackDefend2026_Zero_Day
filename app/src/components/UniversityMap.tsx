@@ -122,7 +122,7 @@ export default function UniversityMap({
 
   if (!isMounted)
     return (
-      <div className="h-[540px] w-full animate-pulse bg-muted rounded-2xl flex items-center justify-center text-muted-foreground text-sm">
+      <div className="h-[400px] w-full animate-pulse bg-muted rounded-2xl flex items-center justify-center text-muted-foreground text-sm">
         Chargement de la carte…
       </div>
     );
@@ -220,7 +220,7 @@ export default function UniversityMap({
       </div>
 
       {/* ─── Map ─── */}
-      <div className="h-[540px] w-full rounded-2xl overflow-hidden border border-border shadow-premium relative z-0">
+      <div className="h-[400px] w-full rounded-2xl overflow-hidden border border-border shadow-premium relative z-0">
         <MapContainer
           center={[8.6195, 0.8248]}
           zoom={7}
