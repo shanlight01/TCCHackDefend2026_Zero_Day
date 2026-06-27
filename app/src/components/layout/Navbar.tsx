@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useTheme } from "./ThemeProvider";
+import { ProfileDropdown } from "./ProfileDropdown";
 
 const navLinks = [
   { href: "/formations", label: "Formations" },
@@ -122,6 +123,9 @@ export function Navbar() {
           >
             Commencer
           </Link>
+          
+          {/* Profile Dropdown */}
+          <ProfileDropdown />
         </div>
 
         {/* Mobile menu button */}
