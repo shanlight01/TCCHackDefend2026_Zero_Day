@@ -55,7 +55,7 @@ export function ProfileDropdown() {
               👤
             </div>
             <div>
-              <p className="text-sm font-semibold text-foreground">Mon profil (No-IA)</p>
+              <p className="text-sm font-semibold text-foreground">Mon profil</p>
               <p className="text-xs text-muted-foreground">Donnees locales</p>
             </div>
           </div>
