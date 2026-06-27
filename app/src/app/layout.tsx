@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
+import { AuthProvider } from "@/lib/supabase/AuthProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -52,9 +53,11 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <ThemeProvider>
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <ConditionalFooter />
+          <AuthProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <ConditionalFooter />
+          </AuthProvider>
         </ThemeProvider>
       </body>
     </html>
