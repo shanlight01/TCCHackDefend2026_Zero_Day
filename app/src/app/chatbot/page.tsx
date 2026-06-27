@@ -1,7 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+
+// ─── Types ──────────────────────────────────────────────────────────────────
 
 interface Message {
   id: string;
@@ -11,49 +13,88 @@ interface Message {
   questionsSuivantes?: string[];
 }
 
+interface ChatSession {
+  id: string;
+  titre: string;
+  messages: Message[];
+  createdAt: string;
+}
+
+interface UserProfile {
+  niveau?: string;
+  interets?: string[];
+  loisirs?: string[];
+}
+
+// ─── Constants ───────────────────────────────────────────────────────────────
+
 const QUICK_STARTS = [
-  { label: "Universités pour l'informatique" },
-  { label: "Métiers qui recrutent le plus au Togo" },
-  { label: "Obtenir une bourse pour étudier à l'étranger" },
-  { label: "Je ne sais pas quelle filière choisir, aide-moi" },
-  { label: "Salaires dans la tech au Togo" },
-  { label: "Comment construire mon projet professionnel ?" },
+  "Universites pour l'informatique au Togo",
+  "Metiers qui recrutent le plus au Togo",
+  "Comment obtenir une bourse pour l'etranger",
+  "Je ne sais pas quelle filiere choisir",
+  "Salaires dans la tech au Togo",
+  "Comment construire mon projet professionnel",
 ];
 
 const IKI_EXPERTISE = [
-  "Universités togolaises",
-  "Filières et formations",
-  "Marché de l'emploi",
-  "Bourses et mobilité",
+  "Universites togolaises",
+  "Filieres et formations",
+  "Marche de l'emploi",
+  "Bourses et mobilite",
   "Orientation psychologique",
   "Projet professionnel",
 ];
 
-/** Simple Markdown-like renderer (gras, italique, listes) sans dépendance externe */
+const STORAGE_SESSIONS_KEY = "iki_chat_sessions";
+const STORAGE_ACTIVE_KEY = "iki_active_session";
+
+// ─── Helpers ────────────────────────────────────────────────────────────────
+
+function generateId() {
+  return Math.random().toString(36).slice(2) + Date.now().toString(36);
+}
+
+function loadSessions(): ChatSession[] {
+  try {
+    const raw = localStorage.getItem(STORAGE_SESSIONS_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveSessions(sessions: ChatSession[]) {
+  try {
+    localStorage.setItem(STORAGE_SESSIONS_KEY, JSON.stringify(sessions));
+  } catch {
+    // quota exceeded — on ne plante pas
+  }
+}
+
+function loadProfile(): UserProfile | null {
+  try {
+    const raw = localStorage.getItem("careerProfile");
+    return raw ? JSON.parse(raw) : null;
+  } catch {
+    return null;
+  }
+}
+
+// ─── Markdown renderer simple (sans dépendance externe) ──────────────────────
+
 function SimpleMarkdown({ text }: { text: string }) {
   const lines = text.split("\n");
   return (
     <div className="space-y-1.5">
       {lines.map((line, i) => {
         if (!line.trim()) return <div key={i} className="h-1" />;
-
-        // Heading ##
         if (line.startsWith("## ")) {
-          return (
-            <p key={i} className="font-semibold text-foreground text-sm mt-2">
-              {line.replace(/^## /, "")}
-            </p>
-          );
+          return <p key={i} className="font-semibold text-foreground text-sm mt-2">{line.replace(/^## /, "")}</p>;
         }
-        // Heading #
         if (line.startsWith("# ")) {
-          return (
-            <p key={i} className="font-bold text-foreground text-base mt-2">
-              {line.replace(/^# /, "")}
-            </p>
-          );
+          return <p key={i} className="font-bold text-foreground text-base mt-2">{line.replace(/^# /, "")}</p>;
         }
-        // List item
         if (line.match(/^[-*•]\s/)) {
           const content = line.replace(/^[-*•]\s/, "");
           return (
@@ -63,12 +104,7 @@ function SimpleMarkdown({ text }: { text: string }) {
             </div>
           );
         }
-        // Normal paragraph
-        return (
-          <p key={i} className="text-sm leading-relaxed">
-            {renderInline(line)}
-          </p>
-        );
+        return <p key={i} className="text-sm leading-relaxed">{renderInline(line)}</p>;
       })}
     </div>
   );
@@ -77,43 +113,115 @@ function SimpleMarkdown({ text }: { text: string }) {
 function renderInline(text: string): React.ReactNode {
   const parts = text.split(/(\*\*.*?\*\*|_.*?_)/g);
   return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return <strong key={i}>{part.slice(2, -2)}</strong>;
-    }
-    if (part.startsWith("_") && part.endsWith("_")) {
-      return <em key={i}>{part.slice(1, -1)}</em>;
-    }
+    if (part.startsWith("**") && part.endsWith("**")) return <strong key={i}>{part.slice(2, -2)}</strong>;
+    if (part.startsWith("_") && part.endsWith("_")) return <em key={i}>{part.slice(1, -1)}</em>;
     return part;
   });
 }
 
+// ─── Main Component ──────────────────────────────────────────────────────────
+
 export default function ChatbotPage() {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [sessions, setSessions] = useState<ChatSession[]>([]);
+  const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
   const [input, setInput] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const [showWelcome, setShowWelcome] = useState(true);
+  const [profile, setProfile] = useState<UserProfile | null>(null);
+  const [sidebarTab, setSidebarTab] = useState<"iki" | "profil">("iki");
+  const [showBanner, setShowBanner] = useState(true);
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  // Load from localStorage on mount
+  useEffect(() => {
+    const loadedSessions = loadSessions();
+    setSessions(loadedSessions);
+    setProfile(loadProfile());
+
+    const savedActiveId = localStorage.getItem(STORAGE_ACTIVE_KEY);
+    if (savedActiveId && loadedSessions.find((s) => s.id === savedActiveId)) {
+      setActiveSessionId(savedActiveId);
+      setShowWelcome(false);
+    }
+  }, []);
+
+  const activeSession = sessions.find((s) => s.id === activeSessionId) ?? null;
+  const messages = activeSession?.messages ?? [];
 
   useEffect(() => {
-    scrollToBottom();
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
+
+  // ─── Session management ─────────────────────────────────────────────────
+
+  const createNewSession = useCallback((firstMessage: string): ChatSession => {
+    const newSession: ChatSession = {
+      id: generateId(),
+      titre: firstMessage.length > 60 ? firstMessage.slice(0, 57) + "..." : firstMessage,
+      messages: [],
+      createdAt: new Date().toISOString(),
+    };
+    return newSession;
+  }, []);
+
+  const updateSessionMessages = useCallback(
+    (sessionId: string, newMessages: Message[]) => {
+      setSessions((prev) => {
+        const updated = prev.map((s) =>
+          s.id === sessionId ? { ...s, messages: newMessages } : s
+        );
+        saveSessions(updated);
+        return updated;
+      });
+    },
+    []
+  );
+
+  const startNewChat = () => {
+    setActiveSessionId(null);
+    setShowWelcome(true);
+    localStorage.removeItem(STORAGE_ACTIVE_KEY);
+  };
+
+  const switchSession = (sessionId: string) => {
+    setActiveSessionId(sessionId);
+    setShowWelcome(false);
+    localStorage.setItem(STORAGE_ACTIVE_KEY, sessionId);
+  };
+
+  // ─── Send message ───────────────────────────────────────────────────────
 
   const sendQuery = async (query: string) => {
     if (!query.trim() || isTyping) return;
     setShowWelcome(false);
 
-    const newUserMsg: Message = {
-      id: Date.now().toString(),
+    const userMsg: Message = {
+      id: generateId(),
       role: "user",
       content: query.trim(),
     };
 
-    setMessages((prev) => [...prev, newUserMsg]);
+    let currentSessionId = activeSessionId;
+    let currentMessages: Message[] = messages;
+
+    // Create session if it's the first message
+    if (!currentSessionId) {
+      const newSession = createNewSession(query);
+      currentSessionId = newSession.id;
+      setSessions((prev) => {
+        const updated = [newSession, ...prev];
+        saveSessions(updated);
+        return updated;
+      });
+      setActiveSessionId(currentSessionId);
+      localStorage.setItem(STORAGE_ACTIVE_KEY, currentSessionId);
+      currentMessages = [];
+    }
+
+    const messagesWithUser = [...currentMessages, userMsg];
+    updateSessionMessages(currentSessionId, messagesWithUser);
     setInput("");
     if (textareaRef.current) textareaRef.current.style.height = "auto";
     setIsTyping(true);
@@ -125,25 +233,23 @@ export default function ChatbotPage() {
         body: JSON.stringify({ message: query }),
       });
 
-      if (!response.ok) throw new Error("Erreur de communication");
+      if (!response.ok) throw new Error("Erreur");
 
       const data = await response.json();
+      const assistantMsg: Message = {
+        id: generateId(),
+        role: "assistant",
+        content: data.reponse || data.error || "Je n'ai pas pu repondre.",
+        liens: data.liens_recommandes,
+        questionsSuivantes: data.questions_suivantes,
+      };
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          role: "assistant",
-          content: data.reponse || data.error || "Desolee, je n'ai pas pu repondre.",
-          liens: data.liens_recommandes,
-          questionsSuivantes: data.questions_suivantes,
-        },
-      ]);
+      updateSessionMessages(currentSessionId, [...messagesWithUser, assistantMsg]);
     } catch {
-      setMessages((prev) => [
-        ...prev,
+      updateSessionMessages(currentSessionId, [
+        ...messagesWithUser,
         {
-          id: (Date.now() + 1).toString(),
+          id: generateId(),
           role: "assistant",
           content: "Oups, je n'ai pas pu te repondre. Verifie ta connexion et reessaie !",
         },
@@ -165,76 +271,242 @@ export default function ChatbotPage() {
     }
   };
 
+  // ─── Render ─────────────────────────────────────────────────────────────
+
   return (
     <div className="flex h-[calc(100vh-73px)] overflow-hidden">
-      {/* Sidebar */}
-      <aside className="hidden xl:flex w-68 flex-col border-r border-border bg-card shrink-0">
-        <div className="p-6 flex flex-col gap-6 flex-1 overflow-y-auto">
-          {/* Iki identity */}
-          <div className="flex flex-col items-center gap-3 text-center pt-2">
-            <div className="relative">
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary shadow-lg">
-                <svg className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
-                </svg>
-              </div>
-              <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-success ring-2 ring-card">
-                <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
-              </span>
-            </div>
-            <div>
-              <h2 className="text-sm font-bold text-foreground">Iki</h2>
-              <p className="text-xs text-muted-foreground mt-0.5">Conseiller d'orientation IA</p>
-              <p className="text-xs text-muted-foreground italic mt-1 leading-relaxed">inspire de l'Ikigai — ta raison d'etre</p>
-            </div>
-          </div>
 
-          {/* Expertise tags */}
-          <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
-              Expertises
-            </p>
-            <div className="flex flex-col gap-1.5">
-              {IKI_EXPERTISE.map((item) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-2.5 rounded-lg px-3 py-2 bg-surface border border-border"
-                >
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
-                  <span className="text-xs font-medium text-foreground">{item}</span>
+      {/* ══ SIDEBAR ═══════════════════════════════════════════════════════ */}
+      <aside className="hidden xl:flex w-72 flex-col border-r border-border bg-card shrink-0">
+
+        {/* Sidebar Tabs */}
+        <div className="flex border-b border-border shrink-0">
+          <button
+            onClick={() => setSidebarTab("iki")}
+            className={`flex-1 py-3 text-xs font-semibold transition-colors ${
+              sidebarTab === "iki"
+                ? "text-primary border-b-2 border-primary bg-primary-light"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Iki
+          </button>
+          <button
+            onClick={() => setSidebarTab("profil")}
+            className={`flex-1 py-3 text-xs font-semibold transition-colors ${
+              sidebarTab === "profil"
+                ? "text-primary border-b-2 border-primary bg-primary-light"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            Mon profil
+          </button>
+        </div>
+
+        <div className="flex-1 overflow-y-auto p-5 flex flex-col gap-5">
+
+          {/* ── Tab Iki ── */}
+          {sidebarTab === "iki" && (
+            <>
+              {/* Identity */}
+              <div className="flex flex-col items-center gap-3 text-center pt-2">
+                <div className="relative">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary shadow-lg">
+                    <svg className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z" />
+                    </svg>
+                  </div>
+                  <span className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-success ring-2 ring-card">
+                    <span className="h-1.5 w-1.5 rounded-full bg-white animate-pulse"></span>
+                  </span>
                 </div>
-              ))}
-            </div>
-          </div>
+                <div>
+                  <h2 className="text-sm font-bold text-foreground">Iki</h2>
+                  <p className="text-xs text-muted-foreground mt-0.5">Conseiller d'orientation IA</p>
+                  <p className="text-xs text-muted-foreground italic mt-1 leading-relaxed">Inspire de l'Ikigai — ta raison d'etre</p>
+                </div>
+              </div>
 
-          {/* Platform links */}
-          <div className="mt-auto">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
-              La plateforme
-            </p>
-            <div className="flex flex-col gap-0.5">
-              {[
-                { href: "/formations", label: "Formations" },
-                { href: "/universities", label: "Universites" },
-                { href: "/recommendations", label: "Metiers" },
-                { href: "/news", label: "Actualites" },
-                { href: "/onboarding", label: "Mon profil" },
-              ].map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
+              {/* Expertise */}
+              <div>
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Expertises</p>
+                <div className="flex flex-col gap-1.5">
+                  {IKI_EXPERTISE.map((item) => (
+                    <div key={item} className="flex items-center gap-2.5 rounded-lg px-3 py-2 bg-surface border border-border">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
+                      <span className="text-xs font-medium text-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* New chat button */}
+              <button
+                onClick={startNewChat}
+                className="w-full rounded-xl border border-dashed border-primary/40 py-2.5 text-xs font-medium text-primary hover:bg-primary-light transition-colors"
+              >
+                + Nouvelle conversation
+              </button>
+
+              {/* Recent sessions */}
+              {sessions.length > 0 && (
+                <div>
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
+                    Conversations recentes
+                  </p>
+                  <div className="flex flex-col gap-1">
+                    {sessions.slice(0, 5).map((s) => (
+                      <button
+                        key={s.id}
+                        onClick={() => switchSession(s.id)}
+                        className={`text-left rounded-lg px-3 py-2.5 text-xs transition-colors truncate ${
+                          s.id === activeSessionId
+                            ? "bg-primary-light text-primary font-semibold"
+                            : "text-muted-foreground hover:text-foreground hover:bg-surface"
+                        }`}
+                      >
+                        {s.titre}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Platform links */}
+              <div className="mt-auto">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">La plateforme</p>
+                <div className="flex flex-col gap-0.5">
+                  {[
+                    { href: "/formations", label: "Formations" },
+                    { href: "/universities", label: "Universites" },
+                    { href: "/recommendations", label: "Metiers" },
+                    { href: "/news", label: "Actualites" },
+                  ].map((link) => (
+                    <Link key={link.href} href={link.href} className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
+                      {link.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </>
+          )}
+
+          {/* ── Tab Profil (No-AI) ── */}
+          {sidebarTab === "profil" && (
+            <>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-bold text-foreground">Mon profil</h3>
+                  <Link
+                    href="/onboarding"
+                    className="text-xs text-primary hover:underline font-medium"
+                  >
+                    Modifier
+                  </Link>
+                </div>
+
+                {profile ? (
+                  <>
+                    {/* Niveau */}
+                    {profile.niveau && (
+                      <div className="rounded-xl border border-border bg-surface p-4">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-1.5">Niveau scolaire</p>
+                        <p className="text-sm font-semibold text-foreground">{profile.niveau}</p>
+                      </div>
+                    )}
+
+                    {/* Interets */}
+                    {profile.interets && profile.interets.length > 0 && (
+                      <div className="rounded-xl border border-border bg-surface p-4">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Centres d'interet</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {profile.interets.map((i) => (
+                            <span key={i} className="rounded-full border border-primary/20 bg-primary-light px-2.5 py-1 text-xs font-medium text-primary">
+                              {i}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Loisirs */}
+                    {profile.loisirs && profile.loisirs.length > 0 && (
+                      <div className="rounded-xl border border-border bg-surface p-4">
+                        <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Loisirs</p>
+                        <div className="flex flex-wrap gap-1.5">
+                          {profile.loisirs.map((l) => (
+                            <span key={l} className="rounded-full border border-border bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground">
+                              {l}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <div className="rounded-xl border border-dashed border-border bg-surface p-5 text-center">
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-3">
+                      Tu n'as pas encore completes ton profil. Reponds a quelques questions pour qu'Iki te conseille mieux !
+                    </p>
+                    <Link
+                      href="/onboarding"
+                      className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-xs font-semibold text-white hover:bg-primary-hover transition-colors"
+                    >
+                      Completer mon profil
+                    </Link>
+                  </div>
+                )}
+
+                {/* Historique des conversations */}
+                {sessions.length > 0 && (
+                  <div className="rounded-xl border border-border bg-surface p-4">
+                    <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
+                      Historique des chats ({sessions.length})
+                    </p>
+                    <div className="flex flex-col gap-1.5">
+                      {sessions.map((s) => (
+                        <button
+                          key={s.id}
+                          onClick={() => { switchSession(s.id); setSidebarTab("iki"); }}
+                          className="text-left rounded-lg px-2 py-2 text-xs text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors truncate"
+                        >
+                          {s.titre}
+                        </button>
+                      ))}
+                    </div>
+                    <button
+                      onClick={() => { setSessions([]); saveSessions([]); startNewChat(); }}
+                      className="mt-3 w-full text-xs text-error hover:underline"
+                    >
+                      Supprimer tout l'historique
+                    </button>
+                  </div>
+                )}
+
+                {/* Explorer */}
+                <div className="rounded-xl border border-border bg-surface p-4">
+                  <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Explorer</p>
+                  <div className="flex flex-col gap-1">
+                    {[
+                      { href: "/recommendations", label: "Metiers recommandes pour moi" },
+                      { href: "/formations", label: "Formations disponibles" },
+                      { href: "/universities", label: "Carte des universites" },
+                    ].map((link) => (
+                      <Link key={link.href} href={link.href} className="rounded-lg px-2 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
+                        {link.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </aside>
 
-      {/* Main chat */}
+      {/* ══ MAIN CHAT ═════════════════════════════════════════════════════ */}
       <div className="flex flex-1 flex-col min-w-0">
+
         {/* Header */}
         <div className="flex items-center justify-between border-b border-border bg-card px-6 py-3.5 shrink-0">
           <div className="flex items-center gap-3">
@@ -247,23 +519,51 @@ export default function ChatbotPage() {
               <h1 className="text-sm font-semibold text-foreground">Iki — Conseiller d'Orientation</h1>
               <div className="flex items-center gap-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-success animate-pulse"></span>
-                <p className="text-xs text-muted-foreground">En ligne · Expert Togo & Afrique de l'Ouest</p>
+                <p className="text-xs text-muted-foreground">En ligne · Expert Togo &amp; Afrique de l'Ouest</p>
               </div>
             </div>
           </div>
-          <Link
-            href="/onboarding"
-            className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-primary transition-colors border border-border rounded-lg px-3 py-1.5 hover:border-primary/30"
-          >
-            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
-            </svg>
-            Mon profil
-          </Link>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={startNewChat}
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-primary transition-colors border border-border rounded-lg px-3 py-1.5 hover:border-primary/30"
+            >
+              <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+              Nouveau chat
+            </button>
+          </div>
         </div>
+
+        {/* ── Registration banner ── */}
+        {showBanner && (
+          <div className="flex items-center justify-between gap-3 border-b border-amber-200 bg-amber-50 px-6 py-2.5 shrink-0 dark:border-amber-900/40 dark:bg-amber-950/30">
+            <div className="flex items-center gap-2">
+              <svg className="h-4 w-4 text-amber-600 shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z" />
+              </svg>
+              <p className="text-xs text-amber-800 dark:text-amber-300">
+                <span className="font-semibold">Tes conversations sont sauvegardees sur cet appareil uniquement.</span>
+                {" "}Pour ne pas les perdre, cree un compte — c'est gratuit !
+              </p>
+            </div>
+            <div className="flex items-center gap-2 shrink-0">
+              <Link href="/onboarding" className="rounded-lg bg-amber-600 px-3 py-1 text-xs font-semibold text-white hover:bg-amber-700 transition-colors">
+                S'inscrire
+              </Link>
+              <button onClick={() => setShowBanner(false)} className="text-amber-600 hover:text-amber-800 transition-colors">
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto px-4 py-6 md:px-8 scroll-smooth">
+
           {/* Welcome */}
           {showWelcome && (
             <div className="flex flex-col items-center justify-center h-full gap-8 animate-fade-in-up max-w-2xl mx-auto text-center">
@@ -277,15 +577,17 @@ export default function ChatbotPage() {
                   Bonjour, je suis <span className="gradient-text">Iki</span>
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed max-w-md mx-auto">
-                  Ton conseiller d'orientation personnel. Je connais les universites, filieres, metiers et opportunites au Togo en profondeur. Demande-moi n'importe quoi sur ton avenir !
+                  {profile?.niveau
+                    ? `Je vois que tu es en ${profile.niveau}. Pose-moi n'importe quelle question sur ton avenir et je t'aiderai !`
+                    : "Ton conseiller d'orientation personnel, specialise dans les filieres et metiers du Togo. Pose-moi n'importe quelle question sur ton avenir !"}
                 </p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full">
                 {QUICK_STARTS.map((qs) => (
                   <button
-                    key={qs.label}
-                    onClick={() => sendQuery(qs.label)}
+                    key={qs}
+                    onClick={() => sendQuery(qs)}
                     className="flex items-center gap-3 rounded-xl border border-border bg-card p-3.5 text-left transition-all hover:border-primary/40 hover:bg-primary-light hover:shadow-sm group"
                   >
                     <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary-light border border-primary/20 group-hover:bg-primary group-hover:border-primary transition-colors">
@@ -294,7 +596,7 @@ export default function ChatbotPage() {
                       </svg>
                     </div>
                     <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
-                      {qs.label}
+                      {qs}
                     </span>
                   </button>
                 ))}
@@ -308,23 +610,11 @@ export default function ChatbotPage() {
               {messages.map((msg, i) => (
                 <div
                   key={msg.id}
-                  className={`flex w-full animate-fade-in-up ${
-                    msg.role === "user" ? "justify-end" : "justify-start"
-                  }`}
+                  className={`flex w-full animate-fade-in-up ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                 >
-                  <div
-                    className={`flex max-w-[88%] items-end gap-2.5 md:max-w-[78%] ${
-                      msg.role === "user" ? "flex-row-reverse" : "flex-row"
-                    }`}
-                  >
+                  <div className={`flex max-w-[88%] items-end gap-2.5 md:max-w-[78%] ${msg.role === "user" ? "flex-row-reverse" : "flex-row"}`}>
                     {/* Avatar */}
-                    <div
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl shadow-sm ${
-                        msg.role === "user"
-                          ? "bg-foreground"
-                          : "bg-primary"
-                      }`}
-                    >
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl shadow-sm ${msg.role === "user" ? "bg-foreground" : "bg-primary"}`}>
                       {msg.role === "user" ? (
                         <svg className="h-4 w-4 text-card" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -338,13 +628,7 @@ export default function ChatbotPage() {
 
                     <div className="flex flex-col gap-2 max-w-full">
                       {/* Bubble */}
-                      <div
-                        className={`rounded-2xl px-5 py-3.5 shadow-sm ${
-                          msg.role === "user"
-                            ? "rounded-br-none bg-primary text-white"
-                            : "rounded-bl-none border border-border bg-card text-foreground"
-                        }`}
-                      >
+                      <div className={`rounded-2xl px-5 py-3.5 shadow-sm ${msg.role === "user" ? "rounded-br-none bg-primary text-white" : "rounded-bl-none border border-border bg-card text-foreground"}`}>
                         {msg.role === "assistant" ? (
                           <SimpleMarkdown text={msg.content} />
                         ) : (
@@ -358,11 +642,7 @@ export default function ChatbotPage() {
                           <span className="text-xs font-semibold text-muted-foreground">Explorer sur la plateforme :</span>
                           <div className="flex flex-wrap gap-2">
                             {msg.liens.map((lien, idx) => (
-                              <Link
-                                key={idx}
-                                href={lien.url}
-                                className="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary-light px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary hover:text-white transition-colors"
-                              >
+                              <Link key={idx} href={lien.url} className="inline-flex items-center gap-1.5 rounded-lg border border-primary/20 bg-primary-light px-3 py-1.5 text-xs font-medium text-primary hover:bg-primary hover:text-white transition-colors">
                                 {lien.titre}
                                 <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
@@ -379,12 +659,7 @@ export default function ChatbotPage() {
                           <span className="text-xs font-semibold text-muted-foreground ml-1">Tu pourrais aussi demander :</span>
                           <div className="flex flex-col gap-1.5">
                             {msg.questionsSuivantes.map((q, idx) => (
-                              <button
-                                key={idx}
-                                onClick={() => sendQuery(q)}
-                                disabled={isTyping}
-                                className="text-left rounded-xl border border-border bg-surface px-4 py-2.5 text-xs font-medium text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary-light hover:text-primary disabled:opacity-50"
-                              >
+                              <button key={idx} onClick={() => sendQuery(q)} disabled={isTyping} className="text-left rounded-xl border border-border bg-surface px-4 py-2.5 text-xs font-medium text-muted-foreground transition-all hover:border-primary/30 hover:bg-primary-light hover:text-primary disabled:opacity-50">
                                 {q}
                               </button>
                             ))}
@@ -421,7 +696,7 @@ export default function ChatbotPage() {
           )}
         </div>
 
-        {/* Input */}
+        {/* ── Input ── */}
         <div className="border-t border-border bg-card px-4 py-4 md:px-8 shrink-0">
           <form onSubmit={handleSubmit} className="mx-auto max-w-3xl">
             <div className="flex items-end gap-3 rounded-2xl border border-border bg-surface px-4 py-3 shadow-sm focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
@@ -434,7 +709,7 @@ export default function ChatbotPage() {
                   e.target.style.height = Math.min(e.target.scrollHeight, 120) + "px";
                 }}
                 onKeyDown={handleKeyDown}
-                placeholder="Pose ta question a Iki... (Entree pour envoyer, Maj+Entree pour sauter une ligne)"
+                placeholder="Pose ta question a Iki..."
                 rows={1}
                 id="chatbot-input"
                 className="flex-1 resize-none bg-transparent text-sm text-foreground placeholder:text-muted-foreground focus:outline-none leading-relaxed"

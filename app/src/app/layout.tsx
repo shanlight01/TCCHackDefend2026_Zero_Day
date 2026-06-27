@@ -3,8 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
 import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -21,7 +21,7 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Career Guidance — Trouve ta voie, pas au hasard",
   description:
-    "Plateforme  d'orientation scolaire et professionnelle pour les lycéens et bacheliers du Togo. Quiz de carrière, universités, feuille de route personnalisée.",
+    "Plateforme d'orientation scolaire et professionnelle pour les lycéens et bacheliers du Togo. Quiz de carrière, universités, feuille de route personnalisée.",
   keywords: "orientation, carrière, Togo, universités, lycéen, bachelier, métier",
 };
 
@@ -54,7 +54,7 @@ export default function RootLayout({
         <ThemeProvider>
           <Navbar />
           <main className="flex-1">{children}</main>
-          <Footer />
+          <ConditionalFooter />
         </ThemeProvider>
       </body>
     </html>
