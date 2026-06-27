@@ -108,8 +108,8 @@ export default function OnboardingPage() {
                 key={level}
                 className={`flex cursor-pointer items-center justify-between rounded-xl border p-4 transition-all hover:border-primary ${
                   niveau === level
-                    ? "border-primary bg-primary/5 shadow-sm"
-                    : "border-border bg-white"
+                    ? "border-primary bg-primary/10 shadow-sm"
+                    : "border-border bg-card"
                 }`}
               >
                 <span className="font-medium text-foreground">{level}</span>
@@ -148,7 +148,7 @@ export default function OnboardingPage() {
                   className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
                     isSelected
                       ? "border-primary bg-primary text-white shadow-md"
-                      : "border-border bg-white text-foreground hover:border-primary/50 hover:bg-muted"
+                      : "border-border bg-card text-foreground hover:border-primary/50 hover:bg-muted"
                   }`}
                 >
                   {interest}
@@ -180,7 +180,7 @@ export default function OnboardingPage() {
                   className={`rounded-full border px-5 py-2.5 text-sm font-medium transition-all ${
                     isSelected
                       ? "border-primary bg-primary text-white shadow-md"
-                      : "border-border bg-white text-foreground hover:border-primary/50 hover:bg-muted"
+                      : "border-border bg-card text-foreground hover:border-primary/50 hover:bg-muted"
                   }`}
                 >
                   {hobby}
@@ -212,7 +212,7 @@ export default function OnboardingPage() {
               (step === 1 && !niveau) ||
               (step === 2 && selectedInterests.length === 0)
             }
-            className="rounded-lg bg-foreground px-8 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#383838] disabled:opacity-50 disabled:cursor-not-allowed"
+            className="rounded-lg bg-primary px-8 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-hover disabled:opacity-50 disabled:cursor-not-allowed"
           >
             Suivant
           </button>

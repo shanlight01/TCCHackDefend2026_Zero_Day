@@ -301,13 +301,12 @@ export default function ChatbotPage() {
 
           {/* Expertise */}
           <div>
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">Expertises</p>
-            <div className="flex flex-col gap-1.5">
+            <p className="text-[10px] font-semibold text-muted-foreground/70 uppercase tracking-widest mb-2">Expertises</p>
+            <div className="flex flex-wrap gap-1.5">
               {IKI_EXPERTISE.map((item) => (
-                <div key={item} className="flex items-center gap-2.5 rounded-lg px-3 py-2 bg-surface border border-border">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary shrink-0"></span>
-                  <span className="text-xs font-medium text-foreground">{item}</span>
-                </div>
+                <span key={item} className="rounded-full bg-muted px-2.5 py-1 text-[11px] text-muted-foreground">
+                  {item}
+                </span>
               ))}
             </div>
           </div>
@@ -323,17 +322,17 @@ export default function ChatbotPage() {
           {/* Recent sessions */}
           {sessions.length > 0 && (
             <div>
-              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2.5">
-                Conversations recentes
+              <p className="text-[10px] font-semibold text-muted-foreground/70 uppercase tracking-widest mb-1.5">
+                Recentes
               </p>
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-0.5">
                 {sessions.slice(0, 5).map((s) => (
                   <button
                     key={s.id}
                     onClick={() => switchSession(s.id)}
-                    className={`text-left rounded-lg px-3 py-2.5 text-xs transition-colors truncate ${
+                    className={`text-left rounded-lg px-2.5 py-2 text-xs transition-colors truncate ${
                       s.id === activeSessionId
-                        ? "bg-primary-light text-primary font-semibold"
+                        ? "bg-primary-light text-primary font-medium"
                         : "text-muted-foreground hover:text-foreground hover:bg-surface"
                     }`}
                   >
@@ -345,16 +344,16 @@ export default function ChatbotPage() {
           )}
 
           {/* Platform links */}
-          <div className="mt-auto">
-            <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2">La plateforme</p>
-            <div className="flex flex-col gap-0.5">
+          <div className="mt-auto pt-3 border-t border-border">
+            <p className="text-[10px] font-semibold text-muted-foreground/70 uppercase tracking-widest mb-1.5">Explorer</p>
+            <div className="flex flex-col gap-0">
               {[
                 { href: "/formations", label: "Formations" },
                 { href: "/universities", label: "Universites" },
                 { href: "/recommendations", label: "Metiers" },
                 { href: "/news", label: "Actualites" },
               ].map((link) => (
-                <Link key={link.href} href={link.href} className="rounded-lg px-3 py-2 text-xs font-medium text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
+                <Link key={link.href} href={link.href} className="rounded-lg px-2.5 py-1.5 text-xs text-muted-foreground hover:text-primary hover:bg-primary-light transition-colors">
                   {link.label}
                 </Link>
               ))}
@@ -408,7 +407,7 @@ export default function ChatbotPage() {
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
-              <Link href="/onboarding" className="rounded-lg bg-white border border-border px-3 py-1 text-xs font-medium text-foreground hover:bg-surface transition-colors shadow-sm">
+              <Link href="/onboarding" className="rounded-lg bg-card border border-border px-3 py-1 text-xs font-medium text-foreground hover:bg-surface-hover transition-colors">
                 Completer mon profil
               </Link>
               <button onClick={() => setShowBanner(false)} className="text-muted-foreground hover:text-foreground transition-colors ml-1">
