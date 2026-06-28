@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ACADEMIC_LEVELS } from "@/lib/constants";
+import { useAuth } from "@/lib/supabase/AuthProvider";
+import { saveProfile } from "@/lib/supabase/auth";
 
 const INTERESTS = [
   "Technologie & Informatique",
@@ -34,6 +36,7 @@ const HOBBIES = [
 
 export default function OnboardingPage() {
   const router = useRouter();
+  const { user } = useAuth();
   const [step, setStep] = useState(1);
   const [niveau, setNiveau] = useState("");
   const [selectedInterests, setSelectedInterests] = useState<string[]>([]);
@@ -64,14 +67,20 @@ export default function OnboardingPage() {
 
   const handleSubmit = async () => {
     setIsLoading(true);
-    // Simulate API call for recommendations
+    const profile = { niveau, interets: selectedInterests, loisirs: selectedHobbies };
+    // Always save to localStorage
+    localStorage.setItem("careerProfile", JSON.stringify(profile));
+    // If user is logged in, also save to Supabase
+    if (user) {
+      await saveProfile(user.id, {
+        niveau,
+        interets: selectedInterests,
+        hobbies: selectedHobbies,
+      });
+    }
     setTimeout(() => {
-      // In a real app, we would send the data to our AI backend and save to Supabase.
-      // For the demo, we'll store the profile in localStorage and redirect.
-      const profile = { niveau, interets: selectedInterests, loisirs: selectedHobbies };
-      localStorage.setItem("careerProfile", JSON.stringify(profile));
       router.push("/recommendations");
-    }, 1500);
+    }, 500);
   };
 
   return (
