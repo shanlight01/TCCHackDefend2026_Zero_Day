@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import careersData from "@/data/careers.json";
-
+import roadmapsData from "@/data/roadmaps.json";
+import universitiesData from "@/data/universities.json";
 interface Career {
   id: string;
   nom_metier: string;
@@ -16,6 +17,8 @@ interface Career {
 export default function RecommendationsPage() {
   const [profile, setProfile] = useState<any>(null);
   const [recommendations, setRecommendations] = useState<Career[]>([]);
+  const [recommendedFormations, setRecommendedFormations] = useState<any[]>([]);
+  const [recommendedUniversities, setRecommendedUniversities] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -48,6 +51,36 @@ export default function RecommendationsPage() {
         // Sort by score and take top 3
         const sorted = scoredCareers.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 3);
         setRecommendations(sorted);
+
+        // Aggregate recommended formations (filières) and universities
+        const allFormations = new Set<string>();
+        const uniIds = new Set<string>();
+
+        sorted.forEach(career => {
+          // Add formations from career
+          if ((career as any).formations_requises) {
+            (career as any).formations_requises.forEach((f: string) => allFormations.add(f));
+          }
+          // Add universities from roadmap
+          const roadmap = roadmapsData.roadmaps.find(r => r.career_id === career.id);
+          if (roadmap && roadmap.related_universities) {
+            roadmap.related_universities.forEach(uid => uniIds.add(uid));
+          }
+        });
+
+        // Convert formations set to array of objects for display
+        const formationsList = Array.from(allFormations).map(f => {
+          // Assign pseudo-levels for visual variety based on string content
+          let niveau = "Moyenne";
+          if (f.toLowerCase().includes("licence") || f.toLowerCase().includes("master") || f.toLowerCase().includes("ingénieur")) niveau = "Haute";
+          if (f.toLowerCase().includes("bts") || f.toLowerCase().includes("dut")) niveau = "Moyenne";
+          return { nom: f, niveau };
+        });
+
+        const universitiesList = universitiesData.filter(u => uniIds.has(u.id));
+
+        setRecommendedFormations(formationsList);
+        setRecommendedUniversities(universitiesList);
         setIsLoading(false);
       }, 1000);
     } else {
@@ -144,7 +177,92 @@ export default function RecommendationsPage() {
           </div>
         ))}
       </div>
+
+      {/* ── FILIÈRES / FORMATIONS ── */}
+      {recommendedFormations.length > 0 && (
+        <div className="mt-16">
+          <h2 className="mb-6 text-sm font-bold uppercase tracking-widest text-muted-foreground">
+            Filières qui te correspondent
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {recommendedFormations.map((form, idx) => (
+              <div key={idx} className="group flex flex-col justify-between rounded-xl border border-border bg-white p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
+                <div>
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="font-bold text-foreground text-lg">{form.nom}</h3>
+                    <span className={`shrink-0 rounded-md px-2 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                      form.niveau === "Haute" ? "bg-success/10 text-success" : 
+                      form.niveau === "Moyenne" ? "bg-warning/10 text-warning" : 
+                      "bg-muted text-muted-foreground"
+                    }`}>
+                      {form.niveau}
+                    </span>
+                  </div>
+                  <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground font-medium">
+                    <span className="rounded-full bg-muted px-2.5 py-1">Supérieur</span>
+                    <span>3 à 5 ans</span>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="/formations" className="inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                    Voir la fiche
+                    <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── UNIVERSITÉS ── */}
+      {recommendedUniversities.length > 0 && (
+        <div className="mt-16">
+          <h2 className="mb-6 text-sm font-bold uppercase tracking-widest text-muted-foreground">
+            Universités qui proposent ces formations
+          </h2>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {recommendedUniversities.map((uni) => (
+              <div key={uni.id} className="group flex flex-col justify-between rounded-xl border border-border bg-white p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
+                <div>
+                  <div className="mb-4 h-12 w-12 overflow-hidden rounded-lg border border-border bg-muted">
+                    {uni.logo ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={uni.logo} alt="" className="h-full w-full object-contain p-1" />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center text-xs font-bold text-muted-foreground">
+                        {uni.name.charAt(0)}
+                      </div>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-foreground text-base line-clamp-2">{uni.name}</h3>
+                  <p className="mt-1 text-xs text-muted-foreground">{uni.location}</p>
+                  
+                  {uni.domains && uni.domains.length > 0 && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      <span className="rounded-full bg-muted px-2.5 py-1 text-xs font-medium text-muted-foreground line-clamp-1">
+                        {uni.domains[0]}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="mt-6">
+                  <Link href={`/universities?search=${encodeURIComponent(uni.name)}`} className="inline-flex items-center text-sm font-semibold text-primary hover:underline">
+                    Voir la vitrine
+                    <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       
+      {/* ── FALLBACK / CTA ── */}
       <div className="mt-16 rounded-xl border border-border bg-muted p-8 text-center">
         <h3 className="text-lg font-semibold text-foreground">
           Ces résultats ne te conviennent pas ?
