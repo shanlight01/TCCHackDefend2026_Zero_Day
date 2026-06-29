@@ -123,10 +123,51 @@ const profiles = [
 
 /* ───── Steps ───── */
 const steps = [
-  { num: "01", title: "Profiling", desc: "Réponds à quelques questions sur tes centres d'intérêt, tes loisirs et ton niveau scolaire." },
-  { num: "02", title: "Recommandations", desc: "Notre IA analyse ton profil et te propose les carrières qui te correspondent le mieux." },
-  { num: "03", title: "Feuille de route", desc: "Pour chaque métier, obtiens les compétences à acquérir, les matières clés et les étapes à suivre." },
-  { num: "04", title: "Universités", desc: "Découvre les établissements au Togo qui proposent les formations adaptées à ton projet." },
+  { 
+    title: "Orientation personnalisée", 
+    desc: "Un test intelligent basé sur tes passions et tes talents.",
+    icon: (
+      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.671zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+        <circle cx="12" cy="12" r="3" />
+      </svg>
+    ),
+    color: "text-primary",
+    bgColor: "bg-primary/10"
+  },
+  { 
+    title: "Universités du Togo", 
+    desc: "Explore toutes les universités et leurs formations.",
+    icon: (
+      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.315 48.315 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
+      </svg>
+    ),
+    color: "text-blue-600",
+    bgColor: "bg-blue-600/10"
+  },
+  { 
+    title: "Roadmap détaillée", 
+    desc: "Un plan pas à pas pour atteindre ton objectif.",
+    icon: (
+      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
+      </svg>
+    ),
+    color: "text-purple-600",
+    bgColor: "bg-purple-600/10"
+  },
+  { 
+    title: "Assistant IA", 
+    desc: "Pose tes questions et reçois des conseils instantanément.",
+    icon: (
+      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+      </svg>
+    ),
+    color: "text-green-600",
+    bgColor: "bg-green-600/10"
+  },
 ];
 
 export default function Home() {
@@ -144,10 +185,11 @@ export default function Home() {
       <section className="relative overflow-hidden">
         {/* Arrière-plan personnalisé (Image 1) */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
+          className="absolute inset-0 bg-cover bg-[center_top] md:bg-center bg-no-repeat"
           style={{ backgroundImage: "url('/bg1.jpg')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
+        {/* Gradient mobile (bas vers haut) & Desktop (gauche vers droite) pour lisibilité */}
+        <div className="absolute inset-0 bg-background/85 md:bg-transparent md:bg-gradient-to-r md:from-background md:via-background/90 md:to-transparent" />
         
         {/* Decorative blur spots for high-end look */}
         <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
@@ -244,6 +286,23 @@ export default function Home() {
 
 
 
+      {/* ═══════ COMMENT ÇA MARCHE ═══════ */}
+      <section id="how-it-works" className="relative -mt-10 sm:-mt-16 z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 mb-12 sm:mb-20">
+        <div ref={stepsRef} className="reveal shadow-premium rounded-3xl border border-border bg-card p-4 sm:p-8">
+          <div className="grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
+            {steps.map((s, i) => (
+              <div key={s.title} className="flex flex-col items-center text-center p-2 sm:p-4" style={{ animationDelay: `${i * 100}ms` }}>
+                <div className={`flex h-14 w-14 sm:h-16 sm:w-16 items-center justify-center rounded-full ${s.bgColor} ${s.color} mb-3 sm:mb-4`}>
+                  {s.icon}
+                </div>
+                <h3 className="text-sm sm:text-base font-bold text-foreground mb-1 sm:mb-2">{s.title}</h3>
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ═══════ QUI ES-TU ? ═══════ */}
       <section className="border-t border-border">
         <div ref={profilesRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
@@ -271,28 +330,6 @@ export default function Home() {
                   C&apos;est moi →
                 </span>
               </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════ COMMENT ÇA MARCHE ═══════ */}
-      <section id="how-it-works" className="border-t border-border bg-muted">
-        <div ref={stepsRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-          <div className="text-center">
-            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-primary">
-              Comment ça marche
-            </span>
-            <h2 className="mt-2 sm:mt-3 font-heading text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
-              4 étapes simples
-            </h2>
-          </div>
-          <div className="mt-10 sm:mt-14 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">            {steps.map((s, i) => (
-              <div key={s.num} className="shadow-premium relative flex flex-col items-start rounded-2xl border border-border bg-card p-6" style={{ animationDelay: `${i * 100}ms` }}>
-                <span className="font-heading text-4xl font-bold text-primary/20">{s.num}</span>
-                <h3 className="mt-3 text-lg font-semibold text-foreground">{s.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              </div>
             ))}
           </div>
         </div>
