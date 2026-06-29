@@ -27,20 +27,20 @@
 
 /* ---------- Dark Theme ---------- */
 :root[data-theme="dark"] {
-  --background: #0b1a1a;
+  --background: #0F1210;
   --foreground: #edf7f5;
-  --primary: #45c4b3;
-  --primary-hover: #5ee3d1;
-  --primary-light: #1d4d4f;
+  --primary: #2c6e6b;
+  --primary-hover: #1d4d4f;
+  --primary-light: #1A2E24;
   --accent: #D4A853;
   --accent-hover: #E0B865;
-  --muted: #133a39;
+  --muted: #1A1E1B;
   --muted-foreground: #9dbbba;
-  --border: #235451;
-  --card: #123332;
-  --card-border: #235451;
-  --surface: #174241;
-  --surface-hover: #1e5452;
+  --border: #2A2E2B;
+  --card: #161A17;
+  --card-border: #2A2E2B;
+  --surface: #1A1E1B;
+  --surface-hover: #222622;
   --success: #22C55E;
   --warning: #F59E0B;
   --error: #EF4444;
