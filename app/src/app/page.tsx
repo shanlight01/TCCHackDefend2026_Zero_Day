@@ -123,51 +123,10 @@ const profiles = [
 
 /* ───── Steps ───── */
 const steps = [
-  { 
-    title: "Orientation personnalisée", 
-    desc: "Un test intelligent basé sur tes passions et tes talents.",
-    icon: (
-      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672 13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.671zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
-    ),
-    color: "text-primary",
-    bgColor: "bg-primary/10"
-  },
-  { 
-    title: "Universités du Togo", 
-    desc: "Explore toutes les universités et leurs formations.",
-    icon: (
-      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.315 48.315 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" />
-      </svg>
-    ),
-    color: "text-blue-600",
-    bgColor: "bg-blue-600/10"
-  },
-  { 
-    title: "Roadmap détaillée", 
-    desc: "Un plan pas à pas pour atteindre ton objectif.",
-    icon: (
-      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z" />
-      </svg>
-    ),
-    color: "text-purple-600",
-    bgColor: "bg-purple-600/10"
-  },
-  { 
-    title: "Assistant IA", 
-    desc: "Pose tes questions et reçois des conseils instantanément.",
-    icon: (
-      <svg className="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
-      </svg>
-    ),
-    color: "text-green-600",
-    bgColor: "bg-green-600/10"
-  },
+  { num: "01", title: "Profiling", desc: "Réponds à quelques questions sur tes centres d'intérêt, tes loisirs et ton niveau scolaire." },
+  { num: "02", title: "Recommandations", desc: "Notre IA analyse ton profil et te propose les carrières qui te correspondent le mieux." },
+  { num: "03", title: "Feuille de route", desc: "Pour chaque métier, obtiens les compétences à acquérir, les matières clés et les étapes à suivre." },
+  { num: "04", title: "Universités", desc: "Découvre les établissements au Togo qui proposent les formations adaptées à ton projet." },
 ];
 
 export default function Home() {
@@ -181,72 +140,107 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      {/* ═══════ HERO (FULL SCREEN) ═══════ */}
-      <section className="relative w-full h-[100dvh] min-h-[600px] overflow-hidden bg-background">
-        
-        {/* Arrière-plan global (Image 1) en 2ème couche */}
+      {/* ═══════ HERO ═══════ */}
+      <section className="relative overflow-hidden">
+        {/* Arrière-plan personnalisé (Image 1) */}
         <div
-          className="absolute right-0 top-0 h-[65%] w-full sm:h-full sm:w-[65%] lg:w-[60%] bg-cover bg-[center_top] sm:bg-center bg-no-repeat z-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
           style={{ backgroundImage: "url('/bg1.jpg')" }}
         />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
         
-        {/* Dégradé pour lisibilité : 
-            Mobile: Dégradé du bas vers le haut pour fondre l'image avec le blanc.
-            Desktop: Dégradé de gauche à droite.
-        */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/95 to-transparent sm:bg-gradient-to-r sm:from-background sm:via-background/90 sm:to-transparent z-0" />
+        {/* Decorative blur spots for high-end look */}
+        <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
+        <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
         
-        {/* Decorative blur spots */}
-        <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none z-0" />
-        <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none hidden sm:block z-0" />
-        
-        <div ref={heroRef} className="reveal relative z-10 mx-auto h-full w-full max-w-7xl px-4 sm:px-6 pt-16 sm:pt-24 pb-4 flex flex-col justify-start sm:justify-center">
-          
-          {/* Main Text Content */}
-          <div className="max-w-[17rem] sm:max-w-xl lg:max-w-2xl mt-4 sm:mt-0">
-            <h1 className="font-heading text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight tracking-tight text-foreground">
-              Trouve ta voie,{" "}
-              <br className="sm:hidden" />
-              <span className="gradient-text">pas au hasard.</span>
-            </h1>
-            <p className="mt-2 sm:mt-6 text-xs sm:text-base lg:text-lg leading-relaxed text-muted-foreground max-w-sm sm:max-w-lg">
-              Bilan de carrière, vitrine universitaire, feuille de route personnalisée —
-              tout ce qu&apos;il te faut pour choisir avec assurance.
-            </p>
-            
-            <div className="mt-4 sm:mt-8 flex flex-col sm:flex-row gap-2 sm:gap-4 w-[fit-content]">
-              <Link
-                href="/onboarding"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-5 py-2.5 sm:px-7 sm:py-3.5 text-xs sm:text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30"
-              >
-                Commencer mon orientation
-                <svg className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          {/* 4 Steps Section (Positioned at bottom left) */}
-          <div className="absolute bottom-6 sm:bottom-10 left-4 sm:left-6 lg:left-8 w-[calc(100%-2rem)] lg:max-w-4xl z-20">
-            <div ref={stepsRef} className="reveal shadow-premium rounded-2xl sm:rounded-3xl border border-border bg-card/95 backdrop-blur-md p-3 sm:p-6 lg:p-8">
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 lg:gap-6 divide-y sm:divide-y-0 sm:divide-x divide-border/50">
-                {steps.map((s, i) => (
-                  <div key={s.title} className="flex flex-col items-center text-center p-2 sm:p-3 lg:p-4" style={{ animationDelay: `${i * 100}ms` }}>
-                    <div className={`flex h-10 w-10 sm:h-12 sm:w-12 lg:h-16 lg:w-16 items-center justify-center rounded-full ${s.bgColor} ${s.color} mb-1 sm:mb-3`}>
-                      <div className="scale-75 sm:scale-100">{s.icon}</div>
-                    </div>
-                    <h3 className="text-[10px] sm:text-xs lg:text-sm font-bold text-foreground mb-0.5 sm:mb-1">{s.title}</h3>
-                    <p className="text-[8px] sm:text-[10px] lg:text-xs leading-relaxed text-muted-foreground">{s.desc}</p>
+        <div ref={heroRef} className="reveal relative mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-20 md:py-32">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <h1 className="mt-6 font-heading text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                Trouve ta voie,{" "}
+                <span className="gradient-text">pas au hasard.</span>
+              </h1>
+              <p className="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground">
+                Bilan de carrière, vitrine universitaire, feuille de route personnalisée —
+                tout ce qu&apos;il te faut pour choisir avec assurance.
+              </p>
+              
+              {/* Compact mobile hero illustration stats */}
+              <div className="mt-6 lg:hidden flex items-center justify-between gap-3 bg-card/60 backdrop-blur border border-border p-4 rounded-2xl shadow-sm max-w-lg">
+                <div className="flex-1 text-center border-r border-border/80">
+                  <p className="text-xl font-extrabold text-primary">96</p>
+                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Écoles</p>
+                </div>
+                <div className="flex-1 text-center border-r border-border/80">
+                  <p className="text-xl font-extrabold text-accent">20+</p>
+                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Carrières</p>
+                </div>
+                <div className="flex-[2] flex items-center gap-2 pl-3">
+                  <div className="h-8 w-8 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                    <svg className="h-4.5 w-4.5 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
                   </div>
-                ))}
+                  <div className="text-left">
+                    <p className="text-xs font-bold text-foreground">Match: 92%</p>
+                    <p className="text-[10px] text-muted-foreground">Développeur Web</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/onboarding"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30"
+                >
+                  Commencer maintenant
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/formations"
+                  className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
+                >
+                  S'orienter
+                </Link>
+              </div>
+            </div>
+            {/* Hero illustration */}
+            <div className="hidden lg:flex justify-center">
+              <div className="relative">
+                <div className="animate-float glass-panel rounded-2xl p-8 shadow-premium">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="rounded-xl bg-primary/10 p-4 text-center">
+                      <p className="text-2xl font-bold text-primary">96</p>
+                      <p className="text-xs text-muted-foreground">Écoles</p>
+                    </div>
+                    <div className="rounded-xl bg-accent/10 p-4 text-center">
+                      <p className="text-2xl font-bold text-accent">20+</p>
+                      <p className="text-xs text-muted-foreground">Carrières</p>
+                    </div>
+                    <div className="col-span-2 rounded-xl border border-border bg-surface p-4">
+                      <div className="flex items-center gap-3">
+                        <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
+                          <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-sm font-semibold text-foreground">Match: 92%</p>
+                          <p className="text-xs text-muted-foreground">Développeur Web</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-xl bg-accent/20 blur-2xl" />
+                <div className="absolute -top-4 -right-4 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
               </div>
             </div>
           </div>
         </div>
       </section>
-
-
 
 
 
@@ -277,6 +271,28 @@ export default function Home() {
                   C&apos;est moi →
                 </span>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════ COMMENT ÇA MARCHE ═══════ */}
+      <section id="how-it-works" className="border-t border-border bg-muted">
+        <div ref={stepsRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+          <div className="text-center">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-primary">
+              Comment ça marche
+            </span>
+            <h2 className="mt-2 sm:mt-3 font-heading text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
+              4 étapes simples
+            </h2>
+          </div>
+          <div className="mt-10 sm:mt-14 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">            {steps.map((s, i) => (
+              <div key={s.num} className="shadow-premium relative flex flex-col items-start rounded-2xl border border-border bg-card p-6" style={{ animationDelay: `${i * 100}ms` }}>
+                <span className="font-heading text-4xl font-bold text-primary/20">{s.num}</span>
+                <h3 className="mt-3 text-lg font-semibold text-foreground">{s.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+              </div>
             ))}
           </div>
         </div>
