@@ -194,8 +194,13 @@ export default function Home() {
 
         {/* ── MOBILE layout (< lg) ── */}
         <div className="lg:hidden relative z-10 flex flex-col min-h-[100dvh] px-4 pt-12 pb-4">
-          {/* Top: titre + sous-titre + bouton */}
+          {/* Top: titre + sous-titre + bouton + stats légères */}
           <div className="flex-1 flex flex-col justify-start pt-4">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-2.5 py-1 mb-3 w-max backdrop-blur-sm">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
+              <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Orientation Intelligente</span>
+            </div>
+            
             <h1 className="font-heading text-[2.25rem] font-bold leading-tight tracking-tight text-foreground max-w-[280px]">
               Trouve ta voie,{" "}
               <span className="gradient-text">pas au hasard.</span>
@@ -219,6 +224,24 @@ export default function Home() {
               >
                 S&apos;orienter
               </Link>
+            </div>
+
+            {/* Petite ligne de stats très légère */}
+            <div className="mt-6 flex items-center gap-4 text-[10px] font-semibold text-muted-foreground">
+               <div className="flex items-center gap-1.5">
+                 <span className="text-primary font-extrabold text-sm">96</span> Écoles
+               </div>
+               <div className="h-3 w-px bg-border/60"></div>
+               <div className="flex items-center gap-1.5">
+                 <span className="text-accent font-extrabold text-sm">20+</span> Carrières
+               </div>
+               <div className="h-3 w-px bg-border/60"></div>
+               <div className="flex items-center gap-1.5">
+                 <svg className="h-3.5 w-3.5 text-foreground/70" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                 </svg>
+                 <span className="text-foreground/80">Match 92%</span>
+               </div>
             </div>
           </div>
 
