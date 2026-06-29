@@ -131,12 +131,12 @@ export default function RecommendationsPage() {
   }
 
   return (
-    <div className="mx-auto w-full max-w-7xl px-6 py-10">
-      <div className="mb-10 text-center">
-        <h1 className="text-3xl font-semibold text-foreground md:text-4xl">
+    <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 py-8 sm:py-10">
+      <div className="mb-8 sm:mb-10 text-center">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-foreground md:text-4xl">
           Tes recommandations de carrières
         </h1>
-        <p className="mx-auto mt-4 max-w-2xl text-base text-muted-foreground">
+        <p className="mx-auto mt-3 sm:mt-4 max-w-2xl text-sm sm:text-base text-muted-foreground px-2">
           Basé sur ton profil (Niveau : {profile.niveau}), voici les métiers qui correspondent le mieux à tes passions et aux besoins du marché togolais.
         </p>
       </div>
@@ -228,8 +228,8 @@ export default function RecommendationsPage() {
 
       {/* ── FILIÈRES / FORMATIONS ── */}
       {recommendedFormations.length > 0 && (
-        <div className="mt-16">
-          <h2 className="mb-6 text-sm font-bold uppercase tracking-widest text-muted-foreground">
+        <div className="mt-12 sm:mt-16">
+          <h2 className="mb-4 sm:mb-6 text-[11px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground text-center sm:text-left">
             Filières qui te correspondent
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -267,8 +267,8 @@ export default function RecommendationsPage() {
 
       {/* ── UNIVERSITÉS ── */}
       {recommendedUniversities.length > 0 && (
-        <div className="mt-16">
-          <h2 className="mb-6 text-sm font-bold uppercase tracking-widest text-muted-foreground">
+        <div className="mt-12 sm:mt-16">
+          <h2 className="mb-4 sm:mb-6 text-[11px] sm:text-sm font-bold uppercase tracking-widest text-muted-foreground text-center sm:text-left">
             Universités qui proposent ces formations
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -311,14 +311,14 @@ export default function RecommendationsPage() {
       )}
       
       {/* ── FALLBACK / CTA ── */}
-      <div className="mt-16 rounded-xl border border-border bg-muted p-8 text-center">
-        <h3 className="text-lg font-semibold text-foreground">
+      <div className="mt-12 sm:mt-16 rounded-xl border border-border bg-muted p-6 sm:p-8 text-center mx-2 sm:mx-0">
+        <h3 className="text-base sm:text-lg font-semibold text-foreground">
           Ces résultats ne te conviennent pas ?
         </h3>
-        <p className="mt-2 text-sm text-muted-foreground">
+        <p className="mt-2 text-xs sm:text-sm text-muted-foreground">
           L&apos;IA base ses recommandations sur tes réponses. Tu peux modifier ton profil pour affiner les résultats ou discuter avec un conseiller.
         </p>
-        <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row">
+        <div className="mt-6 flex flex-col justify-center gap-3 sm:gap-4 sm:flex-row">
           <Link
             href="/onboarding"
             className="inline-flex items-center justify-center rounded-lg border border-border bg-white px-6 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted/50"

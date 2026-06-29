@@ -289,8 +289,14 @@ body {
 }
 
 /* ========================================
-   Mobile Bottom Navigation — Glassmorphism
+   Mobile Bottom Navigation & PWA utilities
    ======================================== */
+
+@media all and (display-mode: standalone) {
+  .hide-in-pwa {
+    display: none !important;
+  }
+}
 
 .mobile-bottom-nav {
   /* Safe area inset for modern phones with home bar */

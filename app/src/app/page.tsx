@@ -153,14 +153,14 @@ export default function Home() {
         <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
         <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
         
-        <div ref={heroRef} className="reveal relative mx-auto w-full max-w-7xl px-6 py-20 md:py-32">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div ref={heroRef} className="reveal relative mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-20 md:py-32">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <h1 className="mt-6 font-heading text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              <h1 className="mt-6 font-heading text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
                 Trouve ta voie,{" "}
                 <span className="gradient-text">pas au hasard.</span>
               </h1>
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground">
                 Quiz de carrière, vitrine universitaire, feuille de route personnalisée —
                 tout ce qu&apos;il te faut pour choisir avec assurance.
               </p>
@@ -246,12 +246,12 @@ export default function Home() {
 
       {/* ═══════ QUI ES-TU ? ═══════ */}
       <section className="border-t border-border">
-        <div ref={profilesRef} className="reveal mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
+        <div ref={profilesRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           <div className="text-center">
-            <h2 className="font-heading text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="font-heading text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
               Qui es-tu ?
             </h2>
-            <p className="mt-3 text-muted-foreground">
+            <p className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground px-4">
               Choisis ton profil pour une expérience personnalisée.
             </p>
           </div>
@@ -260,12 +260,12 @@ export default function Home() {
               <Link
                 key={p.title}
                 href="/onboarding"
-                className="card-hover shadow-premium group flex flex-col rounded-2xl border border-border bg-card p-8 transition-all hover:border-primary/40"
+                className="card-hover shadow-premium group flex flex-col rounded-2xl border border-border bg-card p-6 sm:p-8 transition-all hover:border-primary/40"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-xl bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                   {p.icon}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-foreground">{p.title}</h3>
+                <h3 className="mt-4 sm:mt-5 text-lg font-semibold text-foreground">{p.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{p.desc}</p>
                 <span className="mt-5 text-sm font-medium text-primary group-hover:underline">
                   C&apos;est moi →
@@ -278,17 +278,16 @@ export default function Home() {
 
       {/* ═══════ COMMENT ÇA MARCHE ═══════ */}
       <section id="how-it-works" className="border-t border-border bg-muted">
-        <div ref={stepsRef} className="reveal mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
+        <div ref={stepsRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           <div className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-primary">
               Comment ça marche
             </span>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+            <h2 className="mt-2 sm:mt-3 font-heading text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
               4 étapes simples
             </h2>
           </div>
-          <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => (
+          <div className="mt-10 sm:mt-14 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-4">            {steps.map((s, i) => (
               <div key={s.num} className="shadow-premium relative flex flex-col items-start rounded-2xl border border-border bg-card p-6" style={{ animationDelay: `${i * 100}ms` }}>
                 <span className="font-heading text-4xl font-bold text-primary/20">{s.num}</span>
                 <h3 className="mt-3 text-lg font-semibold text-foreground">{s.title}</h3>
@@ -301,19 +300,19 @@ export default function Home() {
 
       {/* ═══════ STATS ═══════ */}
       <section className="border-t border-border">
-        <div ref={statsRef} className="reveal mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
+        <div ref={statsRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           <div className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-primary">
               La plateforme en chiffres
             </span>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4">
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-4">
             {stats.map((s) => (
-              <div key={s.label} className="shadow-premium flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center">
-                <p className="font-heading text-4xl font-bold text-foreground md:text-5xl">
+              <div key={s.label} className="shadow-premium flex flex-col items-center rounded-2xl border border-border bg-card p-4 sm:p-6 text-center">
+                <p className="font-heading text-3xl sm:text-4xl font-bold text-foreground md:text-5xl">
                   <Counter target={s.value} suffix={s.suffix} />
                 </p>
-                <p className="mt-2 text-sm text-muted-foreground">{s.label}</p>
+                <p className="mt-1 sm:mt-2 text-[11px] sm:text-sm text-muted-foreground">{s.label}</p>
               </div>
             ))}
           </div>
@@ -357,38 +356,39 @@ export default function Home() {
 
       {/* ═══════ UNIVERSITÉ DU MOIS ═══════ */}
       <section className="border-t border-border">
-        <div ref={uniRef} className="reveal mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
+        <div ref={uniRef} className="reveal mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
           <div className="text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-accent">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-accent">
               Université du mois
             </span>
           </div>
-          <div className="mt-10 mx-auto max-w-3xl overflow-hidden rounded-2xl border-2 border-accent/30 bg-card shadow-premium">
-            <div className="h-48 w-full overflow-hidden bg-muted">
+          <div className="mt-8 sm:mt-10 mx-auto max-w-3xl overflow-hidden rounded-2xl border-2 border-accent/30 bg-card shadow-premium">
+            <div className="h-40 sm:h-48 w-full overflow-hidden bg-muted">
               {featuredUni.header_image ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={featuredUni.header_image} alt="" className="h-full w-full object-cover" />
               ) : (
                 <div className="flex h-full items-center justify-center bg-accent/10">
-                  <svg className="h-16 w-16 text-accent/30" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
+                  <svg className="h-12 w-12 sm:h-16 sm:w-16 text-accent/30" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
                   </svg>
                 </div>
               )}
             </div>
-            <div className="p-8">
-              <div className="flex items-center gap-4">
+            <div className="p-5 sm:p-8">
+              <div className="flex items-center gap-3 sm:gap-4">
                 {featuredUni.logo && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={featuredUni.logo} alt="" className="h-14 w-14 rounded-xl border border-border object-contain p-1 bg-white" />
+                  <img src={featuredUni.logo} alt="" className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl border border-border object-contain p-1 bg-white" />
                 )}
                 <div>
-                  <h3 className="text-xl font-bold text-foreground">{featuredUni.name}</h3>
-                  <p className="text-sm text-muted-foreground">📍 {featuredUni.location} · {featuredUni.type}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground leading-tight">{featuredUni.name}</h3>
+                  <p className="text-[11px] sm:text-sm text-muted-foreground mt-0.5">📍 {featuredUni.location} · {featuredUni.type}</p>
                 </div>
               </div>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{featuredUni.description}</p>
-              <div className="mt-6 flex gap-3">
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+
                 <Link href="/universities" className="rounded-xl bg-primary px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-hover">
                   En savoir plus
                 </Link>
@@ -423,15 +423,16 @@ export default function Home() {
 
       {/* ═══════ ACTUALITÉS (NEWS) ═══════ */}
       <section id="actualites" className="border-t border-border bg-background">
-        <div className="mx-auto w-full max-w-7xl px-6 py-16 md:py-24">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-24">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 sm:gap-6">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-primary">
                 S'informer
               </span>
-              <h2 className="mt-3 font-heading text-3xl font-bold text-foreground md:text-4xl">
+              <h2 className="mt-2 sm:mt-3 font-heading text-2xl sm:text-3xl font-bold text-foreground md:text-4xl">
                 Actualités & Marché de l'emploi
               </h2>
+
               <p className="mt-4 max-w-2xl text-base text-muted-foreground">
                 Découvrez les dernières avancées du système éducatif togolais et les tendances du marché du recrutement pour mieux orienter votre carrière.
               </p>
@@ -503,12 +504,12 @@ export default function Home() {
           style={{ backgroundImage: "url('/bg2.jpg')" }}
         />
         <div className="absolute inset-0 bg-muted/70" />
-        <div ref={consultRef} className="reveal relative mx-auto w-full max-w-7xl px-6 py-16 md:py-20">
-          <div className="mx-auto max-w-3xl rounded-2xl glass-panel shadow-premium p-8 md:p-12 text-center">
-            <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+        <div ref={consultRef} className="reveal relative mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+          <div className="mx-auto max-w-3xl rounded-2xl glass-panel shadow-premium p-6 sm:p-8 md:p-12 text-center">
+            <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-widest text-muted-foreground">
               Tu préfères parler à quelqu&apos;un ?
             </span>
-            <h2 className="mt-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
+            <h2 className="mt-3 sm:mt-4 font-heading text-2xl font-bold text-foreground md:text-3xl">
               Consulte un conseiller d&apos;orientation
             </h2>
             <p className="mt-4 text-muted-foreground">

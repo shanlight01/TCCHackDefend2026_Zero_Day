@@ -118,9 +118,9 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Mobile menu button — hidden, navigation handled by bottom bar */}
+        {/* Mobile menu button — hidden in PWA (handled by bottom bar), visible in browser */}
         <button
-          className="lg:hidden flex h-10 w-10 items-center justify-center rounded-lg hover:bg-surface-hover transition-colors"
+          className="hide-in-pwa lg:hidden flex h-10 w-10 items-center justify-center rounded-lg hover:bg-surface-hover transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
