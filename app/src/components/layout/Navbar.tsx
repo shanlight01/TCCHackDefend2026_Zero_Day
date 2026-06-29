@@ -76,34 +76,35 @@ export function Navbar() {
           })}
         </ul>
 
-        {/* Right side: lang, theme, CTA */}
-        <div className="hidden lg:flex items-center gap-2">
+        {/* Right side: theme, install, auth */}
+        <div className="flex items-center gap-2">
+          {/* Desktop-only options */}
+          <div className="hidden lg:flex items-center gap-2">
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
+              title={theme === "light" ? "Mode sombre" : "Mode clair"}
+            >
+              {theme === "light" ? (
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+              ) : (
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+              )}
+            </button>
 
+            <PWAInstallPrompt />
+          </div>
 
-          {/* Theme toggle */}
-          <button
-            onClick={toggleTheme}
-            className="flex h-8 w-8 items-center justify-center rounded-lg border border-border text-muted-foreground transition-colors hover:text-foreground hover:border-foreground/30"
-            title={theme === "light" ? "Mode sombre" : "Mode clair"}
-          >
-            {theme === "light" ? (
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-              </svg>
-            ) : (
-              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-              </svg>
-            )}
-          </button>
-
-          <PWAInstallPrompt />
-
-          {/* Auth / Profile */}
+          {/* Auth / Profile — Always visible */}
           {user ? (
             <Link
               href="/profile"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-white text-sm font-bold hover:bg-primary-hover transition-colors ml-2 shrink-0"
+              className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-primary text-white text-xs sm:text-sm font-bold hover:bg-primary-hover transition-colors shrink-0"
               title={`Mon profil — ${user.firstName ?? user.email}`}
             >
               {(user.firstName ?? user.email).charAt(0).toUpperCase()}
@@ -111,27 +112,27 @@ export function Navbar() {
           ) : (
             <Link
               href="/auth"
-              className="ml-2 inline-flex items-center rounded-lg border border-border bg-surface px-4 py-2 text-sm font-medium text-foreground hover:bg-surface-hover transition-colors"
+              className="inline-flex items-center rounded-lg border border-border bg-surface px-3 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-foreground hover:bg-surface-hover transition-colors"
             >
               Se connecter
             </Link>
           )}
-        </div>
 
-        {/* Mobile menu button — hidden in PWA (handled by bottom bar), visible in browser */}
-        <button
-          className="hide-in-pwa lg:hidden flex h-10 w-10 items-center justify-center rounded-lg hover:bg-surface-hover transition-colors"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Menu"
-        >
-          <svg className="h-5 w-5 text-foreground" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-            {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            )}
-          </svg>
-        </button>
+          {/* Mobile menu button — hidden in PWA (handled by bottom bar), visible in browser */}
+          <button
+            className="hide-in-pwa lg:hidden flex h-10 w-10 items-center justify-center rounded-lg hover:bg-surface-hover transition-colors"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Menu"
+          >
+            <svg className="h-5 w-5 text-foreground" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              {mobileOpen ? (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              )}
+            </svg>
+          </button>
+        </div>
       </nav>
 
       {/* Mobile menu */}
