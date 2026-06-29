@@ -148,6 +148,11 @@ export default function Home() {
           style={{ backgroundImage: "url('/bg1.jpg')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/80 to-background" />
+        
+        {/* Decorative blur spots for high-end look */}
+        <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
+        <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
+        
         <div ref={heroRef} className="reveal relative mx-auto w-full max-w-7xl px-6 py-20 md:py-32">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
@@ -159,6 +164,30 @@ export default function Home() {
                 Quiz de carrière, vitrine universitaire, feuille de route personnalisée —
                 tout ce qu&apos;il te faut pour choisir avec assurance.
               </p>
+              
+              {/* Compact mobile hero illustration stats */}
+              <div className="mt-6 lg:hidden flex items-center justify-between gap-3 bg-card/60 backdrop-blur border border-border p-4 rounded-2xl shadow-sm max-w-lg">
+                <div className="flex-1 text-center border-r border-border/80">
+                  <p className="text-xl font-extrabold text-primary">96</p>
+                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Écoles</p>
+                </div>
+                <div className="flex-1 text-center border-r border-border/80">
+                  <p className="text-xl font-extrabold text-accent">20+</p>
+                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Carrières</p>
+                </div>
+                <div className="flex-[2] flex items-center gap-2 pl-3">
+                  <div className="h-8 w-8 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
+                    <svg className="h-4.5 w-4.5 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-xs font-bold text-foreground">Match: 92%</p>
+                    <p className="text-[10px] text-muted-foreground">Développeur Web</p>
+                  </div>
+                </div>
+              </div>
+
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/onboarding"

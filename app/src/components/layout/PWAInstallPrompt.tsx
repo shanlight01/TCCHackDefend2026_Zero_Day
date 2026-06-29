@@ -51,15 +51,51 @@ export function PWAInstallPrompt() {
   }
 
   return (
-    <button
-      onClick={handleInstallClick}
-      className="hidden lg:flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-hover transition-colors ml-2"
-      title="Installer l'application"
-    >
-      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-      </svg>
-      Installer l'App
-    </button>
+    <>
+      {/* Desktop Button */}
+      <button
+        onClick={handleInstallClick}
+        className="hidden lg:flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary-hover transition-colors ml-2"
+        title="Installer l'application"
+      >
+        <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Installer l'App
+      </button>
+
+      {/* Mobile Floating Banner */}
+      <div className="lg:hidden fixed bottom-6 left-4 right-4 z-50 flex items-center justify-between gap-3 bg-card border border-border p-4 rounded-xl shadow-lg animate-in slide-in-from-bottom-5">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary text-white">
+            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+          </div>
+          <div className="text-left">
+            <h4 className="text-sm font-semibold text-foreground">Career Guidance</h4>
+            <p className="text-[11px] text-muted-foreground">Installe l'application sur ton téléphone</p>
+          </div>
+        </div>
+        <div className="flex items-center gap-2 shrink-0">
+          <button
+            onClick={() => setIsInstallable(false)}
+            className="p-1.5 text-muted-foreground hover:text-foreground"
+            aria-label="Fermer"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+          <button
+            onClick={handleInstallClick}
+            className="rounded-lg bg-primary px-3.5 py-2 text-xs font-semibold text-white hover:bg-primary-hover transition-all"
+          >
+            Installer
+          </button>
+        </div>
+      </div>
+    </>
   );
 }
