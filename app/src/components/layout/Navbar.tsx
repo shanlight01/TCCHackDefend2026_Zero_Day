@@ -118,7 +118,7 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile menu button — hidden, navigation handled by bottom bar */}
         <button
           className="lg:hidden flex h-10 w-10 items-center justify-center rounded-lg hover:bg-surface-hover transition-colors"
           onClick={() => setMobileOpen(!mobileOpen)}

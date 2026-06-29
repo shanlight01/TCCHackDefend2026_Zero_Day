@@ -6,6 +6,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { ConditionalFooter } from "@/components/layout/ConditionalFooter";
 import { AuthProvider } from "@/lib/supabase/AuthProvider";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -86,6 +87,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <ConditionalFooter />
+            <MobileBottomNav />
           </AuthProvider>
         </ThemeProvider>
       </body>
