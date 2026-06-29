@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "leaflet/dist/leaflet.css";
@@ -24,6 +24,23 @@ export const metadata: Metadata = {
   description:
     "Plateforme d'orientation scolaire et professionnelle pour les lycéens et bacheliers du Togo. Quiz de carrière, universités, feuille de route personnalisée.",
   keywords: "orientation, carrière, Togo, universités, lycéen, bachelier, métier",
+  manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Career Guidance",
+  },
+  formatDetection: {
+    telephone: false,
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#1A6B4A",
 };
 
 export default function RootLayout({
@@ -38,6 +55,12 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Career Guidance" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <link rel="manifest" href="/manifest.json" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -47,6 +70,12 @@ export default function RootLayout({
                 else if (window.matchMedia('(prefers-color-scheme: dark)').matches)
                   document.documentElement.setAttribute('data-theme', 'dark');
               } catch(e) {}
+              // Register Service Worker
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                  navigator.serviceWorker.register('/sw.js').catch(() => {});
+                });
+              }
             `,
           }}
         />

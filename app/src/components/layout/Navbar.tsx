@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "./ThemeProvider";
 import { useAuth } from "@/lib/supabase/AuthProvider";
 import { signOut } from "@/lib/supabase/auth";
+import { PWAInstallPrompt } from "./PWAInstallPrompt";
 
 const navLinks = [
   { href: "/formations", label: "Formations" },
@@ -95,6 +96,8 @@ export function Navbar() {
               </svg>
             )}
           </button>
+
+          <PWAInstallPrompt />
 
           {/* Auth / Profile */}
           {user ? (
