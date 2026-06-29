@@ -21,9 +21,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Career Guidance — Trouve ta voie, pas au hasard",
+  title: "Career Guidance Togo | Trouve ta voie",
   description:
-    "Plateforme d'orientation scolaire et professionnelle pour les lycéens et bacheliers du Togo. Quiz de carrière, universités, feuille de route personnalisée.",
+    "Plateforme d'orientation scolaire et professionnelle pour les lycéens et bacheliers du Togo. Bilan de carrière, universités, feuille de route personnalisée.",
   keywords: "orientation, carrière, Togo, universités, lycéen, bachelier, métier",
   manifest: "/manifest.json",
   appleWebApp: {

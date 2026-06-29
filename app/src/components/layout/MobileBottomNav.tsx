@@ -26,7 +26,7 @@ const tabs = [
   },
   {
     href: "/onboarding",
-    label: "Quiz",
+    label: "Bilan",
     icon: (active: boolean) => (
       <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.2 : 1.7} strokeLinecap="round" strokeLinejoin="round">
         <circle cx="12" cy="12" r="9" />

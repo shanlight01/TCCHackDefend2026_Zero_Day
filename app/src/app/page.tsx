@@ -77,7 +77,7 @@ const testimonials = [
   {
     name: "Efia D.",
     role: "Infirmière — ENAM Lomé",
-    quote: "Le quiz d'orientation m'a confirmé ma vocation pour la santé. Les informations sur les écoles et les salaires m'ont aidée à convaincre mes parents.",
+    quote: "Le bilan d'orientation m'a confirmé ma vocation pour la santé. Les informations sur les écoles et les salaires m'ont aidée à convaincre mes parents.",
     avatar: "ED",
   },
 ];
@@ -161,7 +161,7 @@ export default function Home() {
                 <span className="gradient-text">pas au hasard.</span>
               </h1>
               <p className="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground">
-                Quiz de carrière, vitrine universitaire, feuille de route personnalisée —
+                Bilan de carrière, vitrine universitaire, feuille de route personnalisée —
                 tout ce qu&apos;il te faut pour choisir avec assurance.
               </p>
               
