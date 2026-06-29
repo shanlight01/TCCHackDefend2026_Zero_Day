@@ -180,21 +180,35 @@ export default function RecommendationsPage() {
                     <span className="font-medium text-foreground">{career.salaire_debutant}</span>
                   </div>
                 )}
-                {career.competences && career.competences.length > 0 && (
-                  <div className="pt-2 flex flex-wrap gap-1.5">
-                    {career.competences.slice(0, 3).map((comp, i) => (
-                      <span key={i} className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground">
-                        {comp}
-                      </span>
-                    ))}
-                    {career.competences.length > 3 && (
-                      <span className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground">
-                        +{career.competences.length - 3}
-                      </span>
-                    )}
-                  </div>
-                )}
               </div>
+
+              {/* Mini Roadmap Schema */}
+              {(() => {
+                const roadmap = roadmapsData.roadmaps.find(r => r.career_id === career.id);
+                if (roadmap && roadmap.etapes_carriere && roadmap.etapes_carriere.length > 0) {
+                  return (
+                    <div className="mt-5 border-t border-border/60 pt-5">
+                      <p className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-3">
+                        Aperçu du parcours
+                      </p>
+                      <div className="relative flex items-center justify-between">
+                        {/* Ligne de connexion */}
+                        <div className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-border z-0" />
+                        
+                        {roadmap.etapes_carriere.map((etape, i) => (
+                          <div key={i} className="relative z-10 flex flex-col items-center gap-1.5 bg-white px-1">
+                            <div className={`h-2.5 w-2.5 rounded-full ${i === 0 ? 'bg-primary' : i === 1 ? 'bg-success' : i === 2 ? 'bg-warning' : 'bg-info'}`} />
+                            <span className="text-[9px] font-semibold text-muted-foreground whitespace-nowrap">
+                              {etape.phase.split(' ')[0]} {/* Affiche juste "Lycée", "Formation", etc. */}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
+              })()}
               
               <div className="mt-6">
                 <Link
