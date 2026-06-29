@@ -89,7 +89,7 @@ export function MobileBottomNav() {
       <div className="h-24" />
 
       {/* Floating Glassmorphism Bottom Nav */}
-      <nav className="mobile-bottom-nav fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-sm">
+      <nav className="mobile-bottom-nav fixed bottom-4 left-4 right-4 mx-auto z-50 max-w-sm">
         <div className="mobile-nav-glass flex items-center justify-around px-2 py-2 rounded-[28px]">
           {tabs.map((tab) => {
             const isActive =
