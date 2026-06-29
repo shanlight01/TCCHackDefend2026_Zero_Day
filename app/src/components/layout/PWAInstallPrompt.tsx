@@ -40,19 +40,25 @@ export function PWAInstallPrompt() {
   }, []);
 
   const handleInstallClick = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === "accepted") {
-      setInstallState("installed");
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        setInstallState("installed");
+      }
+      setDeferredPrompt(null);
+    } else {
+      setShowIOSGuide(!showIOSGuide);
     }
-    setDeferredPrompt(null);
   };
 
-  // Don't show anything if installed, unknown, or dismissed
-  if (installState === "installed" || installState === "unknown" || dismissed) {
+  // Don't show anything if installed or dismissed
+  if (installState === "installed" || dismissed) {
     return null;
   }
+
+  // Determine browser/OS instructions
+  const isApple = installState === "ios";
 
   return (
     <>
@@ -70,8 +76,8 @@ export function PWAInstallPrompt() {
       )}
 
       {/* ── Mobile Floating Banner (shown in browser only) ── */}
-      <div className="lg:hidden fixed bottom-5 left-3 right-3 z-[60]">
-        <div className="bg-card border border-border rounded-2xl shadow-xl overflow-hidden">
+      <div className="lg:hidden fixed bottom-16 left-3 right-3 z-[60]">
+        <div className="bg-card/95 backdrop-blur border border-border rounded-2xl shadow-xl overflow-hidden animate-fade-in-up">
           
           {/* Main install row */}
           <div className="flex items-center gap-3 p-4">
@@ -82,11 +88,9 @@ export function PWAInstallPrompt() {
               </svg>
             </div>
             <div className="flex-1 text-left">
-              <h4 className="text-sm font-bold text-foreground">Career Guidance</h4>
+              <h4 className="text-sm font-bold text-foreground">Installer l&apos;application</h4>
               <p className="text-[11px] text-muted-foreground leading-tight">
-                {installState === "ios"
-                  ? "Installe l'app sur ton iPhone"
-                  : "Installe l'application sur ton téléphone"}
+                Pour l&apos;avoir sur ton écran d&apos;accueil sans navigateur.
               </p>
             </div>
             <div className="flex items-center gap-2 shrink-0">
@@ -102,40 +106,55 @@ export function PWAInstallPrompt() {
               {installState === "installable" ? (
                 <button
                   onClick={handleInstallClick}
-                  className="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary-hover transition-all active:scale-95"
+                  className="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary-hover transition-all active:scale-95 shadow-md shadow-primary/20"
                 >
                   Installer
                 </button>
               ) : (
                 <button
                   onClick={() => setShowIOSGuide(!showIOSGuide)}
-                  className="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary-hover transition-all active:scale-95"
+                  className="rounded-xl bg-primary px-4 py-2 text-xs font-bold text-white hover:bg-primary-hover transition-all active:scale-95 shadow-md shadow-primary/20"
                 >
-                  Comment ?
+                  {showIOSGuide ? "Fermer" : "Installer"}
                 </button>
               )}
             </div>
           </div>
 
-          {/* iOS Guide — collapsible */}
-          {installState === "ios" && showIOSGuide && (
-            <div className="border-t border-border bg-muted/50 px-4 py-3">
-              <p className="text-xs font-semibold text-foreground mb-2">
-                Sur Safari, pour installer :
+          {/* Guide collapsable pour installer (iOS ou Android) */}
+          {showIOSGuide && (
+            <div className="border-t border-border bg-muted/40 px-4 py-3.5">
+              <p className="text-xs font-bold text-foreground mb-2">
+                {isApple ? "Sur iPhone / iPad (Safari) :" : "Sur Android (Chrome / Brave) :"}
               </p>
-              <ol className="space-y-1.5">
-                {[
-                  { step: "1", text: "Appuie sur l'icône Partager  ⬆  en bas de Safari" },
-                  { step: "2", text: "Fais défiler et appuie sur « Sur l'écran d'accueil »" },
-                  { step: "3", text: "Confirme en appuyant sur « Ajouter »" },
-                ].map(({ step, text }) => (
-                  <li key={step} className="flex items-start gap-2">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">
-                      {step}
-                    </span>
-                    <span className="text-[11px] text-muted-foreground leading-tight">{text}</span>
-                  </li>
-                ))}
+              <ol className="space-y-2">
+                {isApple ? (
+                  <>
+                    <li className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">1</span>
+                      <span className="text-[11px] text-muted-foreground leading-tight">Appuie sur l&apos;icône <strong>Partager</strong> (le carré avec la flèche vers le haut ⎋) en bas.</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">2</span>
+                      <span className="text-[11px] text-muted-foreground leading-tight">Fais défiler vers le bas et choisis <strong>« Sur l&apos;écran d&apos;accueil »</strong>.</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">3</span>
+                      <span className="text-[11px] text-muted-foreground leading-tight">Confirme en cliquant sur <strong>« Ajouter »</strong> en haut à droite.</span>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">1</span>
+                      <span className="text-[11px] text-muted-foreground leading-tight">Appuie sur les <strong>trois petits points (menu) `⋮`</strong> en haut à droite.</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">2</span>
+                      <span className="text-[11px] text-muted-foreground leading-tight">Choisis <strong>« Installer l&apos;application »</strong> ou « Ajouter à l&apos;écran d&apos;accueil ».</span>
+                    </li>
+                  </>
+                )}
               </ol>
             </div>
           )}
