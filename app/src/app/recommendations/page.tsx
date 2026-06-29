@@ -12,6 +12,10 @@ interface Career {
   description: string;
   keywords: string[];
   matchScore?: number; // Calculated for the user
+  demande_marche?: string;
+  salaire_debutant?: string;
+  competences?: string[];
+  formations_requises?: string[];
 }
 
 export default function RecommendationsPage() {
@@ -48,8 +52,8 @@ export default function RecommendationsPage() {
           return { ...career, matchScore: Math.min(score, 98) };
         });
 
-        // Sort by score and take top 3
-        const sorted = scoredCareers.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 3);
+        // Sort by score and take top 6
+        const sorted = scoredCareers.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 6);
         setRecommendations(sorted);
 
         // Aggregate recommended formations (filières) and universities
@@ -158,11 +162,41 @@ export default function RecommendationsPage() {
               <h2 className="text-xl font-bold text-foreground">
                 {career.nom_metier}
               </h2>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground line-clamp-3">
                 {career.description}
               </p>
               
-              <div className="mt-8">
+              {/* Infos additionnelles */}
+              <div className="mt-5 space-y-2.5 border-t border-border/60 pt-5">
+                {career.demande_marche && (
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Demande au Togo :</span>
+                    <span className="font-semibold text-primary">{career.demande_marche}</span>
+                  </div>
+                )}
+                {career.salaire_debutant && (
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-muted-foreground">Salaire débutant :</span>
+                    <span className="font-medium text-foreground">{career.salaire_debutant}</span>
+                  </div>
+                )}
+                {career.competences && career.competences.length > 0 && (
+                  <div className="pt-2 flex flex-wrap gap-1.5">
+                    {career.competences.slice(0, 3).map((comp, i) => (
+                      <span key={i} className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground">
+                        {comp}
+                      </span>
+                    ))}
+                    {career.competences.length > 3 && (
+                      <span className="rounded-md bg-muted px-2 py-1 text-[10px] font-medium text-muted-foreground">
+                        +{career.competences.length - 3}
+                      </span>
+                    )}
+                  </div>
+                )}
+              </div>
+              
+              <div className="mt-6">
                 <Link
                   href={`/roadmap/${career.id}`}
                   className="flex w-full items-center justify-center gap-2 rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#383838]"
