@@ -193,41 +193,47 @@ export default function Home() {
         <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
 
         {/* ── MOBILE layout (< lg) ── */}
-        <div className="lg:hidden relative z-10 flex flex-col min-h-[100dvh] px-4 pt-20 pb-4">
+        <div className="lg:hidden relative z-10 flex flex-col min-h-[100dvh] px-4 pt-12 pb-4">
           {/* Top: titre + sous-titre + bouton */}
-          <div className="flex-1 flex flex-col justify-center">
-            <h1 className="font-heading text-[2rem] font-bold leading-tight tracking-tight text-foreground">
+          <div className="flex-1 flex flex-col justify-start pt-4">
+            <h1 className="font-heading text-[2.25rem] font-bold leading-tight tracking-tight text-foreground max-w-[280px]">
               Trouve ta voie,{" "}
               <span className="gradient-text">pas au hasard.</span>
             </h1>
-            <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-[300px]">
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-[280px]">
               Bilan de carrière, vitrine universitaire, feuille de route personnalisée — tout ce qu&apos;il te faut pour choisir avec assurance.
             </p>
-            <div className="mt-5">
+            <div className="mt-5 flex items-center gap-3">
               <Link
                 href="/onboarding"
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover"
+                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover"
               >
-                Commencer maintenant
+                Commencer
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
+              </Link>
+              <Link
+                href="/formations"
+                className="inline-flex items-center justify-center rounded-xl border border-border bg-card/80 backdrop-blur-sm px-5 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
+              >
+                S&apos;orienter
               </Link>
             </div>
           </div>
 
           {/* Bottom: carte des 4 étapes, au-dessus de la nav */}
-          <div className="shrink-0 mb-20">
-            <div className="shadow-premium rounded-2xl border border-border bg-card/95 backdrop-blur-md p-3">
-              <div className="grid grid-cols-2 gap-x-2 gap-y-2">
-                {steps.map((s) => (
-                  <div key={s.title} className="flex items-start gap-2 rounded-xl p-1.5">
-                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${s.bgColor} ${s.color}`}>
-                      <div className="scale-[0.65]">{s.icon}</div>
+          <div className="shrink-0 mb-20 w-[92%] max-w-[340px]">
+            <div className="shadow-premium rounded-3xl border border-border bg-card/95 backdrop-blur-md p-4">
+              <div className="grid grid-cols-2 gap-x-2 gap-y-4 divide-x divide-border/40">
+                {steps.map((s, index) => (
+                  <div key={s.title} className={`flex flex-col items-center text-center px-2 ${index > 1 ? 'pt-2 border-t border-border/40' : ''}`}>
+                    <div className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full ${s.bgColor} ${s.color} mb-1.5`}>
+                      <div className="scale-75">{s.icon}</div>
                     </div>
                     <div>
                       <h3 className="text-[10px] font-bold text-foreground leading-tight">{s.title}</h3>
-                      <p className="text-[9px] leading-relaxed text-muted-foreground mt-0.5">{s.desc}</p>
+                      <p className="text-[8px] leading-relaxed text-muted-foreground mt-0.5">{s.desc}</p>
                     </div>
                   </div>
                 ))}
