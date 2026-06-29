@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 
 const footerLinks = {
@@ -56,9 +58,35 @@ export function Footer() {
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
               </a>
             </div>
+
+            {/* Mobile-only: Bouton Télécharger */}
+            <div className="mt-6 lg:hidden">
+              <button
+                id="footer-install-btn"
+                className="w-full inline-flex items-center justify-center gap-2.5 rounded-2xl bg-primary px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all active:scale-[0.97] hover:bg-primary-hover"
+                onClick={() => {
+                  // Try native install prompt first
+                  if ((window as any).__pwaPrompt) {
+                    (window as any).__pwaPrompt.prompt();
+                  } else {
+                    // Scroll to show manual instructions or open a guide
+                    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+                    const msg = isIOS
+                      ? "Pour installer :\n1. Appuie sur l'icône Partager (⎋) en bas de Safari\n2. Choisis « Sur l'écran d'accueil »\n3. Appuie sur « Ajouter »"
+                      : "Pour installer :\n1. Appuie sur ⋮ (menu) en haut à droite\n2. Choisis « Installer l'application » ou « Ajouter à l'écran d'accueil »";
+                    alert(msg);
+                  }
+                }}
+              >
+                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+                Télécharger Career Guidance
+              </button>
+            </div>
           </div>
 
-          {/* Links: Plateforme */}
+
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-wider text-foreground">
               Plateforme
