@@ -182,55 +182,73 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* ═══════ HERO ═══════ */}
-      <section className="relative overflow-hidden min-h-[100dvh] lg:min-h-0 flex flex-col justify-center">
-        {/* Arrière-plan personnalisé (Image 1) */}
+      <section className="relative overflow-hidden min-h-[100dvh] lg:min-h-0">
+        {/* Arrière-plan */}
         <div
           className="absolute inset-0 bg-cover bg-[center_top] bg-no-repeat lg:opacity-15"
           style={{ backgroundImage: "url('/bg1.jpg')" }}
         />
-        {/* Gradient: moins opaque sur mobile pour voir l'image en arrière-plan, normal sur desktop */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/60 to-background lg:from-background/40 lg:via-background/80 lg:to-background" />
-        
-        {/* Decorative blur spots for high-end look */}
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/55 to-background lg:from-background/40 lg:via-background/80 lg:to-background" />
         <div className="absolute left-[-10%] top-[-10%] h-[300px] w-[300px] rounded-full bg-primary/10 blur-[100px] pointer-events-none" />
         <div className="absolute right-[-10%] top-[20%] h-[350px] w-[350px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
-        
-        <div ref={heroRef} className="reveal relative mx-auto w-full max-w-7xl px-4 sm:px-6 py-12 sm:py-20 md:py-32">
+
+        {/* ── MOBILE layout (< lg) ── */}
+        <div className="lg:hidden relative z-10 flex flex-col min-h-[100dvh] px-4 pt-20 pb-4">
+          {/* Top: titre + sous-titre + bouton */}
+          <div className="flex-1 flex flex-col justify-center">
+            <h1 className="font-heading text-[2rem] font-bold leading-tight tracking-tight text-foreground">
+              Trouve ta voie,{" "}
+              <span className="gradient-text">pas au hasard.</span>
+            </h1>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground max-w-[300px]">
+              Bilan de carrière, vitrine universitaire, feuille de route personnalisée — tout ce qu&apos;il te faut pour choisir avec assurance.
+            </p>
+            <div className="mt-5">
+              <Link
+                href="/onboarding"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover"
+              >
+                Commencer maintenant
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
+          {/* Bottom: carte des 4 étapes, au-dessus de la nav */}
+          <div className="shrink-0 mb-20">
+            <div className="shadow-premium rounded-2xl border border-border bg-card/95 backdrop-blur-md p-3">
+              <div className="grid grid-cols-2 gap-x-2 gap-y-2">
+                {steps.map((s) => (
+                  <div key={s.title} className="flex items-start gap-2 rounded-xl p-1.5">
+                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full ${s.bgColor} ${s.color}`}>
+                      <div className="scale-[0.65]">{s.icon}</div>
+                    </div>
+                    <div>
+                      <h3 className="text-[10px] font-bold text-foreground leading-tight">{s.title}</h3>
+                      <p className="text-[9px] leading-relaxed text-muted-foreground mt-0.5">{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ── DESKTOP layout (>= lg) ── */}
+        <div ref={heroRef} className="reveal hidden lg:block relative mx-auto w-full max-w-7xl px-6 py-32">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <h1 className="mt-6 font-heading text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              <h1 className="mt-6 font-heading text-5xl font-bold leading-tight tracking-tight text-foreground lg:text-6xl">
                 Trouve ta voie,{" "}
                 <span className="gradient-text">pas au hasard.</span>
               </h1>
-              <p className="mt-4 sm:mt-6 max-w-lg text-base sm:text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
                 Bilan de carrière, vitrine universitaire, feuille de route personnalisée —
                 tout ce qu&apos;il te faut pour choisir avec assurance.
               </p>
-              
-              {/* Compact mobile hero illustration stats */}
-              <div className="mt-6 lg:hidden flex items-center justify-between gap-3 bg-card/60 backdrop-blur border border-border p-4 rounded-2xl shadow-sm max-w-lg">
-                <div className="flex-1 text-center border-r border-border/80">
-                  <p className="text-xl font-extrabold text-primary">96</p>
-                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Écoles</p>
-                </div>
-                <div className="flex-1 text-center border-r border-border/80">
-                  <p className="text-xl font-extrabold text-accent">20+</p>
-                  <p className="text-[10px] text-muted-foreground uppercase font-semibold tracking-wider">Carrières</p>
-                </div>
-                <div className="flex-[2] flex items-center gap-2 pl-3">
-                  <div className="h-8 w-8 rounded-xl bg-primary/20 flex items-center justify-center shrink-0">
-                    <svg className="h-4.5 w-4.5 text-primary" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                    </svg>
-                  </div>
-                  <div className="text-left">
-                    <p className="text-xs font-bold text-foreground">Match: 92%</p>
-                    <p className="text-[10px] text-muted-foreground">Développeur Web</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-8 flex gap-4">
                 <Link
                   href="/onboarding"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/30"
@@ -244,12 +262,12 @@ export default function Home() {
                   href="/formations"
                   className="inline-flex items-center justify-center rounded-xl border border-border bg-card px-7 py-3.5 text-sm font-medium text-foreground transition-colors hover:bg-surface-hover"
                 >
-                  S'orienter
+                  S&apos;orienter
                 </Link>
               </div>
             </div>
-            {/* Hero illustration (Desktop Only) */}
-            <div className="hidden lg:flex justify-center">
+            {/* Hero illustration */}
+            <div className="flex justify-center">
               <div className="relative">
                 <div className="animate-float glass-panel rounded-2xl p-8 shadow-premium">
                   <div className="grid grid-cols-2 gap-4">
@@ -281,24 +299,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* MOBILE ONLY: 4 Steps block at bottom left */}
-          <div className="lg:hidden absolute bottom-6 left-4 right-4 z-20">
-            <div className="shadow-premium rounded-2xl border border-border bg-card/95 backdrop-blur-md p-3">
-              <div className="grid grid-cols-2 gap-2 divide-x divide-border/50">
-                {steps.map((s, i) => (
-                  <div key={s.title} className="flex flex-col items-center text-center p-2" style={{ animationDelay: `${i * 100}ms` }}>
-                    <div className={`flex h-8 w-8 items-center justify-center rounded-full ${s.bgColor} ${s.color} mb-1.5`}>
-                      <div className="scale-75">{s.icon}</div>
-                    </div>
-                    <h3 className="text-[10px] font-bold text-foreground mb-0.5 leading-tight">{s.title}</h3>
-                    <p className="text-[9px] leading-relaxed text-muted-foreground">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
