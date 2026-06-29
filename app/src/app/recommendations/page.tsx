@@ -145,7 +145,7 @@ export default function RecommendationsPage() {
         {recommendations.map((career, index) => (
           <div
             key={career.id}
-            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-shadow hover:shadow-md animate-in fade-in slide-in-from-bottom-4"
+            className="flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md animate-in fade-in slide-in-from-bottom-4"
             style={{ animationDelay: `${index * 150}ms` }}
           >
             <div className="flex items-center justify-between border-b border-border bg-muted/50 px-6 py-4">
@@ -196,7 +196,7 @@ export default function RecommendationsPage() {
                         <div className="absolute left-0 right-0 top-1/2 h-0.5 -translate-y-1/2 bg-border z-0" />
                         
                         {roadmap.etapes_carriere.map((etape, i) => (
-                          <div key={i} className="relative z-10 flex flex-col items-center gap-1.5 bg-white px-1">
+                          <div key={i} className="relative z-10 flex flex-col items-center gap-1.5 bg-card px-1">
                             <div className={`h-2.5 w-2.5 rounded-full ${i === 0 ? 'bg-primary' : i === 1 ? 'bg-success' : i === 2 ? 'bg-warning' : 'bg-info'}`} />
                             <span className="text-[9px] font-semibold text-muted-foreground whitespace-nowrap">
                               {etape.phase.split(' ')[0]} {/* Affiche juste "Lycée", "Formation", etc. */}
@@ -213,7 +213,7 @@ export default function RecommendationsPage() {
               <div className="mt-6">
                 <Link
                   href={`/roadmap/${career.id}`}
-                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-foreground px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-[#383838]"
+                  className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-primary-hover"
                 >
                   Voir la feuille de route
                   <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -234,7 +234,7 @@ export default function RecommendationsPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {recommendedFormations.map((form, idx) => (
-              <div key={idx} className="group flex flex-col justify-between rounded-xl border border-border bg-white p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
+              <div key={idx} className="group flex flex-col justify-between rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
                 <div>
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="font-bold text-foreground text-lg">{form.nom}</h3>
@@ -273,7 +273,7 @@ export default function RecommendationsPage() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {recommendedUniversities.map((uni) => (
-              <div key={uni.id} className="group flex flex-col justify-between rounded-xl border border-border bg-white p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
+              <div key={uni.id} className="group flex flex-col justify-between rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:border-primary hover:shadow-md">
                 <div>
                   <div className="mb-4 h-12 w-12 overflow-hidden rounded-lg border border-border bg-muted">
                     {uni.logo ? (
