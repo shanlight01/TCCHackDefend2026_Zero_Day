@@ -47,8 +47,22 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
   const career = careersData.careers.find((c) => c.id === id);
   if (!career) return notFound();
 
-  const roadmap = roadmapsData.roadmaps.find((r) => r.career_id === id) as Roadmap | undefined;
-  if (!roadmap) return notFound();
+  let roadmap = roadmapsData.roadmaps.find((r) => r.career_id === id) as Roadmap | undefined;
+  if (!roadmap) {
+    roadmap = {
+      career_id: id,
+      competences_cles: (career as any).competences_techniques || (career as any).competences || [],
+      soft_skills: ((career as any).soft_skills || []).map((sk: string) => ({ nom: sk, description: "Compétence utile pour ce profil.", emoji: "💡" })),
+      etapes_carriere: [
+        { phase: "Lycée", actions: ["Obtenir un baccalauréat pertinent (filières adaptées)"], couleur: "primary" },
+        { phase: "Études Supérieures", actions: [(career as any).formation || "Poursuivre des études dans ce domaine", "Se spécialiser"], couleur: "warning" },
+        { phase: "Vie Professionnelle", actions: ["Acquérir de l'expérience pratique", "Développement continu"], couleur: "success" }
+      ],
+      matieres_importantes: (career as any).match_matieres || [],
+      matieres_details: [],
+      related_universities: []
+    };
+  }
 
   const recommendedUniversities = universitiesData.filter((u) =>
     roadmap.related_universities.includes(u.id)
