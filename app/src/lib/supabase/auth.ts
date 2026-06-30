@@ -8,6 +8,9 @@ export type AuthUser = {
   niveau?: string;
   interets?: string[];
   hobbies?: string[];
+  matieres?: string[];
+  competences?: string[];
+  environnement?: string[];
 };
 
 // ── Sign Up ──────────────────────────────────────────────────
@@ -70,6 +73,9 @@ export async function signIn(
       niveau: profile?.niveau,
       interets: profile?.interets,
       hobbies: profile?.hobbies,
+      matieres: profile?.matieres,
+      competences: profile?.competences,
+      environnement: profile?.environnement,
     },
     error: null,
   };
@@ -99,17 +105,34 @@ export async function getSession(): Promise<AuthUser | null> {
     niveau: profile?.niveau,
     interets: profile?.interets,
     hobbies: profile?.hobbies,
+    matieres: profile?.matieres,
+    competences: profile?.competences,
+    environnement: profile?.environnement,
   };
 }
 
 // ── Save profile after onboarding ───────────────────────────
 export async function saveProfile(
   userId: string,
-  data: { niveau: string; interets: string[]; hobbies: string[] }
+  data: { 
+    niveau?: string; 
+    interets?: string[]; 
+    hobbies?: string[];
+    matieres?: string[];
+    competences?: string[];
+    environnement?: string[];
+  }
 ): Promise<{ error: string | null }> {
   const { error } = await supabase
     .from("profiles")
-    .update({ niveau: data.niveau, interets: data.interets, hobbies: data.hobbies })
+    .update({ 
+      niveau: data.niveau, 
+      interets: data.interets, 
+      hobbies: data.hobbies,
+      matieres: data.matieres,
+      competences: data.competences,
+      environnement: data.environnement
+    })
     .eq("id", userId);
 
   return { error: error?.message ?? null };

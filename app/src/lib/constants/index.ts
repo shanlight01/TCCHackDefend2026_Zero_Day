@@ -3,11 +3,11 @@
 export const APP_NAME = 'Career Guidance'
 
 export const ACADEMIC_LEVELS = [
-  'Classe de 3ème',
   'Seconde',
   'Première',
   'Terminale',
   'Nouveau Bachelier',
+  'Autres',
 ] as const
 
 export const ROUTES = {
