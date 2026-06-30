@@ -5,17 +5,10 @@ import Link from "next/link";
 import careersData from "@/data/careers.json";
 import roadmapsData from "@/data/roadmaps.json";
 import universitiesData from "@/data/universities.json";
-interface Career {
-  id: string;
-  nom_metier: string;
-  secteur: string;
-  description: string;
-  keywords: string[];
-  matchScore?: number; // Calculated for the user
-  demande_marche?: string;
-  salaire_debutant?: string;
-  competences?: string[];
-  formations_requises?: string[];
+import { getTopRecommendations, Career as BaseCareer } from "@/lib/careerMatcher";
+
+interface Career extends BaseCareer {
+  matchScore?: number;
 }
 
 export default function RecommendationsPage() {
@@ -35,26 +28,12 @@ export default function RecommendationsPage() {
       // Simple Mock Recommendation Logic
       // In a real app, this would be an API call to Gemini
       setTimeout(() => {
-        const userKeywords = [
-          ...(parsedProfile.interets || []),
-          ...(parsedProfile.loisirs || [])
-        ].map(k => k.toLowerCase());
-
-        const scoredCareers = careersData.careers.map((career: Career) => {
-          let score = 50; // Base score
-          career.keywords.forEach(keyword => {
-            // Very naive matching
-            if (userKeywords.some(userKw => userKw.includes(keyword) || keyword.includes(userKw))) {
-              score += 15;
-            }
-          });
-          // Cap at 98%
-          return { ...career, matchScore: Math.min(score, 98) };
-        });
-
-        // Sort by score and take top 6
-        const sorted = scoredCareers.sort((a, b) => (b.matchScore || 0) - (a.matchScore || 0)).slice(0, 6);
-        setRecommendations(sorted);
+        // New Recommendations Logic
+        const sorted = getTopRecommendations(parsedProfile, careersData.careers as any[], 8).map(c => ({
+          ...c,
+          matchScore: c.score
+        }));
+        setRecommendations(sorted as Career[]);
 
         // Aggregate recommended formations (filières) and universities
         const allFormations = new Set<string>();
@@ -64,6 +43,8 @@ export default function RecommendationsPage() {
           // Add formations from career
           if ((career as any).formations_requises) {
             (career as any).formations_requises.forEach((f: string) => allFormations.add(f));
+          } else if (career.formation) {
+            allFormations.add(career.formation);
           }
           // Add universities from roadmap
           const roadmap = roadmapsData.roadmaps.find(r => r.career_id === career.id);
@@ -168,16 +149,16 @@ export default function RecommendationsPage() {
               
               {/* Infos additionnelles */}
               <div className="mt-5 space-y-2.5 border-t border-border/60 pt-5">
-                {career.demande_marche && (
+                {career.perspectives && (
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">Demande au Togo :</span>
-                    <span className="font-semibold text-primary">{career.demande_marche}</span>
+                    <span className="text-muted-foreground">Perspectives :</span>
+                    <span className="font-semibold text-primary line-clamp-1">{career.perspectives}</span>
                   </div>
                 )}
-                {career.salaire_debutant && (
+                {career.salaire && (
                   <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">Salaire débutant :</span>
-                    <span className="font-medium text-foreground">{career.salaire_debutant}</span>
+                    <span className="text-muted-foreground">Salaire :</span>
+                    <span className="font-medium text-foreground text-right w-1/2 line-clamp-1">{career.salaire}</span>
                   </div>
                 )}
               </div>

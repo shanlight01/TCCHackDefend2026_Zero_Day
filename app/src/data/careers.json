@@ -9,9 +9,50 @@
       "contexte_togo": "Le gouvernement togolais investit massivement dans le numérique (Programme Togo Digital 2025). De nombreuses startups émergent à Lomé.",
       "salaire_debutant": "200 000 – 400 000 FCFA",
       "salaire_senior": "600 000 – 1 500 000 FCFA",
-      "formations_requises": ["Licence Informatique", "DUT Informatique", "BTS Développement"],
-      "competences": ["JavaScript", "Python", "HTML/CSS", "Bases de données", "Git"],
-      "keywords": ["technologie", "informatique", "programmation", "jeux vidéo", "logique", "ordinateur", "numérique"]
+      "formations_requises": [
+        "Licence Informatique",
+        "DUT Informatique",
+        "BTS Développement"
+      ],
+      "competences": [
+        "JavaScript",
+        "Python",
+        "HTML/CSS",
+        "Bases de données",
+        "Git"
+      ],
+      "keywords": [
+        "technologie",
+        "informatique",
+        "programmation",
+        "jeux vidéo",
+        "logique",
+        "ordinateur",
+        "numérique"
+      ],
+      "match_interets": [
+        "technologie",
+        "informatique",
+        "programmation",
+        "jeux vidéo",
+        "logique",
+        "ordinateur",
+        "numérique"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "JavaScript",
+        "Python",
+        "HTML/CSS",
+        "Bases de données",
+        "Git"
+      ],
+      "salaire": "200 000 – 400 000 FCFA - 600 000 – 1 500 000 FCFA",
+      "formation": "Licence Informatique, DUT Informatique, BTS Développement",
+      "perspectives": "Très forte"
     },
     {
       "id": "car_002",
@@ -22,9 +63,48 @@
       "contexte_togo": "L'agriculture représente 40% du PIB togolais. Le MAEP (Ministère de l'Agriculture) recrute régulièrement. Des ONG et bailleurs comme la Banque Mondiale financent des projets.",
       "salaire_debutant": "120 000 – 250 000 FCFA",
       "salaire_senior": "400 000 – 900 000 FCFA",
-      "formations_requises": ["Licence Agronomie", "Master Agrobusiness", "BTS Agriculture"],
-      "competences": ["Agronomie", "Irrigation", "Gestion de projets", "Analyse des sols"],
-      "keywords": ["environnement", "agriculture", "sciences", "nature", "bricolage", "plantes", "terrain"]
+      "formations_requises": [
+        "Licence Agronomie",
+        "Master Agrobusiness",
+        "BTS Agriculture"
+      ],
+      "competences": [
+        "Agronomie",
+        "Irrigation",
+        "Gestion de projets",
+        "Analyse des sols"
+      ],
+      "keywords": [
+        "environnement",
+        "agriculture",
+        "sciences",
+        "nature",
+        "bricolage",
+        "plantes",
+        "terrain"
+      ],
+      "match_interets": [
+        "environnement",
+        "agriculture",
+        "sciences",
+        "nature",
+        "bricolage",
+        "plantes",
+        "terrain"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Agronomie",
+        "Irrigation",
+        "Gestion de projets",
+        "Analyse des sols"
+      ],
+      "salaire": "120 000 – 250 000 FCFA - 400 000 – 900 000 FCFA",
+      "formation": "Licence Agronomie, Master Agrobusiness, BTS Agriculture",
+      "perspectives": "Forte"
     },
     {
       "id": "car_003",
@@ -35,9 +115,47 @@
       "contexte_togo": "Le ratio médecin/patient est très bas au Togo. Le ministère de la Santé recrute constamment. Les ONG (MSF, Croix-Rouge) sont également présentes.",
       "salaire_debutant": "150 000 – 280 000 FCFA",
       "salaire_senior": "400 000 – 700 000 FCFA",
-      "formations_requises": ["Diplôme d'État Infirmier (3 ans)", "BTS Soins Infirmiers"],
-      "competences": ["Soins infirmiers", "Empathie", "Urgences médicales", "Pharmacologie de base"],
-      "keywords": ["santé", "médecine", "bénévolat", "aide", "soins", "hôpital", "humain"]
+      "formations_requises": [
+        "Diplôme d'État Infirmier (3 ans)",
+        "BTS Soins Infirmiers"
+      ],
+      "competences": [
+        "Soins infirmiers",
+        "Empathie",
+        "Urgences médicales",
+        "Pharmacologie de base"
+      ],
+      "keywords": [
+        "santé",
+        "médecine",
+        "bénévolat",
+        "aide",
+        "soins",
+        "hôpital",
+        "humain"
+      ],
+      "match_interets": [
+        "santé",
+        "médecine",
+        "bénévolat",
+        "aide",
+        "soins",
+        "hôpital",
+        "humain"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Soins infirmiers",
+        "Empathie",
+        "Urgences médicales",
+        "Pharmacologie de base"
+      ],
+      "salaire": "150 000 – 280 000 FCFA - 400 000 – 700 000 FCFA",
+      "formation": "Diplôme d'État Infirmier (3 ans), BTS Soins Infirmiers",
+      "perspectives": "Très forte"
     },
     {
       "id": "car_004",
@@ -48,9 +166,48 @@
       "contexte_togo": "Le projet CIZO (électrification rurale) est en cours. La CEET cherche des techniciens. Des entreprises comme Bboxx et SolarNow sont actives au Togo.",
       "salaire_debutant": "180 000 – 350 000 FCFA",
       "salaire_senior": "500 000 – 1 200 000 FCFA",
-      "formations_requises": ["Licence Électrotechnique", "Master Génie Électrique", "BTS Électronique"],
-      "competences": ["Électrotechnique", "Énergie solaire", "Maintenance", "Électricité"],
-      "keywords": ["ingénierie", "environnement", "bricolage", "technologie", "sciences", "électricité", "énergie"]
+      "formations_requises": [
+        "Licence Électrotechnique",
+        "Master Génie Électrique",
+        "BTS Électronique"
+      ],
+      "competences": [
+        "Électrotechnique",
+        "Énergie solaire",
+        "Maintenance",
+        "Électricité"
+      ],
+      "keywords": [
+        "ingénierie",
+        "environnement",
+        "bricolage",
+        "technologie",
+        "sciences",
+        "électricité",
+        "énergie"
+      ],
+      "match_interets": [
+        "ingénierie",
+        "environnement",
+        "bricolage",
+        "technologie",
+        "sciences",
+        "électricité",
+        "énergie"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Électrotechnique",
+        "Énergie solaire",
+        "Maintenance",
+        "Électricité"
+      ],
+      "salaire": "180 000 – 350 000 FCFA - 500 000 – 1 200 000 FCFA",
+      "formation": "Licence Électrotechnique, Master Génie Électrique, BTS Électronique",
+      "perspectives": "Très forte"
     },
     {
       "id": "car_005",
@@ -61,9 +218,48 @@
       "contexte_togo": "Le taux de pénétration d'internet au Togo est de 65%+. Les PME togolaises cherchent activement à se digitaliser. Freelance possible avec clientèle internationale.",
       "salaire_debutant": "100 000 – 220 000 FCFA",
       "salaire_senior": "350 000 – 800 000 FCFA",
-      "formations_requises": ["BTS Communication", "Licence Marketing", "Formation certifiante"],
-      "competences": ["Facebook/Instagram Ads", "Création de contenu", "Copywriting", "Analytics"],
-      "keywords": ["communication", "médias", "commerce", "écriture", "photographie", "réseaux sociaux", "créativité"]
+      "formations_requises": [
+        "BTS Communication",
+        "Licence Marketing",
+        "Formation certifiante"
+      ],
+      "competences": [
+        "Facebook/Instagram Ads",
+        "Création de contenu",
+        "Copywriting",
+        "Analytics"
+      ],
+      "keywords": [
+        "communication",
+        "médias",
+        "commerce",
+        "écriture",
+        "photographie",
+        "réseaux sociaux",
+        "créativité"
+      ],
+      "match_interets": [
+        "communication",
+        "médias",
+        "commerce",
+        "écriture",
+        "photographie",
+        "réseaux sociaux",
+        "créativité"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Facebook/Instagram Ads",
+        "Création de contenu",
+        "Copywriting",
+        "Analytics"
+      ],
+      "salaire": "100 000 – 220 000 FCFA - 350 000 – 800 000 FCFA",
+      "formation": "BTS Communication, Licence Marketing, Formation certifiante",
+      "perspectives": "Forte"
     },
     {
       "id": "car_006",
@@ -74,9 +270,49 @@
       "contexte_togo": "Toute entreprise légale a besoin d'un comptable. Le fisc (OTR) recrute également. L'expertise-comptable est très valorisée.",
       "salaire_debutant": "130 000 – 250 000 FCFA",
       "salaire_senior": "450 000 – 1 000 000 FCFA",
-      "formations_requises": ["BTS Comptabilité", "Licence Gestion/Comptabilité", "Master CCA", "DSCG"],
-      "competences": ["Logiciels comptables (Sage)", "Fiscalité OHADA", "Audit", "Excel avancé"],
-      "keywords": ["commerce", "gestion", "mathématiques", "logique", "organisation", "chiffres", "finance"]
+      "formations_requises": [
+        "BTS Comptabilité",
+        "Licence Gestion/Comptabilité",
+        "Master CCA",
+        "DSCG"
+      ],
+      "competences": [
+        "Logiciels comptables (Sage)",
+        "Fiscalité OHADA",
+        "Audit",
+        "Excel avancé"
+      ],
+      "keywords": [
+        "commerce",
+        "gestion",
+        "mathématiques",
+        "logique",
+        "organisation",
+        "chiffres",
+        "finance"
+      ],
+      "match_interets": [
+        "commerce",
+        "gestion",
+        "mathématiques",
+        "logique",
+        "organisation",
+        "chiffres",
+        "finance"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Logiciels comptables (Sage)",
+        "Fiscalité OHADA",
+        "Audit",
+        "Excel avancé"
+      ],
+      "salaire": "130 000 – 250 000 FCFA - 450 000 – 1 000 000 FCFA",
+      "formation": "BTS Comptabilité, Licence Gestion/Comptabilité, Master CCA, DSCG",
+      "perspectives": "Très forte"
     },
     {
       "id": "car_007",
@@ -87,9 +323,46 @@
       "contexte_togo": "Pénurie critique de médecins au Togo, surtout en zones rurales. Le gouvernement offre des bourses et des postes garantis aux diplômés.",
       "salaire_debutant": "300 000 – 500 000 FCFA",
       "salaire_senior": "800 000 – 2 000 000 FCFA",
-      "formations_requises": ["Doctorat en Médecine (7 ans) — Faculté de Médecine de l'UL"],
-      "competences": ["Diagnostique clinique", "Médecine interne", "Urgences", "Pédiatrie de base"],
-      "keywords": ["santé", "médecine", "sciences", "biologie", "bénévolat", "aide", "humain"]
+      "formations_requises": [
+        "Doctorat en Médecine (7 ans) — Faculté de Médecine de l'UL"
+      ],
+      "competences": [
+        "Diagnostique clinique",
+        "Médecine interne",
+        "Urgences",
+        "Pédiatrie de base"
+      ],
+      "keywords": [
+        "santé",
+        "médecine",
+        "sciences",
+        "biologie",
+        "bénévolat",
+        "aide",
+        "humain"
+      ],
+      "match_interets": [
+        "santé",
+        "médecine",
+        "sciences",
+        "biologie",
+        "bénévolat",
+        "aide",
+        "humain"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Diagnostique clinique",
+        "Médecine interne",
+        "Urgences",
+        "Pédiatrie de base"
+      ],
+      "salaire": "300 000 – 500 000 FCFA - 800 000 – 2 000 000 FCFA",
+      "formation": "Doctorat en Médecine (7 ans) — Faculté de Médecine de l'UL",
+      "perspectives": "Extrêmement forte"
     },
     {
       "id": "car_008",
@@ -100,9 +373,47 @@
       "contexte_togo": "Lomé se modernise rapidement (Route des Ambassadeurs, Grand Marché de Lomé, zones résidentielles). Les cabinets privés et les bureaux d'études recrutent.",
       "salaire_debutant": "200 000 – 380 000 FCFA",
       "salaire_senior": "600 000 – 1 500 000 FCFA",
-      "formations_requises": ["Diplôme d'Architecte (5 ans) — EAMAU", "Master Architecture"],
-      "competences": ["AutoCAD", "ArchiCAD", "Dessin technique", "Droit de l'urbanisme"],
-      "keywords": ["arts", "design", "créativité", "dessin", "construction", "espace", "ingénierie"]
+      "formations_requises": [
+        "Diplôme d'Architecte (5 ans) — EAMAU",
+        "Master Architecture"
+      ],
+      "competences": [
+        "AutoCAD",
+        "ArchiCAD",
+        "Dessin technique",
+        "Droit de l'urbanisme"
+      ],
+      "keywords": [
+        "arts",
+        "design",
+        "créativité",
+        "dessin",
+        "construction",
+        "espace",
+        "ingénierie"
+      ],
+      "match_interets": [
+        "arts",
+        "design",
+        "créativité",
+        "dessin",
+        "construction",
+        "espace",
+        "ingénierie"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "AutoCAD",
+        "ArchiCAD",
+        "Dessin technique",
+        "Droit de l'urbanisme"
+      ],
+      "salaire": "200 000 – 380 000 FCFA - 600 000 – 1 500 000 FCFA",
+      "formation": "Diplôme d'Architecte (5 ans) — EAMAU, Master Architecture",
+      "perspectives": "Forte"
     },
     {
       "id": "car_009",
@@ -113,9 +424,46 @@
       "contexte_togo": "Le PAL (Port Autonome de Lomé) est en expansion. Le corridor Lomé-Ouagadougou-Niamey est stratégique. Des entreprises comme Bolloré, Maersk, et CMA-CGM sont présentes.",
       "salaire_debutant": "180 000 – 320 000 FCFA",
       "salaire_senior": "500 000 – 1 200 000 FCFA",
-      "formations_requises": ["BTS Transport/Logistique", "Licence Gestion des Transports", "Master SCM"],
-      "competences": ["Gestion des stocks", "Incoterms", "ERP (SAP)", "Douanes et transit"],
-      "keywords": ["organisation", "gestion", "commerce", "transport", "international", "planification"]
+      "formations_requises": [
+        "BTS Transport/Logistique",
+        "Licence Gestion des Transports",
+        "Master SCM"
+      ],
+      "competences": [
+        "Gestion des stocks",
+        "Incoterms",
+        "ERP (SAP)",
+        "Douanes et transit"
+      ],
+      "keywords": [
+        "organisation",
+        "gestion",
+        "commerce",
+        "transport",
+        "international",
+        "planification"
+      ],
+      "match_interets": [
+        "organisation",
+        "gestion",
+        "commerce",
+        "transport",
+        "international",
+        "planification"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Gestion des stocks",
+        "Incoterms",
+        "ERP (SAP)",
+        "Douanes et transit"
+      ],
+      "salaire": "180 000 – 320 000 FCFA - 500 000 – 1 200 000 FCFA",
+      "formation": "BTS Transport/Logistique, Licence Gestion des Transports, Master SCM",
+      "perspectives": "Très forte"
     },
     {
       "id": "car_010",
@@ -126,9 +474,48 @@
       "contexte_togo": "Le Togo scolarise massivement (programme de construction d'écoles). Le MENR recrute par concours (CAPES). Les écoles privées recrutent librement.",
       "salaire_debutant": "130 000 – 200 000 FCFA (public) / 100 000 – 250 000 FCFA (privé)",
       "salaire_senior": "300 000 – 500 000 FCFA",
-      "formations_requises": ["Licence + CAPES", "Licence DEUG", "Master Enseignement"],
-      "competences": ["Pédagogie", "Maîtrise de la matière", "Communication", "Patience"],
-      "keywords": ["enseignement", "éducation", "partage", "communication", "lecture", "patience", "jeunes"]
+      "formations_requises": [
+        "Licence + CAPES",
+        "Licence DEUG",
+        "Master Enseignement"
+      ],
+      "competences": [
+        "Pédagogie",
+        "Maîtrise de la matière",
+        "Communication",
+        "Patience"
+      ],
+      "keywords": [
+        "enseignement",
+        "éducation",
+        "partage",
+        "communication",
+        "lecture",
+        "patience",
+        "jeunes"
+      ],
+      "match_interets": [
+        "enseignement",
+        "éducation",
+        "partage",
+        "communication",
+        "lecture",
+        "patience",
+        "jeunes"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Pédagogie",
+        "Maîtrise de la matière",
+        "Communication",
+        "Patience"
+      ],
+      "salaire": "130 000 – 200 000 FCFA (public) / 100 000 – 250 000 FCFA (privé) - 300 000 – 500 000 FCFA",
+      "formation": "Licence + CAPES, Licence DEUG, Master Enseignement",
+      "perspectives": "Stable et continue"
     },
     {
       "id": "car_011",
@@ -139,9 +526,50 @@
       "contexte_togo": "Les banques (Ecobank, Orabank), télécoms (Togocom, Moov) et organismes gouvernementaux commencent à recruter des data analysts.",
       "salaire_debutant": "250 000 – 500 000 FCFA",
       "salaire_senior": "700 000 – 1 800 000 FCFA",
-      "formations_requises": ["Master Statistiques", "Master Informatique (IA/ML)", "Certifications Kaggle/Coursera"],
-      "competences": ["Python", "R", "SQL", "Machine Learning", "Visualisation (Tableau, Power BI)"],
-      "keywords": ["informatique", "mathématiques", "technologie", "logique", "sciences", "données", "jeux vidéo"]
+      "formations_requises": [
+        "Master Statistiques",
+        "Master Informatique (IA/ML)",
+        "Certifications Kaggle/Coursera"
+      ],
+      "competences": [
+        "Python",
+        "R",
+        "SQL",
+        "Machine Learning",
+        "Visualisation (Tableau, Power BI)"
+      ],
+      "keywords": [
+        "informatique",
+        "mathématiques",
+        "technologie",
+        "logique",
+        "sciences",
+        "données",
+        "jeux vidéo"
+      ],
+      "match_interets": [
+        "informatique",
+        "mathématiques",
+        "technologie",
+        "logique",
+        "sciences",
+        "données",
+        "jeux vidéo"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Python",
+        "R",
+        "SQL",
+        "Machine Learning",
+        "Visualisation (Tableau, Power BI)"
+      ],
+      "salaire": "250 000 – 500 000 FCFA - 700 000 – 1 800 000 FCFA",
+      "formation": "Master Statistiques, Master Informatique (IA/ML), Certifications Kaggle/Coursera",
+      "perspectives": "En forte croissance"
     },
     {
       "id": "car_012",
@@ -152,9 +580,46 @@
       "contexte_togo": "De nombreuses ONGs (PNUD, UNICEF, Plan International, GIZ) ont leur bureau régional à Lomé. Elles cherchent des gestionnaires de projets bilingues.",
       "salaire_debutant": "200 000 – 400 000 FCFA",
       "salaire_senior": "600 000 – 1 500 000 FCFA",
-      "formations_requises": ["Licence Management", "Master Gestion de Projets", "Certifications PMP/PMI"],
-      "competences": ["Planification (MS Project)", "Gestion d'équipe", "Reporting", "Budgétisation"],
-      "keywords": ["organisation", "gestion", "leadership", "commerce", "coordination", "équipe"]
+      "formations_requises": [
+        "Licence Management",
+        "Master Gestion de Projets",
+        "Certifications PMP/PMI"
+      ],
+      "competences": [
+        "Planification (MS Project)",
+        "Gestion d'équipe",
+        "Reporting",
+        "Budgétisation"
+      ],
+      "keywords": [
+        "organisation",
+        "gestion",
+        "leadership",
+        "commerce",
+        "coordination",
+        "équipe"
+      ],
+      "match_interets": [
+        "organisation",
+        "gestion",
+        "leadership",
+        "commerce",
+        "coordination",
+        "équipe"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Planification (MS Project)",
+        "Gestion d'équipe",
+        "Reporting",
+        "Budgétisation"
+      ],
+      "salaire": "200 000 – 400 000 FCFA - 600 000 – 1 500 000 FCFA",
+      "formation": "Licence Management, Master Gestion de Projets, Certifications PMP/PMI",
+      "perspectives": "Forte"
     },
     {
       "id": "car_013",
@@ -165,9 +630,48 @@
       "contexte_togo": "La création d'entreprises au Togo nécessite de plus en plus l'accompagnement juridique. Le SYSCOA et le droit OHADA créent une demande pour des juristes d'affaires.",
       "salaire_debutant": "150 000 – 300 000 FCFA",
       "salaire_senior": "500 000 – 1 500 000 FCFA (cabinet privé)",
-      "formations_requises": ["Licence Droit", "Master Droit des Affaires", "Certificat du Barreau"],
-      "competences": ["Droit OHADA", "Rédaction juridique", "Plaidoirie", "Négociation"],
-      "keywords": ["droit", "politique", "lecture", "écriture", "argumentation", "débat", "justice"]
+      "formations_requises": [
+        "Licence Droit",
+        "Master Droit des Affaires",
+        "Certificat du Barreau"
+      ],
+      "competences": [
+        "Droit OHADA",
+        "Rédaction juridique",
+        "Plaidoirie",
+        "Négociation"
+      ],
+      "keywords": [
+        "droit",
+        "politique",
+        "lecture",
+        "écriture",
+        "argumentation",
+        "débat",
+        "justice"
+      ],
+      "match_interets": [
+        "droit",
+        "politique",
+        "lecture",
+        "écriture",
+        "argumentation",
+        "débat",
+        "justice"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Droit OHADA",
+        "Rédaction juridique",
+        "Plaidoirie",
+        "Négociation"
+      ],
+      "salaire": "150 000 – 300 000 FCFA - 500 000 – 1 500 000 FCFA (cabinet privé)",
+      "formation": "Licence Droit, Master Droit des Affaires, Certificat du Barreau",
+      "perspectives": "Stable"
     },
     {
       "id": "car_014",
@@ -178,9 +682,46 @@
       "contexte_togo": "La Zone Industrielle de Lomé, la COTONTOGO, les cimenteries (WACEM, Diamond Cement) et les brasseries (SOBRATOGO) emploient de nombreux techniciens.",
       "salaire_debutant": "150 000 – 280 000 FCFA",
       "salaire_senior": "400 000 – 800 000 FCFA",
-      "formations_requises": ["BTS Maintenance Industrielle", "Licence Génie Mécanique", "BTS Électronique"],
-      "competences": ["Électromécanique", "Hydraulique", "Pneumatique", "Maintenance préventive"],
-      "keywords": ["bricolage", "mécanique", "technologie", "industrie", "réparation", "ingénierie"]
+      "formations_requises": [
+        "BTS Maintenance Industrielle",
+        "Licence Génie Mécanique",
+        "BTS Électronique"
+      ],
+      "competences": [
+        "Électromécanique",
+        "Hydraulique",
+        "Pneumatique",
+        "Maintenance préventive"
+      ],
+      "keywords": [
+        "bricolage",
+        "mécanique",
+        "technologie",
+        "industrie",
+        "réparation",
+        "ingénierie"
+      ],
+      "match_interets": [
+        "bricolage",
+        "mécanique",
+        "technologie",
+        "industrie",
+        "réparation",
+        "ingénierie"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Électromécanique",
+        "Hydraulique",
+        "Pneumatique",
+        "Maintenance préventive"
+      ],
+      "salaire": "150 000 – 280 000 FCFA - 400 000 – 800 000 FCFA",
+      "formation": "BTS Maintenance Industrielle, Licence Génie Mécanique, BTS Électronique",
+      "perspectives": "Forte"
     },
     {
       "id": "car_015",
@@ -191,9 +732,46 @@
       "contexte_togo": "8 grandes banques actives au Togo : Ecobank, Orabank, BTCI, BIA, UTB, BOA, Coris Bank, NSIA Banque. Recrutements réguliers.",
       "salaire_debutant": "180 000 – 350 000 FCFA",
       "salaire_senior": "500 000 – 1 200 000 FCFA",
-      "formations_requises": ["Licence Économie/Finance", "Master Banque & Finance", "MBA Finance"],
-      "competences": ["Analyse financière", "Relation client", "Conformité/KYC", "Crédit"],
-      "keywords": ["gestion", "commerce", "chiffres", "finance", "relation client", "mathématiques"]
+      "formations_requises": [
+        "Licence Économie/Finance",
+        "Master Banque & Finance",
+        "MBA Finance"
+      ],
+      "competences": [
+        "Analyse financière",
+        "Relation client",
+        "Conformité/KYC",
+        "Crédit"
+      ],
+      "keywords": [
+        "gestion",
+        "commerce",
+        "chiffres",
+        "finance",
+        "relation client",
+        "mathématiques"
+      ],
+      "match_interets": [
+        "gestion",
+        "commerce",
+        "chiffres",
+        "finance",
+        "relation client",
+        "mathématiques"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Analyse financière",
+        "Relation client",
+        "Conformité/KYC",
+        "Crédit"
+      ],
+      "salaire": "180 000 – 350 000 FCFA - 500 000 – 1 200 000 FCFA",
+      "formation": "Licence Économie/Finance, Master Banque & Finance, MBA Finance",
+      "perspectives": "Bonne"
     },
     {
       "id": "car_016",
@@ -204,9 +782,50 @@
       "contexte_togo": "Agences de communication, startups et entreprises font appel à des graphistes. Le travail en freelance est très répandu et permet de travailler pour des clients internationaux.",
       "salaire_debutant": "80 000 – 200 000 FCFA (salarié) / illimité (freelance)",
       "salaire_senior": "300 000 – 700 000 FCFA",
-      "formations_requises": ["BTS Design Graphique", "Licence Arts Appliqués", "Auto-formation (YouTube + Udemy)"],
-      "competences": ["Adobe Photoshop", "Illustrator", "InDesign", "Figma", "Motion Design"],
-      "keywords": ["arts", "design", "créativité", "dessin", "peinture", "photographie", "numérique"]
+      "formations_requises": [
+        "BTS Design Graphique",
+        "Licence Arts Appliqués",
+        "Auto-formation (YouTube + Udemy)"
+      ],
+      "competences": [
+        "Adobe Photoshop",
+        "Illustrator",
+        "InDesign",
+        "Figma",
+        "Motion Design"
+      ],
+      "keywords": [
+        "arts",
+        "design",
+        "créativité",
+        "dessin",
+        "peinture",
+        "photographie",
+        "numérique"
+      ],
+      "match_interets": [
+        "arts",
+        "design",
+        "créativité",
+        "dessin",
+        "peinture",
+        "photographie",
+        "numérique"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Adobe Photoshop",
+        "Illustrator",
+        "InDesign",
+        "Figma",
+        "Motion Design"
+      ],
+      "salaire": "80 000 – 200 000 FCFA (salarié) / illimité (freelance) - 300 000 – 700 000 FCFA",
+      "formation": "BTS Design Graphique, Licence Arts Appliqués, Auto-formation (YouTube + Udemy)",
+      "perspectives": "En croissance"
     },
     {
       "id": "car_017",
@@ -217,9 +836,47 @@
       "contexte_togo": "L'État togolais est le plus grand employeur du pays. Des concours sont organisés régulièrement par le Ministère de la Fonction Publique (MFPTRA) et l'ENA.",
       "salaire_debutant": "130 000 – 250 000 FCFA (selon grade)",
       "salaire_senior": "400 000 – 800 000 FCFA",
-      "formations_requises": ["Licence Droit", "Licence Économie", "Licence Administration", "ENA"],
-      "competences": ["Droit administratif", "Rédaction administrative", "Gestion des archives", "Déontologie"],
-      "keywords": ["administration", "droit", "organisation", "politique", "service public", "stabilité"]
+      "formations_requises": [
+        "Licence Droit",
+        "Licence Économie",
+        "Licence Administration",
+        "ENA"
+      ],
+      "competences": [
+        "Droit administratif",
+        "Rédaction administrative",
+        "Gestion des archives",
+        "Déontologie"
+      ],
+      "keywords": [
+        "administration",
+        "droit",
+        "organisation",
+        "politique",
+        "service public",
+        "stabilité"
+      ],
+      "match_interets": [
+        "administration",
+        "droit",
+        "organisation",
+        "politique",
+        "service public",
+        "stabilité"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Droit administratif",
+        "Rédaction administrative",
+        "Gestion des archives",
+        "Déontologie"
+      ],
+      "salaire": "130 000 – 250 000 FCFA (selon grade) - 400 000 – 800 000 FCFA",
+      "formation": "Licence Droit, Licence Économie, Licence Administration, ENA",
+      "perspectives": "Concurrentielle (concours)"
     },
     {
       "id": "car_018",
@@ -230,9 +887,49 @@
       "contexte_togo": "Plusieurs structures soutiennent l'entrepreneuriat : FAIT (Fonds d'Appui aux Initiatives des Togolais), MIFA (Mécanisme Incitatif de Financement Agricole), FNFI (microcrédit). La CCIT accompagne les créateurs.",
       "salaire_debutant": "Variable (0 – sans limite)",
       "salaire_senior": "Illimité",
-      "formations_requises": ["Toute formation + esprit entrepreneurial", "Formation en gestion recommandée"],
-      "competences": ["Gestion", "Vision", "Résilience", "Marketing", "Finance de base"],
-      "keywords": ["entrepreneuriat", "initiative", "créativité", "commerce", "leadership", "innovation", "projet"]
+      "formations_requises": [
+        "Toute formation + esprit entrepreneurial",
+        "Formation en gestion recommandée"
+      ],
+      "competences": [
+        "Gestion",
+        "Vision",
+        "Résilience",
+        "Marketing",
+        "Finance de base"
+      ],
+      "keywords": [
+        "entrepreneuriat",
+        "initiative",
+        "créativité",
+        "commerce",
+        "leadership",
+        "innovation",
+        "projet"
+      ],
+      "match_interets": [
+        "entrepreneuriat",
+        "initiative",
+        "créativité",
+        "commerce",
+        "leadership",
+        "innovation",
+        "projet"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Gestion",
+        "Vision",
+        "Résilience",
+        "Marketing",
+        "Finance de base"
+      ],
+      "salaire": "Variable (0 – sans limite) - Illimité",
+      "formation": "Toute formation + esprit entrepreneurial, Formation en gestion recommandée",
+      "perspectives": "Auto-créée"
     },
     {
       "id": "car_019",
@@ -243,9 +940,46 @@
       "contexte_togo": "Le nombre de pharmacies croît à Lomé et dans les villes secondaires. La Direction des Pharmacies du Ministère de la Santé supervise les agréments.",
       "salaire_debutant": "200 000 – 400 000 FCFA",
       "salaire_senior": "700 000 – 2 000 000 FCFA (propriétaire de pharmacie)",
-      "formations_requises": ["Doctorat en Pharmacie (5 ans) — Faculté des Sciences de la Santé, UL"],
-      "competences": ["Pharmacologie", "Chimie analytique", "Gestion de stock", "Conseil patient"],
-      "keywords": ["santé", "sciences", "chimie", "biologie", "médecine", "aide", "précision"]
+      "formations_requises": [
+        "Doctorat en Pharmacie (5 ans) — Faculté des Sciences de la Santé, UL"
+      ],
+      "competences": [
+        "Pharmacologie",
+        "Chimie analytique",
+        "Gestion de stock",
+        "Conseil patient"
+      ],
+      "keywords": [
+        "santé",
+        "sciences",
+        "chimie",
+        "biologie",
+        "médecine",
+        "aide",
+        "précision"
+      ],
+      "match_interets": [
+        "santé",
+        "sciences",
+        "chimie",
+        "biologie",
+        "médecine",
+        "aide",
+        "précision"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Pharmacologie",
+        "Chimie analytique",
+        "Gestion de stock",
+        "Conseil patient"
+      ],
+      "salaire": "200 000 – 400 000 FCFA - 700 000 – 2 000 000 FCFA (propriétaire de pharmacie)",
+      "formation": "Doctorat en Pharmacie (5 ans) — Faculté des Sciences de la Santé, UL",
+      "perspectives": "Forte"
     },
     {
       "id": "car_020",
@@ -256,9 +990,2946 @@
       "contexte_togo": "Le Togo a des ambassades dans une cinquantaine de pays. Le MAEAT (Ministère des Affaires Étrangères) recrute par concours. L'ENA forme des diplomates.",
       "salaire_debutant": "200 000 – 400 000 FCFA + avantages diplomatiques",
       "salaire_senior": "700 000 – 1 500 000 FCFA + logement + véhicule",
-      "formations_requises": ["Master Relations Internationales", "ENA (option Diplomatie)", "Licence Droit/Science Pol."],
-      "competences": ["Anglais/Français couramment", "Négociation", "Protocole", "Droit international"],
-      "keywords": ["langues", "politique", "international", "voyages", "droit", "diplomatie", "communication"]
+      "formations_requises": [
+        "Master Relations Internationales",
+        "ENA (option Diplomatie)",
+        "Licence Droit/Science Pol."
+      ],
+      "competences": [
+        "Anglais/Français couramment",
+        "Négociation",
+        "Protocole",
+        "Droit international"
+      ],
+      "keywords": [
+        "langues",
+        "politique",
+        "international",
+        "voyages",
+        "droit",
+        "diplomatie",
+        "communication"
+      ],
+      "match_interets": [
+        "langues",
+        "politique",
+        "international",
+        "voyages",
+        "droit",
+        "diplomatie",
+        "communication"
+      ],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": [],
+      "soft_skills": [],
+      "competences_techniques": [
+        "Anglais/Français couramment",
+        "Négociation",
+        "Protocole",
+        "Droit international"
+      ],
+      "salaire": "200 000 – 400 000 FCFA + avantages diplomatiques - 700 000 – 1 500 000 FCFA + logement + véhicule",
+      "formation": "Master Relations Internationales, ENA (option Diplomatie), Licence Droit/Science Pol.",
+      "perspectives": "Sélective"
+    },
+    {
+      "id": "car_new_001",
+      "nom_metier": "Médecin généraliste",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Diagnostique et traite les pathologies courantes, et oriente vers des spécialistes si besoin.",
+      "salaire": "250 000 à 400 000 FCFA/mois",
+      "formation": "9 à 10 ans d’études (médecine + internat)",
+      "competences_techniques": [
+        "diagnostic clinique",
+        "prescription",
+        "gestes médicaux de base",
+        "dossier patient"
+      ],
+      "soft_skills": [
+        "écoute",
+        "empathie",
+        "gestion du stress",
+        "prise de décision rapide"
+      ],
+      "perspectives": "forte demande, surtout en zones rurales et dans les structures privées",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_002",
+      "nom_metier": "Médecin spécialiste",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Expertise approfondie dans un domaine médical précis.",
+      "salaire": "241 000 à 600 000 FCFA/mois, parfois plus en privé",
+      "formation": "10 à 12 ans (médecine + spécialisation)",
+      "competences_techniques": [
+        "expertise pointue",
+        "maîtrise d’équipements spécialisés",
+        "gestes spécialisés"
+      ],
+      "soft_skills": [
+        "précision",
+        "sang-froid",
+        "leadership",
+        "pédagogie envers les patients"
+      ],
+      "perspectives": "très bonnes, surtout en chirurgie, radiologie et anesthésie",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_003",
+      "nom_metier": "Dentiste / Chirurgien-dentiste",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Soins des dents, gencives et mâchoires.",
+      "salaire": "250 000 à 600 000 FCFA/mois",
+      "formation": "6 ans d’études dentaires",
+      "competences_techniques": [
+        "soins bucco-dentaires",
+        "prothèses",
+        "radiologie dentaire"
+      ],
+      "soft_skills": [
+        "minutie",
+        "capacité à rassurer les patients anxieux"
+      ],
+      "perspectives": "bonnes, demande stable",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_004",
+      "nom_metier": "Pharmacien(ne)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Délivre des médicaments, conseille les patients et peut gérer une officine.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "6 ans d’études de pharmacie",
+      "competences_techniques": [
+        "pharmacologie",
+        "gestion des stocks",
+        "réglementation"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "sens du conseil",
+        "discrétion"
+      ],
+      "perspectives": "stables, avec des débouchés en officine, industrie et distribution",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_005",
+      "nom_metier": "Kinésithérapeute",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Rééducation fonctionnelle et traitement des troubles musculo-squelettiques.",
+      "salaire": "250 000 à 500 000 FCFA/mois",
+      "formation": "5 ans",
+      "competences_techniques": [
+        "techniques manuelles",
+        "rééducation",
+        "bilan fonctionnel"
+      ],
+      "soft_skills": [
+        "patience",
+        "sens du contact",
+        "pédagogie"
+      ],
+      "perspectives": "bonnes, demande croissante",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_006",
+      "nom_metier": "Psychologue",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Évalue et accompagne les troubles psychiques et émotionnels.",
+      "salaire": "150 000 à 450 000 FCFA/mois",
+      "formation": "5 ans (Master en psychologie)",
+      "competences_techniques": [
+        "tests psychométriques",
+        "entretiens",
+        "rédaction de bilans"
+      ],
+      "soft_skills": [
+        "écoute active",
+        "empathie",
+        "neutralité bienveillante"
+      ],
+      "perspectives": "en croissance, notamment dans les écoles, ONG et cliniques",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_007",
+      "nom_metier": "Psychiatre",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Médecin spécialisé dans les troubles mentaux, avec possibilité de prescription.",
+      "salaire": "241 000 à 600 000 FCFA/mois",
+      "formation": "10 à 11 ans",
+      "competences_techniques": [
+        "diagnostic psychiatrique",
+        "prescription",
+        "psychothérapie"
+      ],
+      "soft_skills": [
+        "empathie",
+        "patience",
+        "gestion des situations de crise"
+      ],
+      "perspectives": "très bonnes, praticiens encore peu nombreux",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_008",
+      "nom_metier": "Sage-femme",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Suivi de grossesse, accouchement et soins postnataux.",
+      "salaire": "120 000 à 250 000 FCFA/mois",
+      "formation": "5 ans",
+      "competences_techniques": [
+        "suivi obstétrical",
+        "gestes d’urgence",
+        "accompagnement à l’accouchement"
+      ],
+      "soft_skills": [
+        "sang-froid",
+        "réconfort",
+        "communication"
+      ],
+      "perspectives": "bonnes, besoin important dans les formations sanitaires",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_009",
+      "nom_metier": "Infirmier(ère)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Soins aux patients, administration des traitements et suivi médical.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "3 ans",
+      "competences_techniques": [
+        "actes infirmiers",
+        "perfusion",
+        "surveillance clinique"
+      ],
+      "soft_skills": [
+        "résistance au stress",
+        "empathie",
+        "travail d’équipe"
+      ],
+      "perspectives": "très forte demande",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_010",
+      "nom_metier": "Aide-soignant(e)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Assiste les infirmiers dans les soins quotidiens et l’hygiène des patients.",
+      "salaire": "80 000 à 180 000 FCFA/mois",
+      "formation": "formation courte ou diplôme spécialisé",
+      "competences_techniques": [
+        "hygiène",
+        "soins de confort",
+        "aide à la mobilité"
+      ],
+      "soft_skills": [
+        "douceur",
+        "patience",
+        "disponibilité"
+      ],
+      "perspectives": "très bonnes, secteur en tension",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_011",
+      "nom_metier": "Ambulancier(ère)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Transport médicalisé de patients.",
+      "salaire": "80 000 à 180 000 FCFA/mois",
+      "formation": "diplôme d’ambulancier ou formation équivalente",
+      "competences_techniques": [
+        "conduite",
+        "premiers secours",
+        "manipulation de matériel médical"
+      ],
+      "soft_skills": [
+        "calme sous pression",
+        "réactivité"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_012",
+      "nom_metier": "Vétérinaire",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Soigne les animaux, prévention et chirurgie.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "6 à 8 ans",
+      "competences_techniques": [
+        "diagnostic animalier",
+        "chirurgie",
+        "pharmacologie vétérinaire"
+      ],
+      "soft_skills": [
+        "empathie",
+        "sang-froid"
+      ],
+      "perspectives": "bonnes, surtout en zones rurales",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_013",
+      "nom_metier": "Nutritionniste / Diététicien(ne)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Conseille sur l’alimentation pour la santé ou des objectifs spécifiques.",
+      "salaire": "150 000 à 400 000 FCFA/mois",
+      "formation": "BTS à Master selon la spécialité",
+      "competences_techniques": [
+        "calcul nutritionnel",
+        "plans alimentaires"
+      ],
+      "soft_skills": [
+        "pédagogie",
+        "motivation",
+        "écoute"
+      ],
+      "perspectives": "croissance liée à la santé et au bien-être",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_014",
+      "nom_metier": "Ergothérapeute",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Aide à l’autonomie des personnes en situation de handicap ou de rééducation.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "3 ans",
+      "competences_techniques": [
+        "adaptation de l’environnement",
+        "rééducation fonctionnelle"
+      ],
+      "soft_skills": [
+        "créativité",
+        "empathie",
+        "patience"
+      ],
+      "perspectives": "bonnes",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_015",
+      "nom_metier": "Assistant(e) social(e)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Accompagne les personnes en difficulté sociale, financière ou familiale.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "3 ans",
+      "competences_techniques": [
+        "connaissance des dispositifs sociaux",
+        "rédaction de dossiers"
+      ],
+      "soft_skills": [
+        "écoute",
+        "neutralité",
+        "résistance émotionnelle"
+      ],
+      "perspectives": "stables, forte utilité sociale",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_016",
+      "nom_metier": "Éducateur(trice) spécialisé(e)",
+      "secteur": "SANTÉ ET SOCIAL",
+      "description": "Accompagne des publics en difficulté (jeunes, handicap, exclusion).",
+      "salaire": "120 000 à 280 000 FCFA/mois",
+      "formation": "3 ans",
+      "competences_techniques": [
+        "animation de groupe",
+        "suivi éducatif individualisé"
+      ],
+      "soft_skills": [
+        "patience",
+        "autorité bienveillante",
+        "créativité"
+      ],
+      "perspectives": "bonnes",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Psychologie"
+      ],
+      "match_matieres": [
+        "SVT",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Empathie",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_017",
+      "nom_metier": "Ingénieur(e) civil / BTP",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Conception et supervision de la construction d’infrastructures.",
+      "salaire": "300 000 à 700 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "CAO/BIM",
+        "calcul de structures",
+        "normes du bâtiment"
+      ],
+      "soft_skills": [
+        "gestion de projet",
+        "leadership",
+        "rigueur"
+      ],
+      "perspectives": "bonnes, demande liée aux infrastructures",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_018",
+      "nom_metier": "Ingénieur(e) mécanique",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Conçoit des systèmes mécaniques, machines et équipements.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "CAO",
+        "simulation",
+        "thermodynamique",
+        "mécanique des fluides"
+      ],
+      "soft_skills": [
+        "esprit d’analyse",
+        "travail en équipe"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_019",
+      "nom_metier": "Ingénieur(e) électrique / électronique",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Conçoit des systèmes électriques et électroniques.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "circuits électroniques",
+        "automatisme",
+        "normes électriques"
+      ],
+      "soft_skills": [
+        "précision",
+        "résolution de problèmes"
+      ],
+      "perspectives": "bonnes, liées à l’énergie et à l’industrie",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_020",
+      "nom_metier": "Ingénieur(e) biomédical(e)",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Développe des équipements médicaux et technologies de santé.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "dispositifs médicaux",
+        "réglementation",
+        "normes"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "interdisciplinarité"
+      ],
+      "perspectives": "excellentes, secteur en croissance",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_021",
+      "nom_metier": "Biologiste / Microbiologiste",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Étudie les organismes vivants en laboratoire ou sur le terrain.",
+      "salaire": "220 000 à 450 000 FCFA/mois",
+      "formation": "Bac+5 à Bac+8",
+      "competences_techniques": [
+        "techniques de laboratoire",
+        "analyse de données biologiques"
+      ],
+      "soft_skills": [
+        "rigueur scientifique",
+        "patience",
+        "curiosité"
+      ],
+      "perspectives": "correctes",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_022",
+      "nom_metier": "Chimiste",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Recherche et développement dans l’industrie chimique ou pharmaceutique.",
+      "salaire": "250 000 à 500 000 FCFA/mois",
+      "formation": "Bac+5 à Bac+8",
+      "competences_techniques": [
+        "synthèse chimique",
+        "analyse spectroscopique",
+        "sécurité labo"
+      ],
+      "soft_skills": [
+        "précision",
+        "méthode"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_023",
+      "nom_metier": "Géologue",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Étudie la structure de la Terre et les ressources naturelles.",
+      "salaire": "250 000 à 500 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "cartographie",
+        "analyse de sols et roches",
+        "SIG"
+      ],
+      "soft_skills": [
+        "terrain",
+        "autonomie"
+      ],
+      "perspectives": "bonnes dans l’énergie, l’eau et l’environnement",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_024",
+      "nom_metier": "Mathématicien(ne) / Statisticien(ne)",
+      "secteur": "SCIENCES ET RECHERCHE",
+      "description": "Modélisation mathématique appliquée à la finance, à la data et à la recherche.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "Bac+5 à Bac+8",
+      "competences_techniques": [
+        "statistiques avancées",
+        "Python",
+        "R",
+        "modélisation"
+      ],
+      "soft_skills": [
+        "rigueur logique",
+        "communication de résultats complexes"
+      ],
+      "perspectives": "excellentes",
+      "match_interets": [
+        "Sciences & Recherche",
+        "Veille scientifique et technologique"
+      ],
+      "match_matieres": [
+        "Physique",
+        "Mathématiques",
+        "Chimie"
+      ],
+      "match_competences": [
+        "Analyse de données",
+        "Résolution de problèmes"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "En bureau"
+      ]
+    },
+    {
+      "id": "car_new_025",
+      "nom_metier": "Développeur(euse) front-end",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Conçoit l'interface visuelle et interactive des sites/applications web.",
+      "salaire": "150 000 à 450 000 FCFA/mois",
+      "formation": "Bac+2 à Bac+5 (autodidacte possible)",
+      "competences_techniques": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React/Vue/Angular"
+      ],
+      "soft_skills": [
+        "créativité",
+        "sens du détail",
+        "veille technologique"
+      ],
+      "perspectives": "excellentes, forte demande",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_026",
+      "nom_metier": "Développeur(euse) back-end",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Construit la logique serveur et les bases de données des applications.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+2 à Bac+5",
+      "competences_techniques": [
+        "Node.js",
+        "Python",
+        "Java",
+        "PHP",
+        "bases de données (SQL/NoSQL)",
+        "API REST"
+      ],
+      "soft_skills": [
+        "résolution de problèmes",
+        "logique",
+        "rigueur"
+      ],
+      "perspectives": "excellentes",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_027",
+      "nom_metier": "Développeur(euse) full-stack",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Maîtrise à la fois le front-end et le back-end.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+3 à Bac+5",
+      "competences_techniques": [
+        "large palette de langages et frameworks web"
+      ],
+      "soft_skills": [
+        "polyvalence",
+        "autonomie",
+        "gestion du temps"
+      ],
+      "perspectives": "très recherché",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_028",
+      "nom_metier": "Développeur(euse) mobile (iOS/Android)",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Crée des applications mobiles natives ou hybrides.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+3 à Bac+5",
+      "competences_techniques": [
+        "Swift",
+        "Kotlin",
+        "Flutter",
+        "React Native"
+      ],
+      "soft_skills": [
+        "sens de l'UX",
+        "rigueur",
+        "créativité"
+      ],
+      "perspectives": "très bonnes",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_029",
+      "nom_metier": "Ingénieur(e) DevOps",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Automatise et fiabilise les déploiements et infrastructures logicielles.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "AWS/Azure/GCP",
+        "scripting"
+      ],
+      "soft_skills": [
+        "collaboration",
+        "gestion du stress",
+        "organisation"
+      ],
+      "perspectives": "excellentes, l'un des postes les plus demandés",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_030",
+      "nom_metier": "Expert(e) en cybersécurité",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Protège les systèmes informatiques contre les menaces.",
+      "salaire": "400 000 à 1 200 000 FCFA/mois",
+      "formation": "Bac+5, certifications (CEH, CISSP)",
+      "competences_techniques": [
+        "audit de sécurité",
+        "pentest",
+        "cryptographie",
+        "gestion d'incidents"
+      ],
+      "soft_skills": [
+        "vigilance",
+        "esprit analytique",
+        "éthique"
+      ],
+      "perspectives": "extrêmement fortes, pénurie mondiale de talents",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_031",
+      "nom_metier": "Data scientist",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Analyse de données complexes pour en extraire des insights et modèles prédictifs.",
+      "salaire": "400 000 à 1 000 000 FCFA/mois",
+      "formation": "Bac+5 à Bac+8",
+      "competences_techniques": [
+        "Python/R",
+        "machine learning",
+        "SQL",
+        "statistiques"
+      ],
+      "soft_skills": [
+        "curiosité",
+        "communication de résultats",
+        "esprit critique"
+      ],
+      "perspectives": "excellentes",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_032",
+      "nom_metier": "Ingénieur(e) en intelligence artificielle / Machine learning",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Conçoit des modèles d'IA et algorithmes d'apprentissage automatique.",
+      "salaire": "600 000 à 1 800 000 FCFA/mois",
+      "formation": "Bac+5 à Bac+8",
+      "competences_techniques": [
+        "deep learning",
+        "frameworks (TensorFlow",
+        "PyTorch)",
+        "mathématiques avancées"
+      ],
+      "soft_skills": [
+        "innovation",
+        "rigueur scientifique",
+        "collaboration"
+      ],
+      "perspectives": "en très forte croissance, l'un des métiers les plus stratégiques de la décennie",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_033",
+      "nom_metier": "Designer UX/UI",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Conçoit l'expérience et l'interface utilisateur de produits numériques.",
+      "salaire": "200 000 à 600 000 FCFA/mois",
+      "formation": "Bac+3 à Bac+5",
+      "competences_techniques": [
+        "Figma",
+        "recherche utilisateur",
+        "prototypage",
+        "design systems"
+      ],
+      "soft_skills": [
+        "empathie",
+        "créativité",
+        "communication"
+      ],
+      "perspectives": "très bonnes",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_034",
+      "nom_metier": "Chef(fe) de produit digital",
+      "secteur": "INFORMATIQUE ET TECHNOLOGIE",
+      "description": "Pilote la stratégie et le développement d'un produit numérique.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "Bac+5 (école de commerce/ingénieur)",
+      "competences_techniques": [
+        "méthodologie agile",
+        "analyse de données",
+        "roadmap produit"
+      ],
+      "soft_skills": [
+        "leadership",
+        "vision stratégique",
+        "communication transverse"
+      ],
+      "perspectives": "excellentes",
+      "match_interets": [
+        "Technologie & Informatique",
+        "Programmation",
+        "Innovation technologique",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Informatique",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Résolution de problèmes",
+        "Analyse de données",
+        "Adaptabilité"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "En télétravail",
+        "En autonomie"
+      ]
+    },
+    {
+      "id": "car_new_035",
+      "nom_metier": "Comptable",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Tient et contrôle les comptes d’une entreprise.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "Bac+2 à Bac+5 (BTS, DCG, DSCG)",
+      "competences_techniques": [
+        "logiciels comptables",
+        "fiscalité",
+        "normes comptables"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "organisation",
+        "discrétion"
+      ],
+      "perspectives": "stables, avec une demande régulière dans les entreprises, ONG et cabinets",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_036",
+      "nom_metier": "Expert(e)-comptable",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Supervise la comptabilité et conseille les entreprises.",
+      "salaire": "400 000 à 1 500 000 FCFA/mois",
+      "formation": "Bac+8 (DEC)",
+      "competences_techniques": [
+        "audit",
+        "fiscalité avancée",
+        "conseil en gestion"
+      ],
+      "soft_skills": [
+        "leadership",
+        "relation client",
+        "rigueur"
+      ],
+      "perspectives": "très bonnes, surtout dans les cabinets et grandes structures",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_037",
+      "nom_metier": "Analyste financier(ère)",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Évalue la performance financière et les investissements.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+5 (finance, gestion, école de commerce)",
+      "competences_techniques": [
+        "modélisation financière",
+        "Excel avancé",
+        "analyse de marché"
+      ],
+      "soft_skills": [
+        "esprit critique",
+        "résistance au stress",
+        "communication"
+      ],
+      "perspectives": "bonnes, secteur compétitif",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_038",
+      "nom_metier": "Avocat(e)",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Conseille et défend les clients dans des affaires juridiques.",
+      "salaire": "300 000 à 1 200 000 FCFA/mois",
+      "formation": "Bac+5 + CAPA",
+      "competences_techniques": [
+        "droit",
+        "plaidoirie",
+        "rédaction juridique"
+      ],
+      "soft_skills": [
+        "argumentation",
+        "sang-froid",
+        "éthique"
+      ],
+      "perspectives": "bonnes, surtout en droit des affaires et droit du travail",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_039",
+      "nom_metier": "Notaire",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Authentifie des actes juridiques, notamment en immobilier et succession.",
+      "salaire": "500 000 à 1 500 000 FCFA/mois",
+      "formation": "Bac+7/8",
+      "competences_techniques": [
+        "droit civil",
+        "rédaction d’actes",
+        "conseil juridique"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "confidentialité",
+        "relation client"
+      ],
+      "perspectives": "stables, profession réglementée",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_040",
+      "nom_metier": "Consultant(e) en management/stratégie",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Conseille les entreprises sur l’organisation et la stratégie.",
+      "salaire": "300 000 à 1 000 000 FCFA/mois",
+      "formation": "Bac+5 (école de commerce ou d’ingénieur)",
+      "competences_techniques": [
+        "analyse stratégique",
+        "gestion de projet",
+        "outils de data"
+      ],
+      "soft_skills": [
+        "communication",
+        "adaptabilité",
+        "leadership"
+      ],
+      "perspectives": "bonnes, surtout dans les entreprises en croissance",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_041",
+      "nom_metier": "Entrepreneur(e)",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Crée et développe sa propre entreprise.",
+      "salaire": "très variable",
+      "formation": "aucune obligatoire, mais formation en gestion utile",
+      "competences_techniques": [
+        "selon le secteur",
+        "avec bases de gestion financière"
+      ],
+      "soft_skills": [
+        "prise de risque",
+        "résilience",
+        "leadership",
+        "vision"
+      ],
+      "perspectives": "dépend fortement du secteur et de l’exécution",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_042",
+      "nom_metier": "Responsable des ressources humaines (RH)",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Gère le recrutement, la formation et les relations sociales.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "droit du travail",
+        "SIRH",
+        "gestion de la paie"
+      ],
+      "soft_skills": [
+        "écoute",
+        "diplomatie",
+        "gestion de conflits"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_043",
+      "nom_metier": "Responsable marketing",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Définit et pilote la stratégie marketing d’une entreprise.",
+      "salaire": "350 000 à 900 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "marketing digital",
+        "analyse de données",
+        "gestion de campagnes"
+      ],
+      "soft_skills": [
+        "créativité",
+        "leadership",
+        "esprit d’analyse"
+      ],
+      "perspectives": "bonnes, avec la digitalisation croissante",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_044",
+      "nom_metier": "Agent(e) immobilier",
+      "secteur": "BUSINESS, FINANCE ET DROIT",
+      "description": "Accompagne l’achat, la vente ou la location de biens immobiliers.",
+      "salaire": "100 000 à 500 000+ FCFA/mois, souvent à la commission",
+      "formation": "BTS ou expérience",
+      "competences_techniques": [
+        "connaissance du marché local",
+        "négociation",
+        "droit immobilier de base"
+      ],
+      "soft_skills": [
+        "relationnel",
+        "persuasion",
+        "ténacité"
+      ],
+      "perspectives": "variables selon le marché immobilier",
+      "match_interets": [
+        "Entrepreneuriat",
+        "Résolution de problèmes"
+      ],
+      "match_matieres": [
+        "Économie",
+        "Mathématiques"
+      ],
+      "match_competences": [
+        "Leadership",
+        "Organisation",
+        "Négociation"
+      ],
+      "match_environnement": [
+        "En bureau",
+        "Environnement dynamique/rapide"
+      ]
+    },
+    {
+      "id": "car_new_045",
+      "nom_metier": "Professeur(e) des écoles",
+      "secteur": "ÉDUCATION ET FORMATION",
+      "description": "Enseigne aux élèves de primaire.",
+      "salaire": "100 000 à 200 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "pédagogie",
+        "gestion de classe",
+        "programmes scolaires"
+      ],
+      "soft_skills": [
+        "patience",
+        "autorité bienveillante",
+        "créativité pédagogique"
+      ],
+      "perspectives": "stables, recrutements réguliers",
+      "match_interets": [
+        "Lecture",
+        "Psychologie",
+        "Communication & Médias"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Histoire"
+      ],
+      "match_competences": [
+        "Communication",
+        "Empathie",
+        "Organisation"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_046",
+      "nom_metier": "Enseignant(e) secondaire (collège/lycée)",
+      "secteur": "ÉDUCATION ET FORMATION",
+      "description": "Enseigne une matière spécifique au collège ou au lycée.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "Bac+5 + concours",
+      "competences_techniques": [
+        "maîtrise disciplinaire",
+        "pédagogie différenciée"
+      ],
+      "soft_skills": [
+        "gestion de groupe",
+        "communication",
+        "patience"
+      ],
+      "perspectives": "variables selon la discipline, avec une demande plus forte en sciences et langues",
+      "match_interets": [
+        "Lecture",
+        "Psychologie",
+        "Communication & Médias"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Histoire"
+      ],
+      "match_competences": [
+        "Communication",
+        "Empathie",
+        "Organisation"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_047",
+      "nom_metier": "Professeur(e) d’université / Maître de conférences",
+      "secteur": "ÉDUCATION ET FORMATION",
+      "description": "Enseigne et mène des recherches dans le supérieur.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+8 (doctorat)",
+      "competences_techniques": [
+        "recherche",
+        "publication scientifique",
+        "pédagogie universitaire"
+      ],
+      "soft_skills": [
+        "rigueur intellectuelle",
+        "communication",
+        "autonomie"
+      ],
+      "perspectives": "postes compétitifs",
+      "match_interets": [
+        "Lecture",
+        "Psychologie",
+        "Communication & Médias"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Histoire"
+      ],
+      "match_competences": [
+        "Communication",
+        "Empathie",
+        "Organisation"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_048",
+      "nom_metier": "Formateur(trice) professionnel(le)",
+      "secteur": "ÉDUCATION ET FORMATION",
+      "description": "Forme des adultes dans un domaine spécifique.",
+      "salaire": "200 000 à 500 000 FCFA/mois",
+      "formation": "variable selon la spécialité",
+      "competences_techniques": [
+        "ingénierie pédagogique",
+        "expertise du domaine enseigné"
+      ],
+      "soft_skills": [
+        "pédagogie",
+        "adaptabilité",
+        "écoute"
+      ],
+      "perspectives": "bonnes, formation continue en expansion",
+      "match_interets": [
+        "Lecture",
+        "Psychologie",
+        "Communication & Médias"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Histoire"
+      ],
+      "match_competences": [
+        "Communication",
+        "Empathie",
+        "Organisation"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_049",
+      "nom_metier": "Conseiller(ère) d’orientation",
+      "secteur": "ÉDUCATION ET FORMATION",
+      "description": "Accompagne les élèves et étudiants dans leurs choix d’orientation.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "connaissance des filières et métiers",
+        "outils d’évaluation"
+      ],
+      "soft_skills": [
+        "écoute",
+        "neutralité",
+        "pédagogie"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Lecture",
+        "Psychologie",
+        "Communication & Médias"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Histoire"
+      ],
+      "match_competences": [
+        "Communication",
+        "Empathie",
+        "Organisation"
+      ],
+      "match_environnement": [
+        "En équipe",
+        "Cadre structuré"
+      ]
+    },
+    {
+      "id": "car_new_050",
+      "nom_metier": "Graphiste / Designer graphique",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Crée des supports visuels comme les logos, affiches et identités visuelles.",
+      "salaire": "94 057 à 415 934 FCFA/mois",
+      "formation": "Bac+2 à Bac+5",
+      "competences_techniques": [
+        "Photoshop",
+        "Illustrator",
+        "InDesign",
+        "typographie"
+      ],
+      "soft_skills": [
+        "créativité",
+        "sens artistique",
+        "écoute du client"
+      ],
+      "perspectives": "correctes, surtout avec la demande digitale et publicitaire",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_051",
+      "nom_metier": "Architecte",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Conçoit des bâtiments et des espaces, et supervise leur construction.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5/6",
+      "competences_techniques": [
+        "CAO",
+        "normes du bâtiment",
+        "gestion de chantier"
+      ],
+      "soft_skills": [
+        "créativité",
+        "gestion de projet",
+        "négociation"
+      ],
+      "perspectives": "bonnes, liées à l’urbanisme et à la construction",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_052",
+      "nom_metier": "Photographe",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Capture des images pour divers usages : événementiel, presse, mode et communication.",
+      "salaire": "100 000 à 400 000 FCFA/mois",
+      "formation": "formation technique ou autodidacte",
+      "competences_techniques": [
+        "prise de vue",
+        "retouche",
+        "lumière",
+        "composition"
+      ],
+      "soft_skills": [
+        "créativité",
+        "sens du relationnel",
+        "patience"
+      ],
+      "perspectives": "marché concurrentiel, avec des niches porteuses",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_053",
+      "nom_metier": "Réalisateur(trice) / Monteur(euse) vidéo",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Conçoit et assemble des contenus audiovisuels.",
+      "salaire": "200 000 à 600 000 FCFA/mois",
+      "formation": "école de cinéma/audiovisuel ou autodidacte",
+      "competences_techniques": [
+        "montage",
+        "narration visuelle",
+        "prise de vue"
+      ],
+      "soft_skills": [
+        "créativité",
+        "sens du rythme",
+        "gestion de projet"
+      ],
+      "perspectives": "bonnes, avec la forte demande en contenu vidéo",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_054",
+      "nom_metier": "Musicien(ne) / Compositeur(trice)",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Crée, interprète ou produit de la musique.",
+      "salaire": "très variable",
+      "formation": "conservatoire ou autodidacte",
+      "competences_techniques": [
+        "maîtrise instrumentale",
+        "théorie musicale",
+        "production"
+      ],
+      "soft_skills": [
+        "créativité",
+        "persévérance",
+        "sens du réseau"
+      ],
+      "perspectives": "difficiles, mais opportunités via les plateformes numériques",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_055",
+      "nom_metier": "Écrivain(e) / Journaliste / Rédacteur(trice)",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Rédige des contenus écrits comme livres, articles et contenus web.",
+      "salaire": "très variable, souvent freelance",
+      "formation": "Bac+3 à Bac+5 ou autodidacte",
+      "competences_techniques": [
+        "écriture",
+        "SEO",
+        "recherche documentaire"
+      ],
+      "soft_skills": [
+        "créativité",
+        "rigueur",
+        "curiosité"
+      ],
+      "perspectives": "marché concurrentiel, mais la demande en contenu reste forte",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_056",
+      "nom_metier": "Traducteur(trice) / Interprète",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Traduit ou interprète des contenus d’une langue à l’autre.",
+      "salaire": "200 000 à 500 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "maîtrise de plusieurs langues",
+        "outils de TAO"
+      ],
+      "soft_skills": [
+        "précision",
+        "concentration",
+        "culture générale"
+      ],
+      "perspectives": "impactées par l’IA, mais les spécialisations résistent mieux",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_057",
+      "nom_metier": "Créateur(trice) de contenu / Influenceur(euse)",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Produit du contenu pour les réseaux sociaux et en tire des revenus.",
+      "salaire": "extrêmement variable",
+      "formation": "aucune requise",
+      "competences_techniques": [
+        "création de contenu",
+        "montage",
+        "analytics des réseaux"
+      ],
+      "soft_skills": [
+        "créativité",
+        "charisme",
+        "régularité",
+        "résilience face à la critique"
+      ],
+      "perspectives": "en forte croissance mais très concurrentiel",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_058",
+      "nom_metier": "Game designer / Développeur(euse) de jeux vidéo",
+      "secteur": "ARTS, MÉDIAS ET CRÉATION",
+      "description": "Conçoit le gameplay et les mécaniques de jeux vidéo.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+3 à Bac+5",
+      "competences_techniques": [
+        "Unity",
+        "Unreal",
+        "programmation",
+        "level design"
+      ],
+      "soft_skills": [
+        "créativité",
+        "travail d’équipe",
+        "sens du jeu"
+      ],
+      "perspectives": "bonnes, industrie en croissance continue",
+      "match_interets": [
+        "Photographie",
+        "Musique",
+        "Création de contenu",
+        "Montage vidéo"
+      ],
+      "match_matieres": [
+        "Littérature",
+        "Langues"
+      ],
+      "match_competences": [
+        "Créativité",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En autonomie",
+        "Horaires flexibles",
+        "En télétravail"
+      ]
+    },
+    {
+      "id": "car_new_059",
+      "nom_metier": "Électricien(ne)",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Installe et répare les systèmes électriques.",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "CAP à BTS",
+      "competences_techniques": [
+        "normes électriques",
+        "lecture de schémas",
+        "domotique"
+      ],
+      "soft_skills": [
+        "minutie",
+        "sens de la sécurité",
+        "autonomie"
+      ],
+      "perspectives": "excellentes (transition énergétique, rénovation)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_060",
+      "nom_metier": "Plombier(ère) / Chauffagiste",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Installe et entretient les systèmes de plomberie et chauffage.",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "CAP à BTS",
+      "competences_techniques": [
+        "installation sanitaire",
+        "chauffage",
+        "pompes à chaleur"
+      ],
+      "soft_skills": [
+        "sens pratique",
+        "relation client",
+        "fiabilité"
+      ],
+      "perspectives": "très bonnes, forte pénurie de main d'œuvre",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_061",
+      "nom_metier": "Menuisier(ère) / Ébéniste",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Fabrique et installe des structures et meubles en bois.",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "CAP à BTS",
+      "competences_techniques": [
+        "travail du bois",
+        "lecture de plans",
+        "machines-outils"
+      ],
+      "soft_skills": [
+        "précision",
+        "créativité",
+        "patience"
+      ],
+      "perspectives": "bonnes, valorisation de l'artisanat",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_062",
+      "nom_metier": "Maçon(ne) / Couvreur(euse)",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Construit ou rénove des bâtiments (gros œuvre, toiture).",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "CAP",
+      "competences_techniques": [
+        "techniques de construction",
+        "lecture de plans",
+        "sécurité chantier"
+      ],
+      "soft_skills": [
+        "résistance physique",
+        "travail d'équipe",
+        "rigueur"
+      ],
+      "perspectives": "excellentes (BTP en tension)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_063",
+      "nom_metier": "Mécanicien(ne) automobile",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Diagnostique et répare les véhicules.",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "CAP à BTS",
+      "competences_techniques": [
+        "diagnostic électronique",
+        "mécanique",
+        "véhicules électriques/hybrides"
+      ],
+      "soft_skills": [
+        "sens pratique",
+        "méthode",
+        "relation client"
+      ],
+      "perspectives": "en mutation (montée des véhicules électriques nécessite reconversion)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_064",
+      "nom_metier": "Boulanger(ère) / Pâtissier(ère)",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Fabrique du pain, viennoiseries ou pâtisseries.",
+      "salaire": "100 000 à 300 000 FCFA/mois (plus en tant qu'indépendant)",
+      "formation": "CAP",
+      "competences_techniques": [
+        "techniques de panification/pâtisserie",
+        "gestion des stocks"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "créativité",
+        "résistance physique (horaires matinaux)"
+      ],
+      "perspectives": "stables, métier toujours recherché",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_065",
+      "nom_metier": "Coiffeur(euse) / Esthéticien(ne)",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Coiffure ou soins esthétiques pour les clients.",
+      "salaire": "80 000 à 250 000 FCFA/mois (plus en indépendant)",
+      "formation": "CAP à BTS",
+      "competences_techniques": [
+        "techniques de coupe/coloration ou soins du visage/corps"
+      ],
+      "soft_skills": [
+        "relationnel",
+        "créativité",
+        "sens du détail"
+      ],
+      "perspectives": "stables, fort potentiel en indépendant",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_066",
+      "nom_metier": "Bijoutier(ère) / Horloger(ère)",
+      "secteur": "ARTISANAT ET MÉTIERS MANUELS",
+      "description": "Fabrique ou répare bijoux et montres.",
+      "salaire": "150 000 à 400 000 FCFA/mois",
+      "formation": "CAP à Bac+2 spécialisé",
+      "competences_techniques": [
+        "travail de précision",
+        "sertissage",
+        "mécanique horlogère"
+      ],
+      "soft_skills": [
+        "minutie extrême",
+        "patience"
+      ],
+      "perspectives": "niche stable, savoir-faire recherché (luxe)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_067",
+      "nom_metier": "Agriculteur(trice) / Éleveur(euse)",
+      "secteur": "AGRICULTURE, ENVIRONNEMENT ET ÉNERGIE",
+      "description": "Cultive des terres ou élève des animaux pour la production alimentaire.",
+      "salaire": "très variable, 100 000 à 1 000 000+ FCFA/mois",
+      "formation": "CAP/BTS agricole ou reprise familiale",
+      "competences_techniques": [
+        "agronomie",
+        "gestion d'exploitation",
+        "machinisme agricole"
+      ],
+      "soft_skills": [
+        "résistance physique",
+        "autonomie",
+        "gestion du risque"
+      ],
+      "perspectives": "secteur en mutation (agriculture durable, robotisation)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_068",
+      "nom_metier": "Ingénieur(e) agronome",
+      "secteur": "AGRICULTURE, ENVIRONNEMENT ET ÉNERGIE",
+      "description": "Optimise les pratiques agricoles et la production alimentaire.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "agronomie",
+        "gestion environnementale",
+        "analyse de sols"
+      ],
+      "soft_skills": [
+        "esprit d'analyse",
+        "terrain",
+        "communication"
+      ],
+      "perspectives": "bonnes (agriculture durable en expansion)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_069",
+      "nom_metier": "Garde forestier(ère)",
+      "secteur": "AGRICULTURE, ENVIRONNEMENT ET ÉNERGIE",
+      "description": "Gère et protège les espaces forestiers.",
+      "salaire": "120 000 à 300 000 FCFA/mois",
+      "formation": "Bac+2 à Bac+5",
+      "competences_techniques": [
+        "sylviculture",
+        "cartographie",
+        "droit environnemental"
+      ],
+      "soft_skills": [
+        "autonomie",
+        "sens de l'observation",
+        "résistance physique"
+      ],
+      "perspectives": "stables",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_070",
+      "nom_metier": "Spécialiste en énergies renouvelables",
+      "secteur": "AGRICULTURE, ENVIRONNEMENT ET ÉNERGIE",
+      "description": "Conçoit et développe des projets solaires, éoliens, etc.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5 (ingénieur)",
+      "competences_techniques": [
+        "ingénierie énergétique",
+        "gestion de projet",
+        "réglementation"
+      ],
+      "soft_skills": [
+        "innovation",
+        "rigueur",
+        "communication"
+      ],
+      "perspectives": "excellentes, secteur en forte croissance",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_071",
+      "nom_metier": "Pilote de ligne",
+      "secteur": "TRANSPORT ET LOGISTIQUE",
+      "description": "Pilote des avions commerciaux.",
+      "salaire": "1 500 000 à 4 000 000+ FCFA/mois",
+      "formation": "écoles de pilotage (ENAC, etc.), licence ATPL",
+      "competences_techniques": [
+        "pilotage",
+        "navigation",
+        "gestion d'urgence"
+      ],
+      "soft_skills": [
+        "sang-froid",
+        "leadership",
+        "prise de décision"
+      ],
+      "perspectives": "bonnes à long terme malgré la cyclicité du secteur aérien",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_072",
+      "nom_metier": "Conducteur(trice) de train",
+      "secteur": "TRANSPORT ET LOGISTIQUE",
+      "description": "Conduit des trains de voyageurs ou de marchandises.",
+      "salaire": "200 000 à 500 000 FCFA/mois",
+      "formation": "formation interne (SNCF ou équivalent)",
+      "competences_techniques": [
+        "conduite ferroviaire",
+        "sécurité",
+        "procédures"
+      ],
+      "soft_skills": [
+        "vigilance",
+        "rigueur",
+        "autonomie"
+      ],
+      "perspectives": "stables",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_073",
+      "nom_metier": "Chauffeur(euse) routier / livreur(euse)",
+      "secteur": "TRANSPORT ET LOGISTIQUE",
+      "description": "Transporte des marchandises sur route.",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "permis poids lourd + FIMO",
+      "competences_techniques": [
+        "conduite",
+        "réglementation transport",
+        "gestion d'itinéraire"
+      ],
+      "soft_skills": [
+        "autonomie",
+        "ponctualité",
+        "résistance à la fatigue"
+      ],
+      "perspectives": "forte demande (e-commerce), mais automatisation à surveiller",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_074",
+      "nom_metier": "Logisticien(ne) / Responsable supply chain",
+      "secteur": "TRANSPORT ET LOGISTIQUE",
+      "description": "Organise les flux de marchandises et la chaîne d'approvisionnement.",
+      "salaire": "250 000 à 700 000 FCFA/mois",
+      "formation": "Bac+3 à Bac+5",
+      "competences_techniques": [
+        "ERP",
+        "gestion de stocks",
+        "optimisation logistique"
+      ],
+      "soft_skills": [
+        "organisation",
+        "gestion de crise",
+        "négociation"
+      ],
+      "perspectives": "bonnes, digitalisation du secteur",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_075",
+      "nom_metier": "Policier(ère) / Gendarme",
+      "secteur": "SÉCURITÉ ET DÉFENSE",
+      "description": "Assure la sécurité publique et l’application de la loi.",
+      "salaire": "85 000 à 274 604 FCFA/mois selon le grade et la fonction.",
+      "formation": "concours + école de police ou de gendarmerie.",
+      "competences_techniques": [
+        "procédures judiciaires",
+        "intervention",
+        "maniement d’armes selon spécialité."
+      ],
+      "soft_skills": [
+        "sang-froid",
+        "sens du devoir",
+        "gestion de conflit."
+      ],
+      "perspectives": "stables, avec recrutements réguliers.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_076",
+      "nom_metier": "Pompier(ère)",
+      "secteur": "SÉCURITÉ ET DÉFENSE",
+      "description": "Intervient en cas d’incendie, accident ou secours d’urgence.",
+      "salaire": "120 000 à 239 429 FCFA/mois pour un débutant, avec progression selon l’ancienneté.",
+      "formation": "concours + formation spécifique.",
+      "competences_techniques": [
+        "secours",
+        "lutte contre l’incendie",
+        "premiers secours."
+      ],
+      "soft_skills": [
+        "courage",
+        "esprit d’équipe",
+        "résistance physique et psychologique."
+      ],
+      "perspectives": "stables.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_077",
+      "nom_metier": "Militaire",
+      "secteur": "SÉCURITÉ ET DÉFENSE",
+      "description": "Sert dans les forces armées.",
+      "salaire": "120 000 à 350 000 FCFA/mois selon le grade.",
+      "formation": "écoles militaires.",
+      "competences_techniques": [
+        "tactique",
+        "maniement d’équipement militaire",
+        "selon la spécialité."
+      ],
+      "soft_skills": [
+        "discipline",
+        "esprit d’équipe",
+        "résilience."
+      ],
+      "perspectives": "stables, recrutements continus.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_078",
+      "nom_metier": "Agent(e) de sécurité privée",
+      "secteur": "SÉCURITÉ ET DÉFENSE",
+      "description": "Surveille et protège des biens ou des personnes.",
+      "salaire": "80 000 à 180 000 FCFA/mois.",
+      "formation": "CQP ou formation courte.",
+      "competences_techniques": [
+        "surveillance",
+        "procédures de sécurité."
+      ],
+      "soft_skills": [
+        "vigilance",
+        "calme",
+        "autorité naturelle."
+      ],
+      "perspectives": "bonnes, secteur en croissance.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_079",
+      "nom_metier": "Chef cuisinier(ère)",
+      "secteur": "HÔTELLERIE, TOURISME ET RESTAURATION",
+      "description": "Crée et supervise la préparation des plats dans un restaurant.",
+      "salaire": "100 000 à 300 000 FCFA/mois.",
+      "formation": "CAP cuisine à Bac+2/3.",
+      "competences_techniques": [
+        "techniques culinaires",
+        "gestion de brigade",
+        "hygiène."
+      ],
+      "soft_skills": [
+        "créativité",
+        "gestion du stress",
+        "leadership."
+      ],
+      "perspectives": "bonnes, mais métier exigeant.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_080",
+      "nom_metier": "Serveur(euse) / Barman/barmaid",
+      "secteur": "HÔTELLERIE, TOURISME ET RESTAURATION",
+      "description": "Accueille et sert les clients dans un restaurant ou un bar.",
+      "salaire": "45 000 à 200 000 FCFA/mois selon le lieu, l’expérience et les pourboires.",
+      "formation": "CAP ou expérience.",
+      "competences_techniques": [
+        "service à table",
+        "connaissance des boissons et des mets."
+      ],
+      "soft_skills": [
+        "sens du contact",
+        "réactivité",
+        "sourire commercial."
+      ],
+      "perspectives": "forte demande, mais turn-over important.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_081",
+      "nom_metier": "Réceptionniste / Directeur(trice) d’hôtel",
+      "secteur": "HÔTELLERIE, TOURISME ET RESTAURATION",
+      "description": "Accueille les clients ou gère l’ensemble d’un établissement hôtelier.",
+      "salaire": "120 000 à 500 000+ FCFA/mois selon le poste.",
+      "formation": "Bac+2 à Bac+5.",
+      "competences_techniques": [
+        "gestion hôtelière",
+        "logiciels de réservation",
+        "langues étrangères."
+      ],
+      "soft_skills": [
+        "sens du service",
+        "organisation",
+        "diplomatie."
+      ],
+      "perspectives": "bonnes, tourisme en reprise.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_082",
+      "nom_metier": "Guide touristique / Agent(e) de voyage",
+      "secteur": "HÔTELLERIE, TOURISME ET RESTAURATION",
+      "description": "Accompagne les touristes ou organise des voyages.",
+      "salaire": "100 000 à 300 000 FCFA/mois.",
+      "formation": "Bac+2 à Bac+3.",
+      "competences_techniques": [
+        "connaissance géographique et culturelle",
+        "langues",
+        "outils de réservation."
+      ],
+      "soft_skills": [
+        "pédagogie",
+        "sens du relationnel",
+        "adaptabilité."
+      ],
+      "perspectives": "correctes, concurrence des plateformes en ligne.",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_083",
+      "nom_metier": "Entraîneur(euse) sportif / Coach personnel",
+      "secteur": "SPORT ET BIEN-ÊTRE",
+      "description": "Encadre des sportifs ou des particuliers pour atteindre des objectifs physiques.",
+      "salaire": "100 000 à 400 000+ FCFA/mois, souvent variable et parfois indépendant.",
+      "formation": "BPJEPS, STAPS.",
+      "competences_techniques": [
+        "physiologie de l’exercice",
+        "programmation d’entraînement."
+      ],
+      "soft_skills": [
+        "motivation",
+        "pédagogie",
+        "écoute."
+      ],
+      "perspectives": "bonnes, marché du bien-être en croissance.",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_084",
+      "nom_metier": "Athlète professionnel(le)",
+      "secteur": "SPORT ET BIEN-ÊTRE",
+      "description": "Pratique un sport à haut niveau en compétition.",
+      "salaire": "très variable, de quasi nul à plusieurs millions selon la discipline.",
+      "formation": "entraînement intensif dès le plus jeune âge.",
+      "competences_techniques": [
+        "maîtrise technique du sport",
+        "préparation physique et mentale."
+      ],
+      "soft_skills": [
+        "discipline",
+        "résilience",
+        "gestion de la pression."
+      ],
+      "perspectives": "très sélectif, carrière courte.",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_085",
+      "nom_metier": "Professeur(e) de yoga / Pilates",
+      "secteur": "SPORT ET BIEN-ÊTRE",
+      "description": "Enseigne des pratiques corporelles et de bien-être.",
+      "salaire": "100 000 à 300 000 FCFA/mois (souvent indépendant)",
+      "formation": "certification spécifique (200h+ pour le yoga)",
+      "competences_techniques": [
+        "anatomie",
+        "techniques de respiration et postures"
+      ],
+      "soft_skills": [
+        "calme",
+        "pédagogie",
+        "écoute du corps"
+      ],
+      "perspectives": "en croissance, marché du bien-être dynamique",
+      "match_interets": [
+        "Sport & Fitness"
+      ],
+      "match_matieres": [
+        "SVT"
+      ],
+      "match_competences": [
+        "Organisation",
+        "Communication"
+      ],
+      "match_environnement": [
+        "En plein air",
+        "Horaires flexibles"
+      ]
+    },
+    {
+      "id": "car_new_086",
+      "nom_metier": "Fonctionnaire territorial(e) / Agent(e) administratif(ve)",
+      "secteur": "SECTEURS PUBLICS ET SERVICES",
+      "description": "Travaille pour une administration publique (mairie, État, etc.).",
+      "salaire": "100 000 à 300 000 FCFA/mois",
+      "formation": "variable (concours selon catégorie A/B/C)",
+      "competences_techniques": [
+        "gestion administrative",
+        "droit public de base"
+      ],
+      "soft_skills": [
+        "rigueur",
+        "sens du service public",
+        "organisation"
+      ],
+      "perspectives": "stables, sécurité de l'emploi",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_087",
+      "nom_metier": "Diplomate",
+      "secteur": "SECTEURS PUBLICS ET SERVICES",
+      "description": "Représente son pays à l'étranger, négocie des accords internationaux.",
+      "salaire": "500 000 à 1 500 000+ FCFA/mois",
+      "formation": "Bac+5 (Sciences Po, concours)",
+      "competences_techniques": [
+        "relations internationales",
+        "langues",
+        "négociation"
+      ],
+      "soft_skills": [
+        "diplomatie",
+        "adaptabilité culturelle",
+        "discrétion"
+      ],
+      "perspectives": "postes très sélectifs",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_088",
+      "nom_metier": "Urbaniste",
+      "secteur": "SECTEURS PUBLICS ET SERVICES",
+      "description": "Planifie l'aménagement des villes et territoires.",
+      "salaire": "300 000 à 800 000 FCFA/mois",
+      "formation": "Bac+5",
+      "competences_techniques": [
+        "SIG",
+        "droit de l'urbanisme",
+        "conception territoriale"
+      ],
+      "soft_skills": [
+        "vision long-terme",
+        "concertation",
+        "créativité"
+      ],
+      "perspectives": "bonnes (enjeux climatiques et urbains croissants)",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
+    },
+    {
+      "id": "car_new_089",
+      "nom_metier": "Travailleur(euse) humanitaire",
+      "secteur": "SECTEURS PUBLICS ET SERVICES",
+      "description": "Intervient dans des contextes de crise pour aider les populations.",
+      "salaire": "200 000 à 800 000 FCFA/mois (souvent ONG)",
+      "formation": "variable selon le poste (logistique, médical, coordination)",
+      "competences_techniques": [
+        "gestion de projet humanitaire",
+        "langues",
+        "sécurité terrain"
+      ],
+      "soft_skills": [
+        "résilience",
+        "adaptabilité",
+        "engagement"
+      ],
+      "perspectives": "variables selon le financement des ONG",
+      "match_interets": [],
+      "match_matieres": [],
+      "match_competences": [],
+      "match_environnement": []
     }
   ]
 }
