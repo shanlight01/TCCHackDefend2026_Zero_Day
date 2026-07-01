@@ -52,7 +52,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
     roadmap = {
       career_id: id,
       competences_cles: (career as any).competences_techniques || (career as any).competences || [],
-      soft_skills: ((career as any).soft_skills || []).map((sk: string) => ({ nom: sk, description: "Compétence utile pour ce profil.", emoji: "💡" })),
+      soft_skills: ((career as any).soft_skills || []).map((sk: string) => ({ nom: sk, description: "Compétence utile pour ce profil." })),
       etapes_carriere: [
         { phase: "Lycée", actions: ["Obtenir un baccalauréat pertinent (filières adaptées)"], couleur: "primary" },
         { phase: "Études Supérieures", actions: [(career as any).formation || "Poursuivre des études dans ce domaine", "Se spécialiser"], couleur: "warning" },
@@ -121,7 +121,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {roadmap.etapes_carriere && roadmap.etapes_carriere.length > 0 && (
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-foreground">🗺️ Ton parcours, étape par étape</h2>
+              <h2 className="text-2xl font-bold text-foreground">Ton parcours, étape par étape</h2>
               <p className="text-sm text-muted-foreground mt-1">De la classe de Terminale jusqu'au sommet de ta carrière</p>
             </div>
             <div className="relative">
@@ -138,7 +138,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
                       idx === 2 ? "bg-amber-400 text-white" :
                       "bg-blue-500 text-white"
                     }`}>
-                      {idx === 0 ? "📚" : idx === 1 ? "🎓" : idx === 2 ? "💼" : "🏆"}
+                      {idx + 1}
                     </div>
                     {/* Phase */}
                     <h3 className="mt-4 text-sm font-bold text-foreground">{etape.phase}</h3>
@@ -161,7 +161,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {roadmap.soft_skills && roadmap.soft_skills.length > 0 && (
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-foreground">🧠 Soft Skills indispensables</h2>
+              <h2 className="text-2xl font-bold text-foreground">Soft Skills indispensables</h2>
               <p className="text-sm text-muted-foreground mt-1">
                 Les compétences humaines et comportementales qui font la différence dans ce métier. Elles ne s'apprennent pas dans les livres — elles se cultivent au quotidien.
               </p>
@@ -170,7 +170,9 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
               {roadmap.soft_skills.map((skill, idx) => (
                 <div key={idx} className="group rounded-2xl border border-border bg-card p-5 hover:border-primary hover:shadow-sm transition-all">
                   <div className="flex items-start gap-3">
-                    <span className="text-3xl">{skill.emoji}</span>
+                    <div className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <span className="text-primary font-bold text-xs">{idx + 1}</span>
+                    </div>
                     <div>
                       <h3 className="font-semibold text-foreground text-sm">{skill.nom}</h3>
                       <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{skill.description}</p>
@@ -185,7 +187,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {/* ── 3. COMPÉTENCES TECHNIQUES ──────────────────────────────────── */}
         <section>
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-foreground">🎯 Compétences techniques à maîtriser</h2>
+            <h2 className="text-2xl font-bold text-foreground">Compétences techniques à maîtriser</h2>
             <p className="text-sm text-muted-foreground mt-1">
               Ce que tu devras savoir faire concrètement dans ce métier.
             </p>
@@ -206,7 +208,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {roadmap.matieres_details && roadmap.matieres_details.length > 0 ? (
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-foreground">📚 Matières prioritaires au lycée</h2>
+              <h2 className="text-2xl font-bold text-foreground">Matières prioritaires au lycée</h2>
               <p className="text-sm text-muted-foreground mt-1">
                 Pour chaque matière : des <strong>exemples de chapitres</strong> et comment ils s'appliquent <strong>directement dans ce métier</strong>. Pour que tu comprennes pourquoi travailler cette matière maintenant.
               </p>
@@ -259,7 +261,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         ) : (
           /* Fallback si pas de matieres_details */
           <section className="rounded-2xl border border-border bg-card p-6">
-            <h2 className="text-xl font-bold text-foreground mb-4">📚 Matières importantes au lycée</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">Matières importantes au lycée</h2>
             <div className="flex flex-wrap gap-3">
               {roadmap.matieres_importantes.map((matiere, index) => (
                 <div key={index} className="rounded-lg bg-muted px-4 py-2 text-sm font-medium text-foreground">
@@ -273,7 +275,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {/* ── 5. FORMATIONS REQUISES ──────────────────────────────────────── */}
         {(career as any).formations_requises && (
           <section className="rounded-2xl border border-border bg-card p-6 md:p-8">
-            <h2 className="text-xl font-bold text-foreground mb-4">🎓 Formations recommandées</h2>
+            <h2 className="text-xl font-bold text-foreground mb-4">Formations recommandées</h2>
             <ul className="space-y-2">
               {(career as any).formations_requises.map((formation: string, idx: number) => (
                 <li key={idx} className="flex items-center gap-2 text-sm text-foreground">
@@ -291,7 +293,6 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {(career as any).contexte_togo && (
           <section className="rounded-2xl border border-primary/20 bg-primary/5 p-6 md:p-8">
             <div className="flex items-start gap-3">
-              <span className="text-2xl">🇹🇬</span>
               <div>
                 <h2 className="text-xl font-bold text-foreground mb-2">Contexte au Togo</h2>
                 <p className="text-sm text-foreground leading-relaxed">{(career as any).contexte_togo}</p>
@@ -304,7 +305,7 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {recommendedUniversities.length > 0 && (
           <section>
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-foreground">🏛️ Où étudier au Togo ?</h2>
+              <h2 className="text-2xl font-bold text-foreground">Où étudier au Togo ?</h2>
               <p className="text-sm text-muted-foreground mt-1">Établissements recommandés pour cette carrière</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -346,16 +347,15 @@ export default async function RoadmapPage({ params }: { params: Promise<{ id: st
         {/* ── 8. CTA CHATBOT ──────────────────────────────────────────────── */}
         <section className="rounded-2xl bg-primary px-8 py-10 text-white text-center">
           <div className="mx-auto max-w-md">
-            <p className="text-3xl mb-4">✨</p>
-            <h2 className="text-xl font-bold mb-2">Des questions sur ce parcours ?</h2>
+            <h2 className="text-xl font-bold mb-2">Besoin d'orientation supplémentaire ?</h2>
             <p className="text-white/80 text-sm mb-6 leading-relaxed">
-              Iki, ton conseiller IA, peut t'expliquer plus en détail chaque étape, te donner des conseils personnalisés et répondre à tes questions spécifiques.
+              Notre système peut vous guider en détail à chaque étape, vous fournir des recommandations sur mesure et répondre à vos interrogations.
             </p>
             <Link
               href="/chatbot"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-3 text-sm font-bold text-primary hover:bg-white/90 transition-colors shadow-lg"
             >
-              Parler à Iki maintenant
+              Démarrer l'orientation
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>
